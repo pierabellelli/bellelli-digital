@@ -1,0 +1,63 @@
+.about {
+  display: flex;
+  align-items: center;
+  gap: 56px;
+}
+
+.about-avatar {
+  flex: none;
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--accent), var(--accent-dark));
+  color: #fff;
+  font-family: var(--heading);
+  font-weight: 700;
+  font-size: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow);
+}
+
+.about-name {
+  margin-bottom: 8px;
+}
+
+.about-bio {
+  margin-top: 12px;
+  max-width: 560px;
+  font-size: 17px;
+}
+
+.about-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.about-tag {
+  font-size: 13px;
+  font-weight: 600;
+  padding: 7px 14px;
+  border-radius: 999px;
+  background: var(--accent-bg);
+  color: var(--accent-dark);
+}
+
+@media (max-width: 700px) {
+  .about {
+    flex-direction: column;
+    text-align: center;
+    gap: 24px;
+  }
+  .about-tags,
+  .about-bio {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .about-tags {
+    justify-content: center;
+  }
+}

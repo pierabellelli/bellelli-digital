@@ -1,0 +1,31 @@
+.hero {
+  padding: 100px 0 80px;
+  text-align: center;
+  background: radial-gradient(ellipse 80% 60% at 50% -10%, var(--accent-bg), transparent);
+}
+
+.hero-tagline {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.hero-subtitle {
+  max-width: 600px;
+  margin: 24px auto 0;
+  font-size: 19px;
+  color: var(--text);
+}
+
+.hero-ctas {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 36px;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 640px) {
+  .hero {
+    padding: 64px 0 48px;
+  }
+}

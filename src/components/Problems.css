@@ -1,0 +1,49 @@
+.problems-header {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto 48px;
+}
+
+.problems-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.problem-item {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  padding: 24px;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  text-align: left;
+}
+
+.problem-check {
+  flex: none;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--accent-bg);
+  color: var(--accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.problem-text h3 {
+  font-size: 17px;
+  margin-bottom: 4px;
+}
+
+.problem-text p {
+  font-size: 15px;
+}
+
+@media (max-width: 700px) {
+  .problems-list {
+    grid-template-columns: 1fr;
+  }
+}
