@@ -10,6 +10,7 @@ export function Nav() {
         </a>
         <nav className="nav-links">
           <a href="#servizi">Servizi</a>
+          <a href="#podcast">Podcast</a>
           <a href="#prodotti">Prodotti</a>
           <a href={CALENDLY_URL} target="_blank" rel="noreferrer" className="btn btn-primary">
             Prenota una call

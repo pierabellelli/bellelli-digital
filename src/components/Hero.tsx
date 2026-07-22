@@ -5,19 +5,20 @@ export function Hero() {
   return (
     <section id="top" className="hero">
       <div className="container">
+        <span className="eyebrow hero-eyebrow">AI operativa · Customer Success · Prodotti digitali</span>
         <h1 className="hero-tagline">
-          Ho automatizzato processi per centinaia di aziende. Ora lo faccio per la tua.
+          Meno lavoro manuale. Clienti più seguiti. Un business che cresce meglio.
         </h1>
         <p className="hero-subtitle">
-          Consulenza e implementazione AI per Customer Success e operations: meno lavoro
-          manuale, più tempo per i tuoi clienti.
+          Aiuto aziende SaaS, startup e piccole imprese a trasformare processi complessi in
+          automazioni, strategie di Customer Success e soluzioni digitali concrete.
         </p>
         <div className="hero-ctas">
           <a href={CALENDLY_URL} target="_blank" rel="noreferrer" className="btn btn-primary">
-            Prenota una call gratuita
+            Raccontami il tuo progetto
           </a>
           <a href="#servizi" className="btn btn-secondary">
-            Scopri i servizi
+            Scopri come lavoro
           </a>
         </div>
       </div>

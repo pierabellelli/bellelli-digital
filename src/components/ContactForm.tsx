@@ -34,8 +34,12 @@ export function ContactForm() {
     <section className="section section-soft contact" id="contatti">
       <div className="container">
         <div className="contact-header">
-          <span className="eyebrow">Contatti</span>
-          <h2>Parliamo del tuo progetto</h2>
+          <span className="eyebrow">Hai un processo da migliorare?</span>
+          <h2>Partiamo dal problema, non dallo strumento</h2>
+          <p className="contact-intro">
+            Raccontami cosa rallenta il tuo team o l'esperienza dei clienti. Capiremo insieme se
+            serve una strategia, un'automazione o una soluzione digitale.
+          </p>
         </div>
         <form className="contact-form" onSubmit={handleSubmit}>
           <div className="contact-field">
