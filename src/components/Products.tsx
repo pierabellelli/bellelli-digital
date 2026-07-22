@@ -26,7 +26,10 @@ export function Products() {
               <h3>FlowMat</h3>
               <span className="product-badge">In arrivo</span>
             </div>
-            <p>Automazione dei flussi operativi per team di Customer Success. Presto disponibile.</p>
+            <p>
+              App per insegnanti di Pilates: crea lezioni personalizzate per zona, durata e
+              attrezzo, salva le sequenze e gestisci facilmente varianti e note.
+            </p>
           </div>
         </div>
       </div>
