@@ -1,6 +1,11 @@
 import './AboutMe.css'
 
-const TAGS = ['10+ anni in CS', 'SaaS internazionale', 'AI operativa', 'Cilento, Italia']
+const TAGS = [
+  '10+ anni in Customer Success',
+  'SaaS internazionale',
+  'AI applicata',
+  'Prodotti digitali',
+]
 
 export function AboutMe() {
   return (
@@ -11,10 +16,11 @@ export function AboutMe() {
           <span className="eyebrow">Chi sono</span>
           <h2 className="about-name">Piera Bellelli</h2>
           <p className="about-bio">
-            Per anni ho guidato team di Customer Success in realtà SaaS internazionali,
-            costruendo processi e automazioni che hanno fatto risparmiare tempo a centinaia di
-            aziende. Oggi metto la stessa esperienza al servizio del tuo business, con un
-            approccio pratico e concreto all'AI.
+            Sono Team Lead di Customer Success con oltre dieci anni di esperienza in aziende
+            SaaS internazionali. Ho costruito onboarding, processi di retention, health score e
+            automazioni per team e clienti in mercati diversi. Con Bellelli Digital porto questa
+            esperienza fuori dalla teoria: analizzo ciò che rallenta il business e lo trasformo
+            in un sistema più semplice, misurabile e sostenibile.
           </p>
           <div className="about-tags">
             {TAGS.map((tag) => (

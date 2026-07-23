@@ -7,6 +7,10 @@
   margin: 0 auto 40px;
 }
 
+.contact-intro {
+  margin-top: 16px;
+}
+
 .contact-form {
   max-width: 520px;
   margin: 0 auto;

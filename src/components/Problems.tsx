@@ -2,20 +2,20 @@ import './Problems.css'
 
 const PROBLEMS = [
   {
-    title: 'Processi manuali che rallentano il team',
-    text: 'Onboarding, reportistica e follow-up gestiti a mano, con troppo tempo perso ogni settimana.',
+    title: 'Il team perde tempo in attività ripetitive',
+    text: 'Onboarding, follow-up e reportistica assorbono ore che potrebbero essere dedicate ai clienti e alla crescita.',
   },
   {
-    title: 'Dati sparsi tra troppi tool',
-    text: 'CRM, email, fogli di calcolo che non si parlano e costringono a lavoro duplicato.',
+    title: 'I dati esistono, ma non guidano le decisioni',
+    text: 'CRM, email e fogli di calcolo non dialogano: le informazioni si disperdono e il lavoro si duplica.',
   },
   {
-    title: 'Customer Success reattivo, non proattivo',
-    text: 'Mancano segnali chiari su chi rischia di disdire o chi è pronto per un upsell.',
+    title: 'I clienti vengono seguiti quando il problema è già evidente',
+    text: 'Mancano segnali tempestivi su rischio, adozione e opportunità di espansione.',
   },
   {
-    title: 'AI percepita come complessa o lontana',
-    text: 'Si sa che serve automazione, ma non si sa da dove iniziare né come renderla operativa.',
+    title: "L'AI resta un esperimento",
+    text: 'Si provano strumenti diversi, ma senza un processo chiaro, adozione reale o risultati misurabili.',
   },
 ]
 
@@ -24,8 +24,8 @@ export function Problems() {
     <section className="section section-soft">
       <div className="container">
         <div className="problems-header">
-          <span className="eyebrow">Cosa risolvo</span>
-          <h2>I problemi che affronto ogni giorno con i miei clienti</h2>
+          <span className="eyebrow">Dove posso fare la differenza</span>
+          <h2>Quando il business cresce, anche le inefficienze diventano più costose</h2>
         </div>
         <div className="problems-list">
           {PROBLEMS.map((p) => (
