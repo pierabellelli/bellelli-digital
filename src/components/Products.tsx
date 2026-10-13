@@ -52,11 +52,6 @@ export function Products() {
               {p.ombrelloneCta} <span aria-hidden="true">↗</span>
             </a>
           </article>
-          <article className="product-card">
-            <span className="project-category">{p.flowmatTag}</span>
-            <h3>FlowMat</h3>
-            <p>{p.flowmat}</p>
-          </article>
         </div>
       </div>
     </section>

@@ -135,9 +135,6 @@ export const copy = {
         'Una soluzione per semplificare ordini, prenotazioni e attività operative degli stabilimenti balneari, con attenzione all’esperienza di staff e clienti.',
       ombrelloneTag: 'Gestione operativa · Hospitality',
       ombrelloneCta: 'Richiedi informazioni',
-      flowmat:
-        'Un’app in progettazione per insegnanti di Pilates: organizzare lezioni, sequenze, varianti e note in un unico posto.',
-      flowmatTag: 'Prodotto in progettazione',
     },
     about: {
       eyebrow: 'La persona dietro Bellelli Digital',
@@ -320,9 +317,6 @@ export const copy = {
         'A solution designed to simplify orders, bookings and day-to-day operations for beach clubs, with the experience of staff and customers in mind.',
       ombrelloneTag: 'Operations · Hospitality',
       ombrelloneCta: 'Ask about the project',
-      flowmat:
-        'An app being planned for Pilates instructors: organise classes, sequences, variations and notes in one place.',
-      flowmatTag: 'Product in planning',
     },
     about: {
       eyebrow: 'The person behind Bellelli Digital',

@@ -28,7 +28,7 @@ as environment variables in the Netlify site settings.
   `/?lang=it` and `/?lang=en` provide explicit, shareable language links.
 - All interface copy is in `src/lib/copy.ts`. Keep both languages in sync.
 - The profile features Piera's participation in Lovable SheBuilds and describes
-  WorkflowDoctor as in development. OmbrellOne and FlowMat remain in the portfolio.
+  WorkflowDoctor as in development. OmbrellOne remains in the portfolio.
 - Without Supabase configuration, the site loads normally and offers email contact.
   With configuration, the form inserts into the existing `leads` table and shows a
   success or error message without navigating away or claiming an email was sent.
