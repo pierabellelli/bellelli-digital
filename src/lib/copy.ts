@@ -156,20 +156,6 @@ export const copy = {
         'Partecipo a SheBuilds e sto sviluppando WorkflowDoctor: un’occasione per portare un’idea dal problema al prodotto, confrontarmi con altre builder e continuare a imparare.',
       badge: 'Partecipante',
     },
-    podcast: {
-      eyebrow: 'Idee da condividere',
-      title: 'Clienti che restano',
-      badge: 'In arrivo',
-      lead: 'Customer Success, AI e crescita, raccontati in modo concreto.',
-      text: 'Un progetto podcast in italiano dedicato a onboarding, adozione e fidelizzazione, con spazio per esperienze e azioni pratiche.',
-      points: [
-        'Episodi brevi e pratici',
-        'Idee da applicare al lavoro',
-        'La relazione con i clienti al centro',
-      ],
-      cta: 'Proponi un tema',
-      alt: 'Copertina del podcast Clienti che restano',
-    },
     contact: {
       eyebrow: 'Hai un’idea o un processo da migliorare?',
       title: 'Partiamo da una conversazione.',
@@ -354,20 +340,6 @@ export const copy = {
       shebuildsText:
         'I’m taking part in SheBuilds and developing WorkflowDoctor: an opportunity to take an idea from problem to product, exchange perspectives with other builders and keep learning.',
       badge: 'Participant',
-    },
-    podcast: {
-      eyebrow: 'Ideas worth sharing',
-      title: 'Clienti che restano',
-      badge: 'Coming soon',
-      lead: 'Practical conversations about Customer Success, AI and growth.',
-      text: 'An upcoming Italian-language podcast about onboarding, adoption and retention, with room for real experiences and practical actions.',
-      points: [
-        'Short, practical episodes',
-        'Ideas to apply at work',
-        'Customer relationships at the centre',
-      ],
-      cta: 'Suggest a topic',
-      alt: 'Cover of the Italian podcast Clienti che restano',
     },
     contact: {
       eyebrow: 'An idea to build or a process to improve?',
