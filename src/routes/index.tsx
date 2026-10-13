@@ -4,7 +4,6 @@ import { Hero } from '../components/Hero'
 import { AboutMe } from '../components/AboutMe'
 import { Problems } from '../components/Problems'
 import { Services } from '../components/Services'
-import { Podcast } from '../components/Podcast'
 import { Products } from '../components/Products'
 import { ContactForm } from '../components/ContactForm'
 import { Footer } from '../components/Footer'
@@ -25,7 +24,6 @@ export function LandingPage() {
         <Products />
         <Method />
         <AboutMe />
-        <Podcast />
         <ContactForm />
       </main>
       <Footer />
