@@ -1,49 +1,43 @@
-.problems-header {
-  text-align: center;
-  max-width: 600px;
-  margin: 0 auto 48px;
+.problems-layout {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 80px;
+  align-items: start;
 }
-
+.problems-header > p {
+  margin-top: 20px;
+}
 .problems-list {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
+  gap: 22px;
 }
-
 .problem-item {
   display: flex;
-  gap: 14px;
-  align-items: flex-start;
-  padding: 24px;
-  background: #fff;
-  border: 1px solid var(--border);
-  border-radius: 14px;
-  text-align: left;
+  gap: 20px;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 22px;
 }
-
-.problem-check {
+.problem-item:last-child {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+.problem-number {
   flex: none;
-  width: 28px;
-  height: 28px;
-  border-radius: 50%;
-  background: var(--accent-bg);
+  font-size: 12px;
   color: var(--accent);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  font-weight: 600;
+  padding-top: 3px;
 }
-
-.problem-text h3 {
+.problem-item h3 {
   font-size: 17px;
-  margin-bottom: 4px;
+  margin-bottom: 5px;
 }
-
-.problem-text p {
-  font-size: 15px;
+.problem-item p {
+  font-size: 14px;
 }
-
-@media (max-width: 700px) {
-  .problems-list {
+@media (max-width: 800px) {
+  .problems-layout {
     grid-template-columns: 1fr;
+    gap: 36px;
   }
 }
