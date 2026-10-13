@@ -1,0 +1,35 @@
+.method {
+  background: #fff;
+  border-bottom: 1px solid var(--border);
+}
+.method-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 48px;
+}
+.method-number {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--accent);
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 24px;
+}
+.method-step h3 {
+  font-size: 19px;
+  margin-bottom: 12px;
+}
+.method-step p {
+  font-size: 14px;
+}
+@media (max-width: 700px) {
+  .method-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  .method-number {
+    padding-bottom: 12px;
+    margin-bottom: 16px;
+  }
+}

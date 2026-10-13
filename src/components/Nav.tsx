@@ -1,22 +1,80 @@
-import { CALENDLY_URL } from '../lib/constants'
+import { useState } from 'react'
+import { useLanguage } from '../lib/Language'
 import './Nav.css'
 
 export function Nav() {
+  const { language, setLanguage, t } = useLanguage()
+  const [open, setOpen] = useState(false)
   return (
-    <header className="nav">
-      <div className="container nav-inner">
-        <a href="#top" className="nav-logo">
-          bellelli<span>.digital</span>
-        </a>
-        <nav className="nav-links">
-          <a href="#servizi">Servizi</a>
-          <a href="#podcast">Podcast</a>
-          <a href="#prodotti">Prodotti</a>
-          <a href={CALENDLY_URL} target="_blank" rel="noreferrer" className="btn btn-primary">
-            Prenota una call
+    <>
+      <a className="skip-link" href="#main">
+        {t.nav.skip}
+      </a>
+      <header className="nav">
+        <div className="container nav-inner">
+          <a href="#top" className="nav-logo" aria-label="Bellelli Digital">
+            bellelli<span>.digital</span>
           </a>
-        </nav>
-      </div>
-    </header>
+          <nav
+            id="primary-navigation"
+            aria-label={t.nav.label}
+            className={`nav-links${open ? ' is-open' : ''}`}
+          >
+            <a href="#servizi" onClick={() => setOpen(false)}>
+              {t.nav.services}
+            </a>
+            <a href="#prodotti" onClick={() => setOpen(false)}>
+              {t.nav.projects}
+            </a>
+            <a href="#chi-sono" onClick={() => setOpen(false)}>
+              {t.nav.about}
+            </a>
+            <a
+              href="#contatti"
+              className="btn btn-primary nav-cta"
+              onClick={() => setOpen(false)}
+            >
+              {t.nav.contact} <span aria-hidden="true">↗</span>
+            </a>
+          </nav>
+          <div className="nav-controls">
+            <div
+              className="language-switch"
+              role="group"
+              aria-label={t.nav.language}
+            >
+              <button
+                type="button"
+                lang="it"
+                aria-label="Italiano"
+                aria-pressed={language === 'it'}
+                onClick={() => setLanguage('it')}
+              >
+                IT
+              </button>
+              <button
+                type="button"
+                lang="en"
+                aria-label="English"
+                aria-pressed={language === 'en'}
+                onClick={() => setLanguage('en')}
+              >
+                EN
+              </button>
+            </div>
+            <button
+              type="button"
+              className="menu-toggle"
+              aria-expanded={open}
+              aria-controls="primary-navigation"
+              aria-label={open ? t.nav.close : t.nav.menu}
+              onClick={() => setOpen(!open)}
+            >
+              <span aria-hidden="true">{open ? '×' : '☰'}</span>
+            </button>
+          </div>
+        </div>
+      </header>
+    </>
   )
 }

@@ -1,12 +1,12 @@
 # Bellelli Digital
 
-Landing page for bellelli-digital.it — Vite + React + TanStack Router + Supabase.
+Bilingual portfolio and services site for https://bellelli-digital.com/ — Vite + React + TanStack Router + Supabase.
 
 ## Setup
 
 ```bash
 npm install
-cp .env.example .env   # then fill in VITE_SUPABASE_URL / VITE_SUPABASE_ANON_KEY
+cp .env.example .env   # optional: configure the contact form
 npm run dev
 ```
 
@@ -24,6 +24,14 @@ as environment variables in the Netlify site settings.
 
 ## Notes
 
-- The OmbrellOne link in the Products section (`src/components/Products.tsx`) uses
-  a placeholder URL — update `OMBRELLONE_URL` with the real one.
-- The Calendly URL is set in `src/lib/constants.ts` — update with the real scheduling link.
+- Italian is the default. The IT/EN switch remembers the visitor's preference;
+  `/?lang=it` and `/?lang=en` provide explicit, shareable language links.
+- All interface copy is in `src/lib/copy.ts`. Keep both languages in sync.
+- The profile features Piera's participation in Lovable SheBuilds and describes
+  WorkflowDoctor as in development. OmbrellOne and FlowMat remain in the portfolio.
+- Without Supabase configuration, the site loads normally and offers email contact.
+  With configuration, the form inserts into the existing `leads` table and shows a
+  success or error message without navigating away or claiming an email was sent.
+- Contact details are in `src/lib/constants.ts`. Call requests currently use email;
+  replace with a verified scheduling URL when one is available.
+- There are no public product/demo links until their destinations are confirmed.
