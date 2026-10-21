@@ -1,5 +1,4 @@
 import { useState, type FormEvent } from 'react'
-import { supabase } from '../lib/supabase'
 import { CONTACT_EMAIL } from '../lib/constants'
 import { useLanguage } from '../lib/Language'
 import './ContactForm.css'
@@ -14,31 +13,42 @@ export function ContactForm() {
   const [messaggio, setMessaggio] = useState('')
   const [status, setStatus] = useState<Status>('idle')
 
-  async function handleSubmit(e: FormEvent) {
+  async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault()
-    if (!supabase || status === 'submitting') return
-    if (!nome.trim() || !messaggio.trim()) {
+    if (status === 'submitting') return
+    const trimmedNome = nome.trim()
+    const trimmedEmail = email.trim()
+    const trimmedMessaggio = messaggio.trim()
+    if (!trimmedNome || !trimmedEmail || !trimmedMessaggio) {
       setStatus('error')
       return
     }
+    // The static blueprint in public/__forms.html is picked up by Netlify at deploy time.
+    const botField = new FormData(e.currentTarget).get('bot-field')?.toString() ?? ''
+    const fields = new URLSearchParams({
+      'form-name': 'contact',
+      nome: trimmedNome,
+      email: trimmedEmail,
+      messaggio: trimmedMessaggio,
+      'bot-field': botField,
+    })
     setStatus('submitting')
     try {
-      const { error } = await supabase
-        .from('leads')
-        .insert({
-          nome: nome.trim(),
-          email: email.trim(),
-          messaggio: messaggio.trim(),
-        })
-      if (error) {
-        setStatus('error')
-        return
+      const response = await fetch('/__forms.html', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: fields.toString(),
+      })
+      if (!response.ok) {
+        throw new Error(`Contact submission failed: ${response.status}`)
       }
       setStatus('success')
       setNome('')
       setEmail('')
       setMessaggio('')
-    } catch {
+    } catch (error) {
+      console.error('Contact form submission error:', error)
+      // Preserve visitor input for retry or copy/paste to email.
       setStatus('error')
     }
   }
@@ -61,79 +71,81 @@ export function ContactForm() {
             {c.callCta} <span aria-hidden="true">↗</span>
           </a>
         </div>
-        {supabase ? (
-          <form
-            className="contact-form"
-            onSubmit={handleSubmit}
-            aria-busy={status === 'submitting'}
-          >
-            <div className="contact-field">
-              <label htmlFor="nome">{c.name}</label>
-              <input
-                id="nome"
-                name="nome"
-                type="text"
-                autoComplete="name"
-                required
-                maxLength={120}
-                value={nome}
-                onChange={(e) => setNome(e.target.value)}
-              />
-            </div>
-            <div className="contact-field">
-              <label htmlFor="email">{c.email}</label>
-              <input
-                id="email"
-                name="email"
-                type="email"
-                autoComplete="email"
-                required
-                maxLength={254}
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-              />
-            </div>
-            <div className="contact-field">
-              <label htmlFor="messaggio">{c.message}</label>
-              <textarea
-                id="messaggio"
-                name="messaggio"
-                rows={5}
-                required
-                maxLength={5000}
-                placeholder={c.placeholder}
-                value={messaggio}
-                onChange={(e) => setMessaggio(e.target.value)}
-              />
-            </div>
-            <button
-              type="submit"
-              className="btn btn-primary contact-submit"
-              disabled={status === 'submitting'}
-            >
-              {status === 'submitting' ? c.submitting : c.submit}{' '}
-              <span aria-hidden="true">↗</span>
-            </button>
-            <div aria-live="polite" aria-atomic="true">
-              {status === 'success' && (
-                <p className="contact-message is-success">{c.success}</p>
-              )}
-              {status === 'error' && (
-                <p className="contact-message is-error">{c.error}</p>
-              )}
-            </div>
-          </form>
-        ) : (
-          <div className="contact-fallback">
-            <span className="fallback-symbol" aria-hidden="true">
-              ↗
-            </span>
-            <p>{c.unavailable}</p>
-            <a href={`mailto:${CONTACT_EMAIL}`} className="btn btn-primary">
-              {c.emailCta}
-            </a>
+        <form
+          className="contact-form"
+          name="contact"
+          method="POST"
+          data-netlify="true"
+          data-netlify-honeypot="bot-field"
+          onSubmit={handleSubmit}
+          aria-busy={status === 'submitting'}
+        >
+          <input type="hidden" name="form-name" value="contact" />
+          <div className="contact-bot-field" aria-hidden="true">
+            <label htmlFor="contact-bot-field">
+              Leave this field empty
+              <input id="contact-bot-field" name="bot-field" type="text" tabIndex={-1} autoComplete="off" />
+            </label>
           </div>
-        )}
+          <div className="contact-field">
+            <label htmlFor="nome">{c.name}</label>
+            <input
+              id="nome"
+              name="nome"
+              type="text"
+              autoComplete="name"
+              required
+              maxLength={120}
+              value={nome}
+              onChange={(e) => setNome(e.target.value)}
+            />
+          </div>
+          <div className="contact-field">
+            <label htmlFor="email">{c.email}</label>
+            <input
+              id="email"
+              name="email"
+              type="email"
+              autoComplete="email"
+              required
+              maxLength={254}
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
+          </div>
+          <div className="contact-field">
+            <label htmlFor="messaggio">{c.message}</label>
+            <textarea
+              id="messaggio"
+              name="messaggio"
+              rows={5}
+              required
+              maxLength={5000}
+              placeholder={c.placeholder}
+              value={messaggio}
+              onChange={(e) => setMessaggio(e.target.value)}
+            />
+          </div>
+          <button
+            type="submit"
+            className="btn btn-primary contact-submit"
+            disabled={status === 'submitting'}
+          >
+            {status === 'submitting' ? c.submitting : c.submit}{' '}
+            <span aria-hidden="true">↗</span>
+          </button>
+          <div aria-live="polite" aria-atomic="true">
+            {status === 'success' && (
+              <p className="contact-message is-success">{c.success}</p>
+            )}
+            {status === 'error' && (
+              <p className="contact-message is-error">
+                {c.error}{' '}
+                <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>
+              </p>
+            )}
+          </div>
+        </form>
       </div>
     </section>
   )
