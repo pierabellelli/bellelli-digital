@@ -20,8 +20,8 @@ export function Nav() {
             aria-label={t.nav.label}
             className={`nav-links${open ? ' is-open' : ''}`}
           >
-            <a href="#servizi" onClick={() => setOpen(false)}>
-              {t.nav.services}
+            <a href="#sito-smart" onClick={() => setOpen(false)}>
+              {t.nav.smart}
             </a>
             <a href="#prodotti" onClick={() => setOpen(false)}>
               {t.nav.projects}
