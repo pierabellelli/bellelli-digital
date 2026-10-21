@@ -1,12 +1,13 @@
 export const copy = {
   it: {
     meta: {
-      title: 'Bellelli Digital — AI, automazioni e Customer Success',
+      title: 'Bellelli Digital — Siti Smart, AI e automazioni',
       description:
-        'Piera Bellelli: automazioni, web app e Customer Success per piccole imprese e team SaaS. Scopri i progetti e il percorso Lovable SheBuilds.',
+        'Bellelli Digital: siti Smart di 3 pagine con raccolta contatti in Google Sheets o HubSpot, automazioni e soluzioni digitali per piccoli business.',
     },
     nav: {
       services: 'Servizi',
+      smart: 'Sito Smart',
       projects: 'Progetti',
       about: 'Chi sono',
       contact: 'Parliamone',
@@ -17,13 +18,13 @@ export const copy = {
       skip: 'Vai al contenuto',
     },
     hero: {
-      eyebrow: 'Customer Success · AI · Soluzioni digitali',
+      eyebrow: 'Siti Smart · AI · Automazioni',
       title: 'Meno complessità.',
       highlight: 'Più spazio per crescere.',
       intro:
-        'Trasformo processi ripetitivi e idee in automazioni, web app e percorsi cliente più semplici. Per piccole imprese, startup e team SaaS che vogliono lavorare meglio.',
-      primary: 'Parliamo del tuo progetto',
-      secondary: 'Esplora i progetti',
+        'Creo siti web professionali che non si limitano a presentare la tua attività: raccolgono anche le richieste dei potenziali clienti. E aiuto le piccole imprese a semplificare il lavoro con AI e automazioni.',
+      primary: 'Scopri Sito Smart',
+      secondary: 'Parliamo del tuo progetto',
       note: 'Un approccio concreto, dall’esperienza nel Customer Success internazionale.',
       status: 'Ora in Lovable SheBuilds',
       statusDetail: 'Sto sviluppando WorkflowDoctor',
@@ -78,8 +79,8 @@ export const copy = {
           deliverable: 'Un workflow da testare e adottare',
         },
         {
-          title: 'Web app, siti e MVP',
-          text: 'Diamo forma a un’idea con un sito professionale, un prototipo o una prima versione di prodotto da validare.',
+          title: 'Web app e MVP',
+          text: 'Diamo forma a idee digitali con un prototipo o una prima versione di prodotto da validare. Per i siti web, scopri il pacchetto Sito Smart.',
           deliverable: 'Una soluzione da mettere alla prova',
         },
         {
@@ -89,6 +90,37 @@ export const copy = {
         },
       ],
       cta: 'Troviamo il punto di partenza',
+    },
+    smart: {
+      eyebrow: 'Un solo pacchetto, tutto ciò che serve',
+      title: 'Sito Smart: il tuo sito web, con una marcia in più.',
+      intro:
+        'Un sito essenziale e professionale, pensato per presentare la tua attività e trasformare le richieste ricevute in contatti organizzati.',
+      badge: 'Un unico pacchetto · 3 pagine',
+      name: 'Sito Smart',
+      summary: 'Una presenza online curata, con un modulo contatti collegato agli strumenti che già utilizzi.',
+      pagesTitle: 'Le tre pagine incluse',
+      pages: ['Home', 'Servizi', 'Contatti'],
+      includes: 'Cosa include',
+      features: [
+        'Design responsive, adatto anche a smartphone e tablet',
+        'SEO di base e collegamenti ai social',
+        'Pulsante WhatsApp e modulo di richiesta informazioni',
+        'Lead salvati in Google Sheets oppure in HubSpot CRM',
+        'Notifica email all’arrivo di una nuova richiesta',
+      ],
+      cta: 'Richiedi un preventivo',
+      priceNote: 'Dominio, hosting, manutenzione ed eventuali servizi esterni sono quotati separatamente.',
+      flowEyebrow: 'La parte smart',
+      flowTitle: 'Dalla visita al contatto, senza copiare dati a mano.',
+      flowIntro:
+        'Il visitatore ti scrive dal sito: i dati arrivano nel tuo foglio o CRM e ricevi una notifica.',
+      flowSteps: [
+        { title: 'Modulo sul sito', text: 'Un potenziale cliente invia una richiesta.' },
+        { title: 'Google Sheets o HubSpot', text: 'Il lead viene registrato nello strumento scelto.' },
+        { title: 'Notifica email', text: 'Sai subito che è arrivato un nuovo contatto.' },
+      ],
+      flowNote: 'L’integrazione viene configurata e testata per ogni progetto, nel rispetto dei requisiti di privacy.',
     },
     method: {
       eyebrow: 'Il metodo',
@@ -183,12 +215,13 @@ export const copy = {
   },
   en: {
     meta: {
-      title: 'Bellelli Digital — AI, automation & Customer Success',
+      title: 'Bellelli Digital — Smart Websites, AI & automation',
       description:
-        'Piera Bellelli: workflow automation, web apps and Customer Success for small businesses and SaaS teams. Explore her projects and Lovable SheBuilds journey.',
+        'Bellelli Digital: three-page Smart Websites with lead capture in Google Sheets or HubSpot, automation and digital solutions for small businesses.',
     },
     nav: {
       services: 'Services',
+      smart: 'Smart Website',
       projects: 'Projects',
       about: 'About',
       contact: 'Let’s talk',
@@ -199,13 +232,13 @@ export const copy = {
       skip: 'Skip to content',
     },
     hero: {
-      eyebrow: 'Customer Success · AI · Digital solutions',
+      eyebrow: 'Smart Websites · AI · Automation',
       title: 'Less complexity.',
       highlight: 'More room to grow.',
       intro:
-        'I turn repetitive processes and ideas into automation, web apps and smoother customer journeys. For small businesses, startups and SaaS teams that want to work better.',
-      primary: 'Let’s talk about your project',
-      secondary: 'Explore the projects',
+        'I build professional websites that do more than showcase your business: they help you capture new customer enquiries. I also help small businesses simplify everyday work through AI and automation.',
+      primary: 'Discover Smart Website',
+      secondary: 'Let’s discuss your project',
       note: 'A practical approach, shaped by international Customer Success experience.',
       status: 'Now taking part in Lovable SheBuilds',
       statusDetail: 'Building WorkflowDoctor',
@@ -260,8 +293,8 @@ export const copy = {
           deliverable: 'A workflow to test and adopt',
         },
         {
-          title: 'Web apps, websites & MVPs',
-          text: 'We bring an idea to life with a professional website, a prototype or an initial product to validate.',
+          title: 'Web apps & MVPs',
+          text: 'We bring digital ideas to life with a prototype or an initial product to validate. For websites, explore the Smart Website package.',
           deliverable: 'A solution you can put to the test',
         },
         {
@@ -271,6 +304,37 @@ export const copy = {
         },
       ],
       cta: 'Find your starting point',
+    },
+    smart: {
+      eyebrow: 'One package, everything you need',
+      title: 'Smart Website: more than an online presence.',
+      intro:
+        'A focused, professional website designed to showcase your business and keep incoming customer enquiries organised.',
+      badge: 'One package · 3 pages',
+      name: 'Smart Website',
+      summary: 'A polished online presence, with a contact form connected to the tools you already use.',
+      pagesTitle: 'The three included pages',
+      pages: ['Home', 'Services', 'Contact'],
+      includes: 'What is included',
+      features: [
+        'Responsive design for desktop, mobile and tablet',
+        'Basic SEO and social media links',
+        'WhatsApp button and enquiry form',
+        'Leads saved to Google Sheets or HubSpot CRM',
+        'Email notification whenever a new enquiry arrives',
+      ],
+      cta: 'Request a quote',
+      priceNote: 'Domain, hosting, maintenance and any third-party services are quoted separately.',
+      flowEyebrow: 'The smart part',
+      flowTitle: 'From website enquiry to organised lead, automatically.',
+      flowIntro:
+        'A visitor fills in your form: the details go to your sheet or CRM, and you receive a notification.',
+      flowSteps: [
+        { title: 'Website contact form', text: 'A prospective customer submits an enquiry.' },
+        { title: 'Google Sheets or HubSpot', text: 'The lead is recorded in your chosen tool.' },
+        { title: 'Email notification', text: 'You know when a new enquiry comes in.' },
+      ],
+      flowNote: 'Every integration is configured and tested for the project, with privacy requirements considered.',
     },
     method: {
       eyebrow: 'The approach',
