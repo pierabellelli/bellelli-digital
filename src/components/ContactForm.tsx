@@ -12,6 +12,7 @@ export function ContactForm() {
   const [email, setEmail] = useState('')
   const [messaggio, setMessaggio] = useState('')
   const [status, setStatus] = useState<Status>('idle')
+  const [errorCode, setErrorCode] = useState('')
 
   async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault()
@@ -33,14 +34,27 @@ export function ContactForm() {
       'bot-field': botField,
     })
     setStatus('submitting')
+    setErrorCode('')
     try {
-      const response = await fetch('/__forms.html', {
+      // This is a static Vite site, not an SSR app. POST to the home
+      // document so Netlify can process the registered contact form.
+      // Fall back to the static form blueprint only for a 404/405.
+      const payload = fields.toString()
+      let response = await fetch('/', {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: fields.toString(),
+        body: payload,
       })
+      if (response.status === 404 || response.status === 405) {
+        response = await fetch('/__forms.html', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+          body: payload,
+        })
+      }
       if (!response.ok) {
-        throw new Error(`Contact submission failed: ${response.status}`)
+        setErrorCode(`HTTP ${response.status}`)
+        throw new Error(`Contact form submission failed: HTTP ${response.status}`)
       }
       setStatus('success')
       setNome('')
@@ -48,7 +62,8 @@ export function ContactForm() {
       setMessaggio('')
     } catch (error) {
       console.error('Contact form submission error:', error)
-      // Preserve visitor input for retry or copy/paste to email.
+      // Preserve visitor input for retry or copying into an email.
+      if (error instanceof TypeError) setErrorCode('Network error')
       setStatus('error')
     }
   }
@@ -141,6 +156,7 @@ export function ContactForm() {
             {status === 'error' && (
               <p className="contact-message is-error">
                 {c.error}{' '}
+                {errorCode && <small className="contact-error-code">({errorCode}) </small>}
                 <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>
               </p>
             )}
