@@ -16,7 +16,7 @@ export function Hero() {
           </h1>
           <p className="hero-subtitle">{h.intro}</p>
           <div className="hero-ctas">
-            <a href="#sito-smart" className="btn btn-primary">
+            <a href="#attivita-digitale" className="btn btn-primary">
               {h.primary} <span aria-hidden="true">↗</span>
             </a>
             <a href="#contatti" className="text-link">

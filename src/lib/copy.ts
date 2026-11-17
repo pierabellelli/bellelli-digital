@@ -1,13 +1,13 @@
 export const copy = {
   it: {
     meta: {
-      title: 'Bellelli Digital — Siti Smart, AI e automazioni',
+      title: 'Bellelli Digital — Siti per attività locali, AI e automazioni',
       description:
-        'Bellelli Digital: siti Smart di 3 pagine con raccolta contatti in Google Sheets o HubSpot, automazioni e soluzioni digitali per piccoli business.',
+        'Bellelli Digital: sito, scheda Google e AI per la tua attività in 7 giorni, a prezzo fisso. Automazioni e soluzioni digitali per piccoli business.',
     },
     nav: {
       services: 'Servizi',
-      smart: 'Sito Smart',
+      digital: 'Attività Digitale',
       projects: 'Progetti',
       about: 'Chi sono',
       contact: 'Parliamone',
@@ -18,12 +18,12 @@ export const copy = {
       skip: 'Vai al contenuto',
     },
     hero: {
-      eyebrow: 'Siti Smart · AI · Automazioni',
+      eyebrow: 'Siti in 7 giorni · AI · Automazioni',
       title: 'Meno complessità.',
       highlight: 'Più spazio per crescere.',
       intro:
-        'Creo siti web professionali che non si limitano a presentare la tua attività: raccolgono anche le richieste dei potenziali clienti. E aiuto le piccole imprese a semplificare il lavoro con AI e automazioni.',
-      primary: 'Scopri Sito Smart',
+        'Porto online le attività locali in 7 giorni, a prezzo fisso: sito, scheda Google e AI per le recensioni. E aiuto le piccole imprese a semplificare il lavoro con AI e automazioni.',
+      primary: 'Scopri Attività Digitale',
       secondary: 'Parliamo del tuo progetto',
       note: 'Un approccio concreto, dall’esperienza nel Customer Success internazionale.',
       status: 'Ora in Lovable SheBuilds',
@@ -80,7 +80,7 @@ export const copy = {
         },
         {
           title: 'Web app e MVP',
-          text: 'Diamo forma a idee digitali con un prototipo o una prima versione di prodotto da validare. Per i siti web, scopri il pacchetto Sito Smart.',
+          text: 'Diamo forma a idee digitali con un prototipo o una prima versione di prodotto da validare. Per i siti delle attività locali, scopri Attività Digitale in 7 giorni.',
           deliverable: 'Una soluzione da mettere alla prova',
         },
         {
@@ -91,36 +91,67 @@ export const copy = {
       ],
       cta: 'Troviamo il punto di partenza',
     },
-    smart: {
-      eyebrow: 'Un solo pacchetto, tutto ciò che serve',
-      title: 'Sito Smart: il tuo sito web, con una marcia in più.',
+    digital: {
+      eyebrow: 'Per bar, negozi, artigiani e studi',
+      title: 'Attività Digitale in 7 giorni: sito, Google e AI, a prezzo fisso.',
       intro:
-        'Un sito essenziale e professionale, pensato per presentare la tua attività e trasformare le richieste ricevute in contatti organizzati.',
-      badge: 'Un unico pacchetto · 3 pagine',
-      name: 'Sito Smart',
-      summary: 'Una presenza online curata, con un modulo contatti collegato agli strumenti che già utilizzi.',
-      pagesTitle: 'Le tre pagine incluse',
-      pages: ['Home', 'Servizi', 'Contatti'],
-      includes: 'Cosa include',
-      features: [
-        'Design responsive, adatto anche a smartphone e tablet',
-        'SEO di base e collegamenti ai social',
-        'Pulsante WhatsApp e modulo di richiesta informazioni',
-        'Lead salvati in Google Sheets oppure in HubSpot CRM',
-        'Notifica email all’arrivo di una nuova richiesta',
+        'Porto online la tua attività in una settimana: un sito pensato per il telefono, la scheda Google in ordine e l’AI per rispondere alle recensioni. Faccio tutto io, a te serve circa un’ora in tutto.',
+      recommended: 'Consigliato',
+      oneOff: 'una tantum',
+      planCta: 'Scegli',
+      plans: [
+        {
+          name: 'Base',
+          price: '390 €',
+          launch: 'Prezzo lancio: 290 € (primi 3 clienti)',
+          featured: false,
+          features: [
+            'Sito di una pagina, ottimizzato per smartphone',
+            'Scheda Google sistemata: orari, foto, descrizione',
+            'Pulsanti Chiama e WhatsApp',
+            'Un giro di modifiche',
+          ],
+        },
+        {
+          name: 'Completo',
+          price: '590 €',
+          launch: 'Prezzo lancio: 390 € (primi 3 clienti)',
+          featured: true,
+          features: [
+            'Tutto il pacchetto Base',
+            '10 modelli AI per rispondere alle recensioni',
+            '1 ora di formazione AI sulla tua attività',
+            'Guida “La tua AI in 10 minuti al giorno”',
+          ],
+        },
+        {
+          name: 'Plus',
+          price: '790 €',
+          launch: '',
+          featured: false,
+          features: [
+            'Tutto il pacchetto Completo',
+            'Sito fino a 3 pagine',
+            'Prenotazione o richiesta preventivo',
+            '5 post social pronti da pubblicare',
+          ],
+        },
       ],
-      cta: 'Richiedi un preventivo',
-      priceNote: 'Dominio, hosting, manutenzione ed eventuali servizi esterni sono quotati separatamente.',
-      flowEyebrow: 'La parte smart',
-      flowTitle: 'Dalla visita al contatto, senza copiare dati a mano.',
-      flowIntro:
-        'Il visitatore ti scrive dal sito: i dati arrivano nel tuo foglio o CRM e ricevi una notifica.',
-      flowSteps: [
-        { title: 'Modulo sul sito', text: 'Un potenziale cliente invia una richiesta.' },
-        { title: 'Google Sheets o HubSpot', text: 'Il lead viene registrato nello strumento scelto.' },
-        { title: 'Notifica email', text: 'Sai subito che è arrivato un nuovo contatto.' },
+      maintTitle: 'Manutenzione 29 €/mese',
+      maintText:
+        'Una modifica al mese, orari e offerte aggiornati, controllo della scheda Google. Disdici quando vuoi.',
+      smallprint:
+        'Pagamento: 50% all’avvio, 50% alla pubblicazione. Sito, dominio e account restano intestati a te; l’unico costo esterno è il dominio, circa 10-20 € l’anno.',
+      weekEyebrow: 'Come funziona',
+      weekTitle: 'La tua settimana',
+      steps: [
+        { day: '0', title: 'Chiamata di 30 minuti', text: 'Mi racconti l’attività e cosa vuoi mettere in evidenza.' },
+        { day: '1', title: 'Materiali', text: 'Mi mandi foto, logo e orari, e mi dai accesso alla scheda Google.' },
+        { day: '2–4', title: 'Costruzione', text: 'Scrivo i testi, creo il sito e sistemo Google.' },
+        { day: '5', title: 'Anteprima', text: 'Guardi il sito e chiedi le modifiche.' },
+        { day: '7', title: 'Online e formazione', text: 'Pubblichiamo e ti mostro come usare l’AI in un’ora.' },
       ],
-      flowNote: 'L’integrazione viene configurata e testata per ogni progetto, nel rispetto dei requisiti di privacy.',
+      weekNote: 'Lavoro anche a distanza: chiamata, revisione e formazione si fanno in videochiamata.',
     },
     method: {
       eyebrow: 'Il metodo',
@@ -215,13 +246,13 @@ export const copy = {
   },
   en: {
     meta: {
-      title: 'Bellelli Digital — Smart Websites, AI & automation',
+      title: 'Bellelli Digital — Websites for local businesses, AI & automation',
       description:
-        'Bellelli Digital: three-page Smart Websites with lead capture in Google Sheets or HubSpot, automation and digital solutions for small businesses.',
+        'Bellelli Digital: website, Google profile and AI for your business in 7 days, at a fixed price. Automation and digital solutions for small businesses.',
     },
     nav: {
       services: 'Services',
-      smart: 'Smart Website',
+      digital: 'Online in 7 days',
       projects: 'Projects',
       about: 'About',
       contact: 'Let’s talk',
@@ -232,12 +263,12 @@ export const copy = {
       skip: 'Skip to content',
     },
     hero: {
-      eyebrow: 'Smart Websites · AI · Automation',
+      eyebrow: 'Websites in 7 days · AI · Automation',
       title: 'Less complexity.',
       highlight: 'More room to grow.',
       intro:
-        'I build professional websites that do more than showcase your business: they help you capture new customer enquiries. I also help small businesses simplify everyday work through AI and automation.',
-      primary: 'Discover Smart Website',
+        'I get local businesses online in 7 days, at a fixed price: website, Google profile and AI for reviews. I also help small businesses simplify everyday work through AI and automation.',
+      primary: 'Discover Online in 7 days',
       secondary: 'Let’s discuss your project',
       note: 'A practical approach, shaped by international Customer Success experience.',
       status: 'Now taking part in Lovable SheBuilds',
@@ -294,7 +325,7 @@ export const copy = {
         },
         {
           title: 'Web apps & MVPs',
-          text: 'We bring digital ideas to life with a prototype or an initial product to validate. For websites, explore the Smart Website package.',
+          text: 'We bring digital ideas to life with a prototype or an initial product to validate. For local business websites, explore Online in 7 days.',
           deliverable: 'A solution you can put to the test',
         },
         {
@@ -305,36 +336,67 @@ export const copy = {
       ],
       cta: 'Find your starting point',
     },
-    smart: {
-      eyebrow: 'One package, everything you need',
-      title: 'Smart Website: more than an online presence.',
+    digital: {
+      eyebrow: 'For cafés, shops, tradespeople and studios',
+      title: 'Your business online in 7 days: website, Google and AI, at a fixed price.',
       intro:
-        'A focused, professional website designed to showcase your business and keep incoming customer enquiries organised.',
-      badge: 'One package · 3 pages',
-      name: 'Smart Website',
-      summary: 'A polished online presence, with a contact form connected to the tools you already use.',
-      pagesTitle: 'The three included pages',
-      pages: ['Home', 'Services', 'Contact'],
-      includes: 'What is included',
-      features: [
-        'Responsive design for desktop, mobile and tablet',
-        'Basic SEO and social media links',
-        'WhatsApp button and enquiry form',
-        'Leads saved to Google Sheets or HubSpot CRM',
-        'Email notification whenever a new enquiry arrives',
+        'I get your business online in one week: a mobile-first website, a tidy Google Business Profile and AI to help you reply to reviews. I do the work; you need about an hour in total.',
+      recommended: 'Recommended',
+      oneOff: 'one-off',
+      planCta: 'Choose',
+      plans: [
+        {
+          name: 'Base',
+          price: '€390',
+          launch: 'Launch price: €290 (first 3 clients)',
+          featured: false,
+          features: [
+            'One-page website, optimised for mobile',
+            'Google Business Profile fixed: hours, photos, description',
+            'Call and WhatsApp buttons',
+            'One round of revisions',
+          ],
+        },
+        {
+          name: 'Complete',
+          price: '€590',
+          launch: 'Launch price: €390 (first 3 clients)',
+          featured: true,
+          features: [
+            'Everything in Base',
+            '10 AI templates for replying to reviews',
+            '1-hour AI training on your business',
+            'Guide: “Your AI in 10 minutes a day”',
+          ],
+        },
+        {
+          name: 'Plus',
+          price: '€790',
+          launch: '',
+          featured: false,
+          features: [
+            'Everything in Complete',
+            'Website up to 3 pages',
+            'Booking or quote request',
+            '5 ready-to-post social media posts',
+          ],
+        },
       ],
-      cta: 'Request a quote',
-      priceNote: 'Domain, hosting, maintenance and any third-party services are quoted separately.',
-      flowEyebrow: 'The smart part',
-      flowTitle: 'From website enquiry to organised lead, automatically.',
-      flowIntro:
-        'A visitor fills in your form: the details go to your sheet or CRM, and you receive a notification.',
-      flowSteps: [
-        { title: 'Website contact form', text: 'A prospective customer submits an enquiry.' },
-        { title: 'Google Sheets or HubSpot', text: 'The lead is recorded in your chosen tool.' },
-        { title: 'Email notification', text: 'You know when a new enquiry comes in.' },
+      maintTitle: 'Maintenance €29/month',
+      maintText:
+        'One change a month, updated hours and offers, Google profile check. Cancel any time.',
+      smallprint:
+        'Payment: 50% at kickoff, 50% at launch. The website, domain and accounts are in your name; the only external cost is the domain, about €10-20 a year.',
+      weekEyebrow: 'How it works',
+      weekTitle: 'Your week',
+      steps: [
+        { day: '0', title: '30-minute call', text: 'You tell me about your business and what to highlight.' },
+        { day: '1', title: 'Materials', text: 'You send photos, logo and hours, and give me access to your Google profile.' },
+        { day: '2–4', title: 'Build', text: 'I write the copy, build the website and fix your Google profile.' },
+        { day: '5', title: 'Preview', text: 'You review the website and request changes.' },
+        { day: '7', title: 'Launch and training', text: 'We go live and I show you how to use AI in one hour.' },
       ],
-      flowNote: 'Every integration is configured and tested for the project, with privacy requirements considered.',
+      weekNote: 'I also work remotely: the call, review and training can all happen by video.',
     },
     method: {
       eyebrow: 'The approach',
