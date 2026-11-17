@@ -8,11 +8,11 @@ export function Footer() {
     <footer className="footer">
       <div className="container">
         <div className="footer-top">
-          <a href="#top" className="nav-logo">
+          <a href="#main" className="nav-logo">
             bellelli<span>.digital</span>
           </a>
           <p>{t.footer.line}</p>
-          <a href="#top" className="text-link">
+          <a href="#main" className="text-link">
             {t.footer.top} ↑
           </a>
         </div>

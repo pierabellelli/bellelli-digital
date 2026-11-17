@@ -1,14 +1,12 @@
 import { createFileRoute } from '@tanstack/react-router'
 import { Nav } from '../components/Nav'
 import { Hero } from '../components/Hero'
-import { AttivitaDigitale } from '../components/AttivitaDigitale'
-import { AboutMe } from '../components/AboutMe'
-import { Problems } from '../components/Problems'
 import { Services } from '../components/Services'
 import { Products } from '../components/Products'
+import { AboutMe } from '../components/AboutMe'
+import { BlogPreview } from '../components/BlogPreview'
 import { ContactForm } from '../components/ContactForm'
 import { Footer } from '../components/Footer'
-import { Method } from '../components/Method'
 
 export const Route = createFileRoute('/')({
   component: LandingPage,
@@ -20,12 +18,10 @@ export function LandingPage() {
       <Nav />
       <main id="main" tabIndex={-1}>
         <Hero />
-        <AttivitaDigitale />
-        <Problems />
         <Services />
         <Products />
-        <Method />
         <AboutMe />
+        <BlogPreview />
         <ContactForm />
       </main>
       <Footer />

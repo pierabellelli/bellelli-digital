@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Link } from '@tanstack/react-router'
 import { useLanguage } from '../lib/Language'
 import './Nav.css'
 
@@ -12,7 +13,7 @@ export function Nav() {
       </a>
       <header className="nav">
         <div className="container nav-inner">
-          <a href="#top" className="nav-logo" aria-label="Bellelli Digital">
+          <a href="/" className="nav-logo" aria-label="Bellelli Digital">
             bellelli<span>.digital</span>
           </a>
           <nav
@@ -20,17 +21,20 @@ export function Nav() {
             aria-label={t.nav.label}
             className={`nav-links${open ? ' is-open' : ''}`}
           >
-            <a href="#attivita-digitale" onClick={() => setOpen(false)}>
-              {t.nav.digital}
+            <a href="/#servizi" onClick={() => setOpen(false)}>
+              {t.nav.services}
             </a>
-            <a href="#prodotti" onClick={() => setOpen(false)}>
+            <a href="/#prodotti" onClick={() => setOpen(false)}>
               {t.nav.projects}
             </a>
-            <a href="#chi-sono" onClick={() => setOpen(false)}>
+            <Link to="/blog" onClick={() => setOpen(false)}>
+              {t.nav.blog}
+            </Link>
+            <a href="/#chi-sono" onClick={() => setOpen(false)}>
               {t.nav.about}
             </a>
             <a
-              href="#contatti"
+              href="/#contatti"
               className="btn btn-primary nav-cta"
               onClick={() => setOpen(false)}
             >

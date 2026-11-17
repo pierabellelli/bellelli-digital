@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Caffè Dorico Paestum</title>
+<meta name="robots" content="noindex">
+<meta name="description" content="Caffè Dorico, bar pasticceria a Capaccio Paestum: colazioni, pasticceria cilentana e aperitivi a 5 minuti dai Templi. Sito dimostrativo.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"CafeOrCoffeeShop","name":"Caffè Dorico (esempio)","address":{"@type":"PostalAddress","streetAddress":"Indirizzo di esempio","addressLocality":"Capaccio Paestum","addressRegion":"SA","addressCountry":"IT"},"openingHours":["Mo-Su 06:30-21:00"],"servesCuisine":"Bar, pasticceria"}
+</script>
+<style>
+:root {
+  /* Layout: hero in blu Tirreno con colonnato dorico, poi sezioni su pietra chiara, barra azioni fissa su mobile */
+  --sea: #123a5e;
+  --sea-deep: #0c2742;
+  --stone: #f3f0e9;
+  --stone-line: #ddd6c8;
+  --lemon: #f2c230;
+  --ink: #1d2430;
+  --ink-soft: #5b6472;
+  --font-display: "Bricolage Grotesque", "Arial Narrow", system-ui, sans-serif;
+  --font-body: "Figtree", system-ui, -apple-system, "Segoe UI", sans-serif;
+  color-scheme: light;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; }
+body {
+  background: var(--stone);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 17px;
+  line-height: 1.55;
+  padding-bottom: 76px;
+}
+a { color: inherit; }
+a:focus-visible, button:focus-visible { outline: 3px solid var(--lemon); outline-offset: 3px; border-radius: 6px; }
+h1, h2, h3 { font-family: var(--font-display); text-wrap: balance; line-height: 1.05; margin: 0; }
+.wrap { width: min(1080px, 100% - 32px); margin-inline: auto; }
+
+.demo-bar {
+  background: var(--lemon);
+  color: var(--sea-deep);
+  font-size: 13px;
+  font-weight: 600;
+  text-align: center;
+  padding: 7px 16px;
+}
+
+/* HERO */
+.hero {
+  background: var(--sea);
+  color: var(--stone);
+  position: relative;
+  overflow: hidden;
+}
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 0 0;
+  height: 120px;
+  background: repeating-linear-gradient(90deg, rgba(243,240,233,.10) 0 2px, transparent 2px 22px, rgba(243,240,233,.05) 22px 26px, transparent 26px 46px);
+  -webkit-mask-image: linear-gradient(to top, #000, transparent);
+          mask-image: linear-gradient(to top, #000, transparent);
+}
+.nav { display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 18px 0; }
+.logo { font-family: var(--font-display); font-weight: 800; font-size: 22px; letter-spacing: -.01em; text-decoration: none; }
+.logo span { color: var(--lemon); }
+.nav ul { display: flex; gap: 22px; list-style: none; margin: 0; padding: 0; font-size: 15px; font-weight: 500; }
+.nav ul a { text-decoration: none; opacity: .85; }
+.nav ul a:hover { opacity: 1; text-decoration: underline; text-underline-offset: 4px; }
+.hero-body { display: grid; grid-template-columns: 1.25fr 1fr; gap: 40px; align-items: end; padding: 48px 0 150px; position: relative; z-index: 1; }
+.kicker { font-size: 14px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--lemon); margin: 0 0 14px; }
+.hero h1 { font-size: clamp(44px, 7vw, 88px); font-weight: 800; letter-spacing: -.03em; }
+.hero h1 em { font-style: normal; color: var(--lemon); }
+.hero p.lead { font-size: 19px; max-width: 34ch; margin: 22px 0 28px; opacity: .92; }
+.actions { display: flex; flex-wrap: wrap; gap: 12px; }
+.btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 13px 20px; border-radius: 999px;
+  font-weight: 600; font-size: 16px; text-decoration: none;
+  border: 2px solid var(--lemon);
+}
+.btn-main { background: var(--lemon); color: var(--sea-deep); }
+.btn-ghost { color: var(--stone); }
+.btn-ghost:hover { background: rgba(242,194,48,.12); }
+.today {
+  background: var(--sea-deep);
+  border: 1px solid rgba(243,240,233,.18);
+  border-radius: 14px;
+  padding: 22px;
+}
+.today h2 { font-size: 15px; font-family: var(--font-body); font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: var(--lemon); margin-bottom: 12px; }
+.today .open { font-family: var(--font-display); font-size: 34px; font-weight: 700; }
+.today dl { display: grid; grid-template-columns: auto 1fr; gap: 6px 16px; margin: 16px 0 0; font-size: 15px; font-variant-numeric: tabular-nums; }
+.today dt { opacity: .7; }
+.today dd { margin: 0; }
+
+/* SECTIONS */
+section.block { padding: 72px 0; border-bottom: 1px solid var(--stone-line); }
+.sec-head { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; flex-wrap: wrap; margin-bottom: 32px; }
+.sec-head h2 { font-size: clamp(32px, 4.5vw, 48px); font-weight: 700; letter-spacing: -.02em; color: var(--sea); }
+.sec-head p { margin: 0; color: var(--ink-soft); max-width: 46ch; }
+
+.about { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; }
+.about p { max-width: 60ch; margin: 0 0 14px; }
+.photo {
+  aspect-ratio: 4 / 3;
+  border-radius: 14px;
+  background:
+    radial-gradient(circle at 70% 30%, rgba(242,194,48,.55), transparent 45%),
+    linear-gradient(160deg, #1b4a73, #0c2742);
+  display: grid; place-items: end start;
+  padding: 18px;
+  color: var(--stone);
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.menu { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.menu-col {
+  background: #fff;
+  border: 1px solid var(--stone-line);
+  border-top: 5px solid var(--sea);
+  border-radius: 12px;
+  padding: 22px;
+}
+.menu-col h3 { font-size: 24px; color: var(--sea); margin-bottom: 4px; }
+.menu-col .when { font-size: 14px; color: var(--ink-soft); margin: 0 0 14px; }
+.menu-col ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
+.menu-col li { display: flex; justify-content: space-between; gap: 12px; border-bottom: 1px dotted var(--stone-line); padding-bottom: 8px; }
+.menu-col li span:last-child { font-variant-numeric: tabular-nums; font-weight: 600; white-space: nowrap; }
+.menu-note { margin-top: 18px; font-size: 14px; color: var(--ink-soft); }
+
+.visit { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+.card {
+  background: #fff;
+  border: 1px solid var(--stone-line);
+  border-radius: 12px;
+  padding: 24px;
+}
+.card h3 { font-size: 22px; color: var(--sea); margin-bottom: 14px; }
+.hours { width: 100%; border-collapse: collapse; font-variant-numeric: tabular-nums; }
+.hours td { padding: 7px 0; border-bottom: 1px solid var(--stone-line); }
+.hours td:last-child { text-align: right; }
+.hours tr.is-today td { font-weight: 700; color: var(--sea); }
+.map {
+  height: 170px;
+  border-radius: 10px;
+  margin-bottom: 16px;
+  background:
+    linear-gradient(90deg, transparent 48%, #c9d6e3 48% 52%, transparent 52%),
+    linear-gradient(0deg, transparent 58%, #c9d6e3 58% 61%, transparent 61%),
+    linear-gradient(135deg, #e7eef4, #d7e3ec);
+  position: relative;
+}
+.map::after {
+  content: "";
+  position: absolute; left: 50%; top: 58%;
+  width: 22px; height: 22px;
+  background: var(--lemon);
+  border: 4px solid var(--sea);
+  border-radius: 50% 50% 50% 0;
+  transform: translate(-50%, -100%) rotate(-45deg);
+}
+.card p { margin: 0 0 12px; }
+.card .btn { border-color: var(--sea); color: var(--sea); }
+.card .btn:hover { background: rgba(18,58,94,.07); }
+
+.reviews { display: grid; grid-template-columns: 1.2fr 1fr; gap: 24px; align-items: center; }
+.reviews .placeholder {
+  border: 2px dashed var(--stone-line);
+  border-radius: 12px;
+  padding: 24px;
+  color: var(--ink-soft);
+}
+
+footer { padding: 36px 0 24px; font-size: 14px; color: var(--ink-soft); }
+footer .row { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+
+/* BARRA AZIONI MOBILE */
+.action-bar {
+  position: fixed; inset: auto 0 0 0;
+  background: var(--sea-deep);
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  border-top: 1px solid rgba(243,240,233,.2);
+  z-index: 10;
+}
+.action-bar a {
+  color: var(--stone); text-decoration: none; text-align: center;
+  padding: 12px 6px 14px; font-size: 14px; font-weight: 600;
+}
+.action-bar a + a { border-left: 1px solid rgba(243,240,233,.15); }
+.action-bar a small { display: block; font-weight: 400; font-size: 11px; opacity: .7; }
+.action-bar a.wa { background: var(--lemon); color: var(--sea-deep); }
+
+@media (min-width: 861px) {
+  body { padding-bottom: 0; }
+  .action-bar { display: none; }
+}
+@media (max-width: 860px) {
+  .nav ul { display: none; }
+  .hero-body, .about, .visit, .reviews { grid-template-columns: 1fr; }
+  .menu { grid-template-columns: 1fr; }
+  .hero-body { padding: 24px 0 130px; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .hero h1, .hero .lead, .hero .actions { animation: rise .7s ease-out both; }
+  .hero .lead { animation-delay: .08s; }
+  .hero .actions { animation-delay: .16s; }
+  @keyframes rise { from { transform: translateY(14px); } to { transform: none; } }
+}
+</style>
+</head>
+<body>
+
+<div class="demo-bar">Sito dimostrativo · attività immaginaria · <a href="/">realizzato da Bellelli Digital</a></div>
+
+<header class="hero">
+  <div class="wrap">
+    <nav class="nav" aria-label="Menu principale">
+      <a class="logo" href="#top">Caffè <span>Dorico</span></a>
+      <ul>
+        <li><a href="#chi-siamo">Chi siamo</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#vieni-a-trovarci">Orari e indirizzo</a></li>
+      </ul>
+    </nav>
+    <div class="hero-body" id="top">
+      <div>
+        <p class="kicker">Bar pasticceria · Capaccio Paestum</p>
+        <h1>Colazione a cinque minuti dai <em>Templi</em>.</h1>
+        <p class="lead">Caffè, sfogliatelle calde dalle 6:30 e aperitivi con mozzarella di bufala della Piana del Sele.</p>
+        <div class="actions">
+          <a class="btn btn-main" href="https://wa.me/390000000000" rel="noopener">Ordina su WhatsApp</a>
+          <a class="btn btn-ghost" href="#menu">Guarda il menu</a>
+        </div>
+      </div>
+      <aside class="today" aria-label="Orari di oggi">
+        <h2>Oggi</h2>
+        <div class="open" id="open-status">Aperto fino alle 21:00</div>
+        <dl>
+          <dt>Telefono</dt><dd>0828 000 000</dd>
+          <dt>WhatsApp</dt><dd>+39 000 000 0000</dd>
+          <dt>Dove</dt><dd>Indirizzo di esempio, Capaccio Paestum</dd>
+        </dl>
+      </aside>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="block" id="chi-siamo">
+    <div class="wrap about">
+      <div>
+        <div class="sec-head"><h2>Chi siamo</h2></div>
+        <p>Dal 1998 la famiglia Esposito apre il bancone prima dell'alba: i cornetti escono dal forno alle 6, le sfogliatelle alle 7. Chi va ai Templi passa da noi per un caffè, chi torna dal mare per una granita al limone.</p>
+        <p>Usiamo latte e ricotta di bufala della Piana del Sele, carciofi di Paestum IGP in primavera e limoni del Cilento.</p>
+        <p class="menu-note">Testi di esempio: in un sito reale li scriviamo con il titolare durante la chiamata iniziale.</p>
+      </div>
+      <div class="photo" role="img" aria-label="Spazio per la foto del bancone">Qui la foto del bancone, scattata dal titolare</div>
+    </div>
+  </section>
+
+  <section class="block" id="menu">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>Il menu</h2>
+        <p>Prezzi al banco. Al tavolo si aggiunge il servizio.</p>
+      </div>
+      <div class="menu">
+        <div class="menu-col">
+          <h3>Colazione</h3>
+          <p class="when">dalle 6:30 alle 11:30</p>
+          <ul>
+            <li><span>Caffè espresso</span><span>1,20 €</span></li>
+            <li><span>Cappuccino</span><span>1,60 €</span></li>
+            <li><span>Cornetto alla crema</span><span>1,50 €</span></li>
+            <li><span>Sfogliatella riccia</span><span>2,00 €</span></li>
+            <li><span>Treccia con ricotta di bufala</span><span>2,50 €</span></li>
+          </ul>
+        </div>
+        <div class="menu-col">
+          <h3>Pasticceria</h3>
+          <p class="when">tutto il giorno, anche da asporto</p>
+          <ul>
+            <li><span>Delizia al limone</span><span>3,00 €</span></li>
+            <li><span>Babà</span><span>2,50 €</span></li>
+            <li><span>Pastiera (fetta)</span><span>3,00 €</span></li>
+            <li><span>Granita al limone del Cilento</span><span>3,50 €</span></li>
+            <li><span>Torte su ordinazione</span><span>da 25 €/kg</span></li>
+          </ul>
+        </div>
+        <div class="menu-col">
+          <h3>Aperitivo</h3>
+          <p class="when">dalle 18:00 alle 21:00</p>
+          <ul>
+            <li><span>Spritz con stuzzichini</span><span>6,00 €</span></li>
+            <li><span>Calice di Fiano del Cilento</span><span>5,00 €</span></li>
+            <li><span>Tagliere con mozzarella di bufala</span><span>12,00 €</span></li>
+            <li><span>Analcolico della casa</span><span>4,50 €</span></li>
+          </ul>
+        </div>
+      </div>
+      <p class="menu-note">Menu e prezzi di esempio. Il titolare può chiedere di aggiornarli con un messaggio.</p>
+    </div>
+  </section>
+
+  <section class="block" id="vieni-a-trovarci">
+    <div class="wrap">
+      <div class="sec-head"><h2>Vieni a trovarci</h2></div>
+      <div class="visit">
+        <div class="card">
+          <h3>Orari</h3>
+          <table class="hours" aria-label="Orari settimanali">
+            <tbody id="hours-body">
+              <tr data-day="1"><td>Lunedì</td><td>6:30 – 21:00</td></tr>
+              <tr data-day="2"><td>Martedì</td><td>6:30 – 21:00</td></tr>
+              <tr data-day="3"><td>Mercoledì</td><td>6:30 – 21:00</td></tr>
+              <tr data-day="4"><td>Giovedì</td><td>6:30 – 21:00</td></tr>
+              <tr data-day="5"><td>Venerdì</td><td>6:30 – 23:00</td></tr>
+              <tr data-day="6"><td>Sabato</td><td>6:30 – 23:00</td></tr>
+              <tr data-day="0"><td>Domenica</td><td>7:00 – 21:00</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="card">
+          <h3>Dove siamo</h3>
+          <div class="map" role="img" aria-label="Mappa di esempio"></div>
+          <p>Indirizzo di esempio, 84047 Capaccio Paestum (SA). Parcheggio gratuito di fronte.</p>
+          <a class="btn" href="https://www.google.com/maps/search/?api=1&query=Paestum" rel="noopener">Apri in Google Maps</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="recensioni">
+    <div class="wrap reviews">
+      <div>
+        <div class="sec-head"><h2>Le vostre recensioni</h2></div>
+        <p>Le recensioni lasciate su Google sono il primo motivo per cui un turista sceglie un bar invece di un altro. Qui il sito rimanda alla scheda Google del locale, dove il titolare risponde a ognuna con i modelli preparati insieme.</p>
+      </div>
+      <div class="placeholder">
+        Spazio per le recensioni reali della scheda Google del locale, con il pulsante "Lascia una recensione".
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap row">
+    <span>© Caffè Dorico · attività immaginaria · P. IVA di esempio</span>
+    <span><a href="#top">Privacy e cookie</a> · Sito realizzato da <strong>Bellelli Digital</strong></span>
+  </div>
+</footer>
+
+<nav class="action-bar" aria-label="Contatti rapidi">
+  <a href="tel:0828000000">Chiama<small>0828 000 000</small></a>
+  <a class="wa" href="https://wa.me/390000000000" rel="noopener">WhatsApp<small>scrivici</small></a>
+  <a href="https://www.google.com/maps/search/?api=1&query=Paestum" rel="noopener">Indicazioni<small>Google Maps</small></a>
+</nav>
+
+<script>
+(function () {
+  var now = new Date();
+  var day = now.getDay();
+  var row = document.querySelector('#hours-body tr[data-day="' + day + '"]');
+  if (!row) return;
+  row.classList.add('is-today');
+  var range = row.children[1].textContent.split('–');
+  function toMin(s) { var p = s.trim().split(':'); return Number(p[0]) * 60 + Number(p[1]); }
+  var open = toMin(range[0]), close = toMin(range[1]);
+  var mins = now.getHours() * 60 + now.getMinutes();
+  var status = document.getElementById('open-status');
+  if (mins >= open && mins < close) {
+    status.textContent = 'Aperto fino alle ' + range[1].trim();
+  } else if (mins < open) {
+    status.textContent = 'Apre alle ' + range[0].trim();
+  } else {
+    status.textContent = 'Chiuso, a domani';
+  }
+})();
+</script>
+</body>
+</html>
