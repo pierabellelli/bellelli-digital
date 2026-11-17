@@ -1,7 +1,7 @@
 import { createFileRoute } from '@tanstack/react-router'
 import { Nav } from '../components/Nav'
 import { Hero } from '../components/Hero'
-import { SmartWebsite } from '../components/SmartWebsite'
+import { AttivitaDigitale } from '../components/AttivitaDigitale'
 import { AboutMe } from '../components/AboutMe'
 import { Problems } from '../components/Problems'
 import { Services } from '../components/Services'
@@ -20,7 +20,7 @@ export function LandingPage() {
       <Nav />
       <main id="main" tabIndex={-1}>
         <Hero />
-        <SmartWebsite />
+        <AttivitaDigitale />
         <Problems />
         <Services />
         <Products />
