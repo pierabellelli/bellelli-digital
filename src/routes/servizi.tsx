@@ -97,7 +97,7 @@ function Servizi() {
           <h2 className="split-title">Per chi è.</h2>
           <div className="split-body">
             <p className="big">
-              Bar, ristoranti, negozi, artigiani, estetiste, palestre, studi e aziende
+              Bar, ristoranti, negozi, artigiani, estetiste, palestre, professionisti e aziende
               agricole: chi lavora bene di persona ma online è poco visibile.
             </p>
             <p>
