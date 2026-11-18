@@ -1,6 +1,6 @@
 // Shared content for the whole site (Italian only).
 
-export const CONTACT_EMAIL = 'ciao@bellelli-digital.it'
+export const CONTACT_EMAIL = 'piera.bellelli@gmail.com'
 export const WHATSAPP_NUMBER = '+39 329 196 9548'
 export const WHATSAPP_URL =
   'https://wa.me/393291969548?text=' +
