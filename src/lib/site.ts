@@ -19,7 +19,7 @@ export const packages = [
       'Sito di una pagina, pensato per il telefono',
       'Scheda Google sistemata: orari, foto, descrizione',
       'Pulsanti Chiama e WhatsApp',
-      'Un giro di modifiche',
+      'Fino a 2 giri di modifiche',
     ],
   },
   {
