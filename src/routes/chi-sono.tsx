@@ -36,7 +36,7 @@ function ChiSono() {
             Ciao, sono <em>Piera.</em>
           </>
         }
-        intro="Lavoro con la tecnologia da anni. Vivo nel Cilento da sempre. Bellelli Digital è il punto in cui le due cose si incontrano."
+        intro="Lavoro con la tecnologia da molti anni e mi piace portare la mia conoscenza al servizio delle piccole aziende e dei freelance."
       />
 
       <section className="section section-top-0">
@@ -57,7 +57,7 @@ function ChiSono() {
             </p>
             <p>
               Con Bellelli Digital porto questo metodo alle attività della mia zona. Bar,
-              negozi, artigiani e studi che lavorano bene di persona e meritano di essere
+              negozi, artigiani e professionisti che lavorano bene di persona e meritano di essere
               trovati anche online.
             </p>
           </div>

@@ -18,14 +18,14 @@ export const Route = createFileRoute("/")({
 function Home() {
   useSeo(
     "Bellelli Digital — Sito, Google e AI per attività locali in 7 giorni",
-    "Sito, scheda Google e AI per bar, negozi, artigiani e studi: online in 7 giorni a prezzo fisso. Piera Bellelli, Capaccio Paestum.",
+    "Sito, scheda Google e AI per bar, negozi, artigiani e professionisti: online in 7 giorni a prezzo fisso. Piera Bellelli, Capaccio Paestum.",
     "/",
   );
   return (
     <Layout>
       <PageHero
         big
-        eyebrow="Per bar, negozi, artigiani e studi · Capaccio Paestum"
+        eyebrow="Per bar, negozi, artigiani e professionisti · Capaccio Paestum"
         title={
           <>
             Online in 7 giorni. <em>Prezzo fisso.</em>

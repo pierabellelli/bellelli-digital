@@ -93,7 +93,7 @@ function AttivitaDigitale() {
             </p>
             <p>
               È il modello da cui parto per bar e ristoranti. Per negozi, artigiani e
-              studi uso modelli simili, adattati al tuo lavoro.
+              professionisti uso modelli simili, adattati al tuo lavoro.
             </p>
             <a href={EXAMPLE_URL} className="text-link">
               Apri il sito di esempio <span aria-hidden="true">↗</span>
