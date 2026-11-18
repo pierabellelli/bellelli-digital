@@ -1,5 +1,0 @@
-# Netlify site for attivita.bellelli-digital.com
-# In Netlify: Base directory = landing/attivita, no build command.
-[build]
-  publish = "."
-  command = ""

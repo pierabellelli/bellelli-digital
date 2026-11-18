@@ -273,3 +273,25 @@
   clip: rect(0 0 0 0);
   white-space: nowrap;
 }
+.container.blog-body {
+  padding-bottom: 96px;
+}
+.blog-gap {
+  margin-top: 24px;
+}
+.page-hero .blog-search {
+  margin-top: 0;
+}
+.article-excerpt {
+  font-size: 19px;
+  line-height: 1.6;
+  margin-top: 14px;
+}
+.article h1 {
+  font-weight: 700;
+  letter-spacing: -0.035em;
+}
+.container.blog-page.article {
+  padding-top: 64px;
+  padding-bottom: 96px;
+}

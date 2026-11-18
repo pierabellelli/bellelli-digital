@@ -1,12 +1,9 @@
-import { useEffect } from 'react'
 import { createFileRoute, Link, notFound } from '@tanstack/react-router'
-import { Nav } from '../components/Nav'
-import { Footer } from '../components/Footer'
-import { ClusterGrid, PostRows } from '../components/BlogPreview'
-import { useLanguage } from '../lib/Language'
+import { Layout, PageHero } from '../components/Blocks'
+import { ClusterGrid, PostRows } from '../components/BlogParts'
 import { sortedPosts } from '../content/posts'
 import { getCategory } from '../content/categories'
-import '../components/Blog.css'
+import { useSeo } from '../lib/useSeo'
 
 export const Route = createFileRoute('/blog/categoria/$cat')({
   loader: ({ params }) => {
@@ -19,54 +16,36 @@ export const Route = createFileRoute('/blog/categoria/$cat')({
 
 function CategoryPage() {
   const category = Route.useLoaderData()
-  const { t, language } = useLanguage()
-  const b = t.blog
   const items = sortedPosts().filter((p) => p.category === category.slug)
-
-  useEffect(() => {
-    // Runs after the language provider has set the home page title.
-    const id = window.setTimeout(() => {
-      document.title = `${category.name} — Blog Bellelli Digital`
-      document
-        .querySelector('meta[name="description"]')
-        ?.setAttribute('content', category.description)
-      document
-        .querySelector('link[rel="canonical"]')
-        ?.setAttribute(
-          'href',
-          `https://bellelli-digital.com/blog/categoria/${category.slug}`,
-        )
-    }, 0)
-    return () => window.clearTimeout(id)
-  }, [category, language])
+  useSeo(`${category.name} — Blog`, category.description, `/blog/categoria/${category.slug}`)
 
   return (
-    <>
-      <Nav />
-      <main id="main" tabIndex={-1} className="blog-page">
-        <div className="container">
-          <header className="blog-hero">
-            <Link to="/blog" className="text-link article-back">
-              <span aria-hidden="true">←</span> {b.back}
-            </Link>
-            <span className="eyebrow">{b.eyebrow}</span>
-            <h1>{category.name}</h1>
-            <p>{category.description}</p>
-          </header>
-          <section className="blog-block">
-            {items.length > 0 ? (
-              <PostRows items={items} />
-            ) : (
-              <p className="blog-empty">{b.soon}.</p>
-            )}
-          </section>
-          <section className="blog-block">
-            <h2>{b.clusterAll}</h2>
+    <Layout>
+      <PageHero eyebrow="Blog · Argomento" title={category.name} intro={category.description}>
+        <Link to="/blog" className="text-link">
+          <span aria-hidden="true">←</span> Tutti gli articoli
+        </Link>
+      </PageHero>
+      <div className="container blog-body">
+        <section>
+          <div className="rows-head">
+            <h2>Articoli</h2>
+          </div>
+          {items.length > 0 ? (
+            <PostRows items={items} />
+          ) : (
+            <p className="blog-empty">Primi articoli in arrivo.</p>
+          )}
+        </section>
+        <section className="blog-block">
+          <div className="rows-head">
+            <h2>Altri argomenti</h2>
+          </div>
+          <div className="blog-gap">
             <ClusterGrid current={category.slug} />
-          </section>
-        </div>
-      </main>
-      <Footer />
-    </>
+          </div>
+        </section>
+      </div>
+    </Layout>
   )
 }

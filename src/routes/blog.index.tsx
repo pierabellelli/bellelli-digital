@@ -1,33 +1,23 @@
 import { useEffect, useRef, useState } from 'react'
 import { createFileRoute } from '@tanstack/react-router'
-import { Nav } from '../components/Nav'
-import { Footer } from '../components/Footer'
-import { ClusterGrid, PostRows } from '../components/BlogPreview'
-import { useLanguage } from '../lib/Language'
+import { Layout, PageHero } from '../components/Blocks'
+import { ClusterGrid, PostRows } from '../components/BlogParts'
 import { searchPosts } from '../content/posts'
-import '../components/Blog.css'
+import { useSeo } from '../lib/useSeo'
 
 export const Route = createFileRoute('/blog/')({
   component: BlogIndex,
 })
 
 function BlogIndex() {
-  const { t, language } = useLanguage()
-  const b = t.blog
   const [query, setQuery] = useState('')
   const inputRef = useRef<HTMLInputElement>(null)
   const results = searchPosts(query)
-
-  useEffect(() => {
-    // Runs after the language provider has set the home page title.
-    const id = window.setTimeout(() => {
-      document.title = `${b.eyebrow} — Bellelli Digital`
-      document
-        .querySelector('link[rel="canonical"]')
-        ?.setAttribute('href', 'https://bellelli-digital.com/blog')
-    }, 0)
-    return () => window.clearTimeout(id)
-  }, [b.eyebrow, language])
+  useSeo(
+    'Blog',
+    'Articoli pratici su siti, Google, AI e automazioni per piccole attività e professionisti.',
+    '/blog',
+  )
 
   useEffect(() => {
     // Cmd+K / Ctrl+K jumps to the search field.
@@ -42,53 +32,59 @@ function BlogIndex() {
   }, [])
 
   return (
-    <>
-      <Nav />
-      <main id="main" tabIndex={-1} className="blog-page">
-        <div className="container">
-          <header className="blog-hero">
-            <span className="eyebrow">{b.eyebrow}</span>
-            <h1>{b.heroTitle}</h1>
-            <p>{b.heroIntro}</p>
-            {b.note && <p className="blog-note">{b.note}</p>}
-            <label className="blog-search" htmlFor="blog-search">
-              <span className="visually-hidden">{b.searchLabel}</span>
-              <input
-                ref={inputRef}
-                id="blog-search"
-                type="search"
-                placeholder={b.search}
-                value={query}
-                onChange={(e) => setQuery(e.target.value)}
-                autoComplete="off"
-              />
-              <kbd aria-hidden="true">⌘K</kbd>
-            </label>
-          </header>
+    <Layout>
+      <PageHero
+        eyebrow="Blog"
+        title={
+          <>
+            Digitale pratico. <em>Niente formule magiche.</em>
+          </>
+        }
+        intro="Articoli per titolari, freelance e professionisti che vogliono usare meglio siti, Google, AI e automazioni, senza diventare tecnici."
+      >
+        <label className="blog-search" htmlFor="blog-search">
+          <span className="visually-hidden">Cerca nel blog</span>
+          <input
+            ref={inputRef}
+            id="blog-search"
+            type="search"
+            placeholder="Cerca tra gli articoli…"
+            value={query}
+            onChange={(e) => setQuery(e.target.value)}
+            autoComplete="off"
+          />
+          <kbd aria-hidden="true">⌘K</kbd>
+        </label>
+      </PageHero>
 
-          {query.trim() ? (
-            <section className="blog-block" aria-live="polite">
-              {results.length > 0 ? (
-                <PostRows items={results} />
-              ) : (
-                <p className="blog-empty">{b.noResults}</p>
-              )}
-            </section>
-          ) : (
-            <>
-              <section className="blog-block">
-                <h2>{b.clustersTitle}</h2>
+      <div className="container blog-body">
+        {query.trim() ? (
+          <section aria-live="polite">
+            {results.length > 0 ? (
+              <PostRows items={results} />
+            ) : (
+              <p className="blog-empty">Nessun articolo trovato. Prova con un’altra parola.</p>
+            )}
+          </section>
+        ) : (
+          <>
+            <section>
+              <div className="rows-head">
+                <h2>Esplora per argomento</h2>
+              </div>
+              <div className="blog-gap">
                 <ClusterGrid />
-              </section>
-              <section className="blog-block">
-                <h2>{b.allTitle}</h2>
-                <PostRows items={results} />
-              </section>
-            </>
-          )}
-        </div>
-      </main>
-      <Footer />
-    </>
+              </div>
+            </section>
+            <section className="blog-block">
+              <div className="rows-head">
+                <h2>Tutti gli articoli</h2>
+              </div>
+              <PostRows items={results} />
+            </section>
+          </>
+        )}
+      </div>
+    </Layout>
   )
 }

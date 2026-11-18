@@ -1,13 +1,8 @@
 import { Link } from '@tanstack/react-router'
-import { CONTACT_EMAIL } from '../lib/constants'
-import { useLanguage } from '../lib/Language'
+import { CONTACT_EMAIL, WHATSAPP_NUMBER, WHATSAPP_URL } from '../lib/site'
 import './Footer.css'
 
-const OFFER_URL = 'https://attivita.bellelli-digital.com'
-
 export function Footer() {
-  const { t } = useLanguage()
-  const f = t.footer
   return (
     <footer className="footer">
       <div className="container">
@@ -16,34 +11,34 @@ export function Footer() {
             <Link to="/" className="nav-logo">
               bellelli<span>.digital</span>
             </Link>
-            <p>{f.line}</p>
+            <p>Sito, Google e AI per le attività locali. Capaccio Paestum (SA).</p>
           </div>
-          <nav className="footer-cols" aria-label="Footer">
+          <nav className="footer-cols" aria-label="Link del sito">
             <div>
-              <h2>{f.explore}</h2>
-              <a href="/#servizi">{t.nav.services}</a>
-              <a href="/#prodotti">{t.nav.projects}</a>
-              <Link to="/blog">{t.nav.blog}</Link>
-              <a href="/#chi-sono">{t.nav.about}</a>
+              <h2>Esplora</h2>
+              <Link to="/attivita-digitale">Attività Digitale</Link>
+              <Link to="/servizi">Servizi</Link>
+              <Link to="/chi-sono">Chi sono</Link>
+              <Link to="/blog">Blog</Link>
             </div>
             <div>
-              <h2>{f.start}</h2>
-              <a href={OFFER_URL}>{f.offer} ↗</a>
-              <a href="/#contatti">{f.talk}</a>
+              <h2>Inizia</h2>
+              <Link to="/parliamone">Parliamone</Link>
+              <a href="/esempi/caffe-dorico/">Sito di esempio</a>
             </div>
             <div>
-              <h2>{f.contact}</h2>
+              <h2>Contatti</h2>
+              <a href={WHATSAPP_URL} rel="noopener">
+                WhatsApp {WHATSAPP_NUMBER}
+              </a>
               <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>
-              <span>{f.location}</span>
             </div>
           </nav>
         </div>
         <div className="footer-inner">
-          <span>
-            © {new Date().getFullYear()} Bellelli Digital · Piera Bellelli
-          </span>
+          <span>© {new Date().getFullYear()} Bellelli Digital · Piera Bellelli</span>
           <a href="#main" className="text-link">
-            {f.top} ↑
+            Torna su ↑
           </a>
         </div>
       </div>
