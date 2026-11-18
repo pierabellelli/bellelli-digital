@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="Packaging per biscotti artigianali">
+<rect width="800" height="600" fill="#efe6da"/>
+<ellipse cx="400" cy="520" rx="230" ry="24" fill="#00000018"/>
+<path d="M200 230 l200 -80 l200 80 v240 l-200 60 l-200 -60 z" fill="#c8693a"/>
+<path d="M200 230 l200 60 l200 -60" fill="none" stroke="#a9532b" stroke-width="3"/>
+<path d="M400 290 v240" stroke="#a9532b" stroke-width="3"/>
+<path d="M200 230 l200 60 v240 l-200 -60 z" fill="#d97b4a"/>
+<g transform="translate(300 380) skewY(17)">
+<circle cx="0" cy="0" r="46" fill="#f6efe2"/>
+<text x="0" y="-4" text-anchor="middle" font-family="Georgia, serif" font-size="16" fill="#7a3a1d">Biscotti</text>
+<text x="0" y="16" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#7a3a1d" letter-spacing="2">DI NONNA</text>
+</g>
+<g transform="translate(500 380) skewY(-17)" fill="#f6efe2" opacity=".9">
+<circle cx="-40" cy="-20" r="10"/><circle cx="0" cy="-30" r="10"/><circle cx="40" cy="-20" r="10"/><circle cx="-20" cy="20" r="10"/><circle cx="20" cy="20" r="10"/>
+</g>
+</svg>

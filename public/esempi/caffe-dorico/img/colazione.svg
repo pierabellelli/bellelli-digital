@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 320" role="img" aria-label="Espresso e cornetto">
+<rect width="600" height="320" fill="#e6edf4"/>
+<circle cx="470" cy="70" r="120" fill="#f2c230" opacity=".25"/>
+<rect y="230" width="600" height="90" fill="#123a5e"/>
+<ellipse cx="220" cy="240" rx="110" ry="22" fill="#ffffff"/>
+<path d="M160 140 h120 l-10 88 a50 14 0 0 1 -100 0 z" fill="#ffffff"/>
+<path d="M280 158 c 36 -4 40 40 2 48" stroke="#ffffff" stroke-width="12" fill="none" stroke-linecap="round"/>
+<ellipse cx="220" cy="140" rx="60" ry="14" fill="#5a3418"/>
+<ellipse cx="220" cy="140" rx="52" ry="10" fill="#8a5428"/>
+<path d="M330 236 c 16 -54 156 -54 172 0 c -26 -8 -50 -10 -86 -10 s -60 2 -86 10 z" fill="#d98c3a"/>
+<path d="M372 205 q 8 22 0 32 M404 196 q 9 26 0 40 M436 196 q -9 26 0 40 M468 205 q -8 22 0 32" stroke="#9a5419" stroke-width="4" fill="none" stroke-linecap="round"/>
+</svg>

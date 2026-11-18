@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 320" role="img" aria-label="Spritz e tagliere con mozzarella">
+<rect width="600" height="320" fill="#f6dfcf"/>
+<circle cx="120" cy="80" r="110" fill="#f2c230" opacity=".35"/>
+<rect y="236" width="600" height="84" fill="#123a5e"/>
+<path d="M170 110 h90 l-8 120 h-74 z" fill="#ffffff" opacity=".55"/>
+<path d="M176 140 h78 l-6 86 h-66 z" fill="#ef7a22"/>
+<rect x="190" y="150" width="22" height="22" fill="#ffffff" opacity=".6" transform="rotate(12 201 161)"/>
+<circle cx="232" cy="128" r="16" fill="#f08a2c"/><circle cx="232" cy="128" r="10" fill="#f8b46b"/>
+<path d="M300 236 h220 l-10 -16 h-200 z" fill="#a0683a"/>
+<circle cx="360" cy="206" r="22" fill="#ffffff"/><circle cx="410" cy="210" r="18" fill="#ffffff"/>
+<path d="M440 214 c 10 -20 40 -20 50 0 z" fill="#c43b2a"/>
+<path d="M330 216 c 6 -10 22 -10 26 0 z M460 200 c 4 -8 16 -8 20 0 z" fill="#5d7a2f"/>
+</svg>

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 320" role="img" aria-label="Babà e delizia al limone">
+<rect width="600" height="320" fill="#fbf3dc"/>
+<rect y="236" width="600" height="84" fill="#123a5e"/>
+<ellipse cx="300" cy="244" rx="230" ry="26" fill="#ffffff"/>
+<path d="M170 236 c -6 -70 6 -110 50 -118 c 44 8 56 48 50 118 z" fill="#c98a3c"/>
+<path d="M176 160 c 30 -16 58 -16 88 0" stroke="#e8b46a" stroke-width="6" fill="none"/>
+<ellipse cx="220" cy="120" rx="34" ry="12" fill="#e0a95c"/>
+<path d="M330 236 a70 70 0 0 1 140 0 z" fill="#f2c230"/>
+<path d="M330 236 a70 70 0 0 1 140 0" stroke="#fffaf0" stroke-width="10" fill="none" opacity=".7"/>
+<path d="M392 160 c 10 -18 30 -20 40 -6 c -14 8 -28 10 -40 6 z" fill="#5d8c3a"/>
+<circle cx="400" cy="170" r="8" fill="#fff6c9"/>
+</svg>

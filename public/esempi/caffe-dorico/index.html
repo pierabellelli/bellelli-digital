@@ -122,12 +122,15 @@ section.block { padding: 72px 0; border-bottom: 1px solid var(--stone-line); }
 
 .menu { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
 .menu-col {
+  overflow: hidden;
   background: #fff;
   border: 1px solid var(--stone-line);
   border-top: 5px solid var(--sea);
   border-radius: 12px;
   padding: 22px;
 }
+.menu-img { display: block; width: calc(100% + 44px); max-width: none; height: auto; margin: -22px -22px 16px; border-radius: 8px 8px 0 0; }
+.photo-img { display: block; width: 100%; height: auto; border-radius: 14px; }
 .menu-col h3 { font-size: 24px; color: var(--sea); margin-bottom: 4px; }
 .menu-col .when { font-size: 14px; color: var(--ink-soft); margin: 0 0 14px; }
 .menu-col ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
@@ -259,9 +262,9 @@ footer .row { display: flex; justify-content: space-between; gap: 16px; flex-wra
         <div class="sec-head"><h2>Chi siamo</h2></div>
         <p>Dal 1998 la famiglia Esposito apre il bancone prima dell'alba: i cornetti escono dal forno alle 6, le sfogliatelle alle 7. Chi va ai Templi passa da noi per un caffè, chi torna dal mare per una granita al limone.</p>
         <p>Usiamo latte e ricotta di bufala della Piana del Sele, carciofi di Paestum IGP in primavera e limoni del Cilento.</p>
-        <p class="menu-note">Testi di esempio: in un sito reale li scriviamo con il titolare durante la chiamata iniziale.</p>
+        <p class="menu-note">Testi e illustrazioni di esempio: nel sito reale usiamo le foto del locale e i testi scritti con il titolare.</p>
       </div>
-      <div class="photo" role="img" aria-label="Spazio per la foto del bancone">Qui la foto del bancone, scattata dal titolare</div>
+      <img class="photo-img" src="img/bancone.svg" alt="Cappuccino, cornetto e sfogliatella sul bancone del bar" width="800" height="600">
     </div>
   </section>
 
@@ -273,6 +276,7 @@ footer .row { display: flex; justify-content: space-between; gap: 16px; flex-wra
       </div>
       <div class="menu">
         <div class="menu-col">
+          <img class="menu-img" src="img/colazione.svg" alt="Espresso e cornetto" width="600" height="320" loading="lazy">
           <h3>Colazione</h3>
           <p class="when">dalle 6:30 alle 11:30</p>
           <ul>
@@ -284,6 +288,7 @@ footer .row { display: flex; justify-content: space-between; gap: 16px; flex-wra
           </ul>
         </div>
         <div class="menu-col">
+          <img class="menu-img" src="img/pasticceria.svg" alt="Babà e delizia al limone" width="600" height="320" loading="lazy">
           <h3>Pasticceria</h3>
           <p class="when">tutto il giorno, anche da asporto</p>
           <ul>
@@ -295,6 +300,7 @@ footer .row { display: flex; justify-content: space-between; gap: 16px; flex-wra
           </ul>
         </div>
         <div class="menu-col">
+          <img class="menu-img" src="img/aperitivo.svg" alt="Spritz e tagliere con mozzarella" width="600" height="320" loading="lazy">
           <h3>Aperitivo</h3>
           <p class="when">dalle 18:00 alle 21:00</p>
           <ul>

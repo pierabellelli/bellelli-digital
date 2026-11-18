@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="Menu stampato per una trattoria">
+<rect width="800" height="600" fill="#f4e9e1"/>
+<rect x="150" y="70" width="250" height="460" fill="#ffffff" transform="rotate(-3 275 300)"/>
+<rect x="400" y="70" width="250" height="460" fill="#fbf8f3" transform="rotate(3 525 300)"/>
+<g transform="rotate(-3 275 300)" font-family="Georgia, serif" fill="#7a2e1f">
+<text x="275" y="130" text-anchor="middle" font-size="28">Trattoria</text>
+<text x="275" y="162" text-anchor="middle" font-size="28" font-style="italic">da Nina</text>
+<line x1="215" y1="185" x2="335" y2="185" stroke="#7a2e1f"/>
+<g font-family="Arial, sans-serif" font-size="12" fill="#3b2a24">
+<text x="180" y="230">Antipasti</text><rect x="180" y="242" width="150" height="5" rx="2" fill="#3b2a24" opacity=".25"/><rect x="180" y="256" width="120" height="5" rx="2" fill="#3b2a24" opacity=".25"/>
+<text x="180" y="300">Primi</text><rect x="180" y="312" width="160" height="5" rx="2" fill="#3b2a24" opacity=".25"/><rect x="180" y="326" width="130" height="5" rx="2" fill="#3b2a24" opacity=".25"/><rect x="180" y="340" width="140" height="5" rx="2" fill="#3b2a24" opacity=".25"/>
+<text x="180" y="384">Secondi</text><rect x="180" y="396" width="150" height="5" rx="2" fill="#3b2a24" opacity=".25"/><rect x="180" y="410" width="110" height="5" rx="2" fill="#3b2a24" opacity=".25"/>
+</g></g>
+<g transform="rotate(3 525 300)">
+<circle cx="525" cy="250" r="70" fill="#7a2e1f"/>
+<path d="M490 262 c 10 -30 60 -30 70 0" stroke="#f4e9e1" stroke-width="6" fill="none" stroke-linecap="round"/>
+<text x="525" y="380" text-anchor="middle" font-family="Georgia, serif" font-size="20" fill="#7a2e1f" font-style="italic">cucina di casa</text>
+</g>
+</svg>

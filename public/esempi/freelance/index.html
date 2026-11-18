@@ -4,208 +4,198 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex">
-<title>Elena Marino Fotografa</title>
-<meta name="description" content="Elena Marino, fotografa di matrimoni, eventi e ritratti nel Cilento. Sito dimostrativo.">
+<title>Elena Marino Graphic Designer</title>
+<meta name="description" content="Elena Marino, graphic designer nel Cilento: loghi, etichette, menu e social per piccole attività. Sito dimostrativo.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Karla:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
 :root {
-  /* Layout: nome grande su fondo sabbia, griglia di lavori, pacchetti con prezzi "da", modulo preventivo */
-  --sand: #efe9e1;
-  --paper: #f8f5f0;
-  --ink: #1b1a19;
-  --ink-soft: #5d5952;
-  --line: #d9d0c4;
-  --sea: #2f5d73;
-  --font-display: "Fraunces", Georgia, serif;
-  --font-body: "Karla", system-ui, sans-serif;
+  /* Layout: bianco, nero e un solo accento; tanto spazio, griglia di progetti, servizi in righe */
+  --white: #ffffff;
+  --ink: #111111;
+  --ink-soft: #6b6b6b;
+  --line: #e7e7e7;
+  --tint: #f5f5f3;
+  --accent: #ff5a36;
+  --font: "Manrope", system-ui, -apple-system, "Segoe UI", sans-serif;
   color-scheme: light;
 }
 * { box-sizing: border-box; }
 html, body { margin: 0; }
-body { background: var(--paper); color: var(--ink); font-family: var(--font-body); font-size: 17px; line-height: 1.6; padding-bottom: 72px; }
+body { background: var(--white); color: var(--ink); font-family: var(--font); font-size: 17px; line-height: 1.6; padding-bottom: 64px; }
 a { color: inherit; }
-a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible { outline: 3px solid var(--sea); outline-offset: 3px; }
-h1, h2, h3 { font-family: var(--font-display); font-weight: 400; line-height: 1.05; margin: 0; text-wrap: balance; }
-.wrap { width: min(1100px, 100% - 32px); margin-inline: auto; }
-.demo-bar { background: var(--ink); color: var(--paper); font-size: 13px; font-weight: 500; text-align: center; padding: 7px 16px; }
-.demo-bar a { color: #fff; }
+a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+h1, h2, h3 { margin: 0; line-height: 1.05; letter-spacing: -0.03em; text-wrap: balance; }
+img { display: block; max-width: 100%; height: auto; }
+figure { margin: 0; }
+.wrap { width: min(1120px, 100% - 40px); margin-inline: auto; }
+.demo-bar { background: var(--tint); color: var(--ink-soft); font-size: 12px; text-align: center; padding: 7px 16px; }
 
-.top { display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 22px 0; }
-.logo { font-family: var(--font-display); font-size: 22px; text-decoration: none; }
-.top nav { display: flex; gap: 24px; font-size: 15px; }
-.top nav a { text-decoration: none; }
-.top nav a:hover { text-decoration: underline; text-underline-offset: 4px; }
+.top { display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 28px 0; }
+.logo { font-weight: 800; font-size: 17px; text-decoration: none; letter-spacing: -0.02em; }
+.logo span { color: var(--accent); }
+.top nav { display: flex; gap: 28px; font-size: 15px; font-weight: 500; }
+.top nav a { text-decoration: none; color: var(--ink-soft); }
+.top nav a:hover { color: var(--ink); }
 
-.hero { padding: 48px 0 64px; display: grid; grid-template-columns: 1.2fr 1fr; gap: 40px; align-items: end; }
-.hero h1 { font-size: clamp(52px, 8vw, 104px); letter-spacing: -0.02em; }
-.hero h1 em { color: var(--sea); }
-.hero p { font-size: 19px; color: var(--ink-soft); max-width: 36ch; margin: 22px 0 26px; }
-.btns { display: flex; flex-wrap: wrap; gap: 12px; }
-.btn { display: inline-flex; align-items: center; padding: 14px 22px; border-radius: 2px; font-weight: 700; font-size: 15px; text-decoration: none; border: 1.5px solid var(--ink); cursor: pointer; font-family: inherit; }
-.btn-main { background: var(--ink); color: var(--paper); }
-.btn-main:hover { background: var(--sea); border-color: var(--sea); }
-.btn-line:hover { background: var(--sand); }
-.cover {
-  aspect-ratio: 4 / 5; border-radius: 2px;
-  background: linear-gradient(170deg, #c9b8a2 0%, #9a8670 45%, #2f5d73 100%);
-  position: relative; overflow: hidden; display: flex; align-items: flex-end; padding: 18px; color: #fff; font-size: 13px;
-}
-.cover::before { content: ""; position: absolute; left: 50%; top: 22%; width: 34%; aspect-ratio: 1; border-radius: 50%; background: #f3e3c9; opacity: .8; transform: translateX(-50%); }
-.cover span { position: relative; }
+.hero { padding: 72px 0 56px; }
+.hero h1 { font-size: clamp(44px, 7vw, 92px); font-weight: 800; max-width: 13ch; }
+.hero h1 span { color: var(--accent); }
+.hero-row { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 24px; margin-top: 32px; }
+.hero p { margin: 0; font-size: 19px; color: var(--ink-soft); max-width: 40ch; }
+.btn { display: inline-flex; align-items: center; gap: 10px; padding: 14px 24px; border-radius: 999px; background: var(--ink); color: var(--white); font: inherit; font-weight: 700; font-size: 15px; text-decoration: none; border: 0; cursor: pointer; }
+.btn:hover { background: var(--accent); }
 
-section.block { padding: 72px 0; border-top: 1px solid var(--line); }
-.head { display: flex; justify-content: space-between; align-items: end; gap: 16px; flex-wrap: wrap; margin-bottom: 28px; }
-.head h2 { font-size: clamp(34px, 4.6vw, 52px); }
-.head p { margin: 0; color: var(--ink-soft); max-width: 44ch; }
+.featured { margin-bottom: 96px; }
+.featured img { border-radius: 16px; width: 100%; }
+.caption { display: flex; justify-content: space-between; gap: 16px; margin-top: 12px; font-size: 14px; color: var(--ink-soft); }
+.caption strong { color: var(--ink); font-weight: 600; }
 
-.works { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
-.work { aspect-ratio: 1; border-radius: 2px; display: flex; align-items: flex-end; padding: 14px; color: #fff; font-size: 14px; font-weight: 700; }
-.w1 { background: linear-gradient(160deg, #d7c3a8, #8c6f55); }
-.w2 { background: linear-gradient(200deg, #9fb7c1, #2f5d73); }
-.w3 { background: linear-gradient(140deg, #e3d3c0, #b08d6e 70%, #6b5442); }
-.w4 { background: linear-gradient(180deg, #b9c6b0, #586b52); }
-.w5 { background: linear-gradient(120deg, #e8d9cb, #c29a7d); }
-.w6 { background: linear-gradient(200deg, #6e8796, #22333d); }
+section.block { padding: 96px 0; border-top: 1px solid var(--line); }
+.label { font-size: 13px; font-weight: 600; color: var(--ink-soft); margin: 0 0 20px; }
+.block h2 { font-size: clamp(32px, 4.5vw, 52px); font-weight: 800; margin-bottom: 40px; max-width: 18ch; }
 
-.plans { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
-.plan { background: #fff; border: 1px solid var(--line); padding: 26px; display: flex; flex-direction: column; gap: 10px; }
-.plan h3 { font-size: 28px; }
-.plan .price { font-size: 15px; color: var(--ink-soft); }
-.plan .price strong { font-family: var(--font-display); font-size: 34px; font-weight: 600; color: var(--ink); }
-.plan ul { margin: 6px 0 0; padding-left: 18px; display: grid; gap: 6px; font-size: 15px; }
+.grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 40px 24px; }
+.project img { border-radius: 12px; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; background: var(--tint); }
 
-.steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; counter-reset: s; }
-.step { border-top: 2px solid var(--ink); padding-top: 14px; }
-.step strong { display: block; font-family: var(--font-display); font-size: 22px; font-weight: 400; margin-bottom: 4px; }
+.rows { border-top: 1px solid var(--ink); }
+.row { display: grid; grid-template-columns: 1fr 2fr auto; gap: 24px; align-items: baseline; padding: 24px 0; border-bottom: 1px solid var(--line); }
+.row h3 { font-size: 22px; font-weight: 700; }
+.row p { margin: 0; color: var(--ink-soft); font-size: 16px; }
+.row .price { font-weight: 700; white-space: nowrap; font-variant-numeric: tabular-nums; }
+
+.steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
+.step b { display: block; font-size: 14px; color: var(--accent); margin-bottom: 10px; }
+.step strong { display: block; font-size: 19px; margin-bottom: 6px; }
 .step p { margin: 0; color: var(--ink-soft); font-size: 15px; }
 
-.contact { display: grid; grid-template-columns: 1fr 1.2fr; gap: 40px; align-items: start; }
-.contact p { color: var(--ink-soft); margin: 14px 0 0; }
-form { display: grid; gap: 12px; background: #fff; border: 1px solid var(--line); padding: 24px; }
-label { font-size: 14px; font-weight: 700; display: grid; gap: 6px; }
-input, select, textarea { font: inherit; font-size: 16px; padding: 11px 12px; border: 1px solid var(--line); border-radius: 2px; background: var(--paper); color: var(--ink); }
-.row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
-.note { font-size: 14px; color: var(--sea); margin: 0; min-height: 1.4em; }
+.contact { display: grid; grid-template-columns: 1fr 1.1fr; gap: 56px; align-items: start; }
+.contact h2 { margin-bottom: 20px; }
+.contact p { color: var(--ink-soft); margin: 0 0 8px; }
+form { display: grid; gap: 14px; }
+label { font-size: 13px; font-weight: 600; display: grid; gap: 6px; }
+input, select, textarea { font: inherit; font-size: 16px; padding: 12px 14px; border: 1px solid var(--line); border-radius: 10px; background: var(--white); color: var(--ink); }
+input:focus, select:focus, textarea:focus { border-color: var(--ink); }
+.pair { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.note { font-size: 14px; color: var(--accent); margin: 0; min-height: 1.4em; }
 
-footer { padding: 28px 0; border-top: 1px solid var(--line); font-size: 14px; color: var(--ink-soft); }
+footer { padding: 32px 0; border-top: 1px solid var(--line); font-size: 13px; color: var(--ink-soft); }
 footer .wrap { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
 
 .bar { position: fixed; inset: auto 0 0 0; display: grid; grid-template-columns: 1fr 1fr; background: var(--ink); z-index: 5; }
-.bar a { color: var(--paper); text-decoration: none; text-align: center; padding: 14px 8px; font-weight: 700; font-size: 15px; }
-.bar a + a { background: var(--sea); }
+.bar a { color: var(--white); text-decoration: none; text-align: center; padding: 18px 8px; font-weight: 700; font-size: 15px; }
+.bar a + a { background: var(--accent); }
 @media (min-width: 861px) { body { padding-bottom: 0; } .bar { display: none; } }
 @media (max-width: 860px) {
   .top nav { display: none; }
-  .hero, .contact { grid-template-columns: 1fr; }
-  .works { grid-template-columns: 1fr 1fr; }
-  .plans { grid-template-columns: 1fr; }
+  .grid, .contact { grid-template-columns: 1fr; }
   .steps { grid-template-columns: 1fr 1fr; }
-  .row { grid-template-columns: 1fr; }
+  .row { grid-template-columns: 1fr auto; }
+  .row p { grid-column: 1 / -1; }
+  .pair { grid-template-columns: 1fr; }
+  section.block { padding: 64px 0; }
 }
 </style>
 </head>
 <body>
-<div class="demo-bar">Sito dimostrativo · professionista immaginaria · <a href="/attivita-digitale" target="_top">realizzato da Bellelli Digital</a></div>
+<div class="demo-bar">Sito dimostrativo · professionista e lavori immaginari · <a href="/attivita-digitale" target="_top">realizzato da Bellelli Digital</a></div>
 
 <div class="wrap">
   <header class="top">
-    <a class="logo" href="#top">Elena Marino</a>
+    <a class="logo" href="#top">Elena Marino<span>.</span></a>
     <nav aria-label="Menu">
       <a href="#lavori">Lavori</a>
       <a href="#servizi">Servizi</a>
-      <a href="#come">Come lavoro</a>
-      <a href="#preventivo">Preventivo</a>
+      <a href="#metodo">Metodo</a>
+      <a href="#contatti">Contatti</a>
     </nav>
   </header>
 
-  <div class="hero" id="top">
-    <div>
-      <h1>Fotografie che sembrano <em>ricordi</em>, non pose.</h1>
-      <p>Matrimoni, eventi e ritratti nel Cilento e in Costiera. Luce naturale, poche indicazioni, molta pazienza.</p>
-      <div class="btns">
-        <a class="btn btn-main" href="#preventivo">Chiedi un preventivo</a>
-        <a class="btn btn-line" href="#lavori">Guarda i lavori</a>
-      </div>
+  <section class="hero" id="top">
+    <h1>Grafica per attività che vogliono farsi <span>ricordare</span>.</h1>
+    <div class="hero-row">
+      <p>Loghi, etichette, menu e social per botteghe, cantine e ristoranti del Cilento. Pochi progetti alla volta, seguiti dall'inizio alla stampa.</p>
+      <a class="btn" href="#contatti">Parliamo del tuo progetto <span aria-hidden="true">→</span></a>
     </div>
-    <div class="cover" role="img" aria-label="Spazio per la foto di copertina"><span>Qui la foto di copertina della professionista</span></div>
-  </div>
+  </section>
+
+  <figure class="featured">
+    <img src="img/brand-board.svg" alt="Brand identity per un panificio: logo, palette di colori e biglietti da visita" width="1200" height="640">
+    <figcaption class="caption"><strong>Forno Lucia · Brand identity</strong><span>Logo, colori, biglietti da visita</span></figcaption>
+  </figure>
 </div>
 
 <main>
   <section class="block" id="lavori">
     <div class="wrap">
-      <div class="head">
-        <h2>Lavori recenti</h2>
-        <p>Una selezione per genere. Le gallerie complete si inviano su richiesta.</p>
-      </div>
-      <div class="works">
-        <div class="work w1" role="img" aria-label="Spazio foto matrimonio">Matrimonio a Paestum</div>
-        <div class="work w2" role="img" aria-label="Spazio foto evento">Evento aziendale</div>
-        <div class="work w3" role="img" aria-label="Spazio foto ritratto">Ritratto in studio</div>
-        <div class="work w4" role="img" aria-label="Spazio foto famiglia">Famiglia in campagna</div>
-        <div class="work w5" role="img" aria-label="Spazio foto battesimo">Battesimo</div>
-        <div class="work w6" role="img" aria-label="Spazio foto mare">Ritratto al mare</div>
+      <p class="label">Lavori selezionati</p>
+      <h2>Ogni attività ha una sua voce. La disegno.</h2>
+      <div class="grid">
+        <figure class="project">
+          <img src="img/etichetta.svg" alt="Etichetta per una bottiglia di Fiano del Cilento" width="800" height="600" loading="lazy">
+          <figcaption class="caption"><strong>Cantina del Monte</strong><span>Etichetta vino</span></figcaption>
+        </figure>
+        <figure class="project">
+          <img src="img/menu.svg" alt="Menu stampato per una trattoria" width="800" height="600" loading="lazy">
+          <figcaption class="caption"><strong>Trattoria da Nina</strong><span>Menu e coordinato</span></figcaption>
+        </figure>
+        <figure class="project">
+          <img src="img/social.svg" alt="Griglia di post Instagram per una gelateria" width="800" height="600" loading="lazy">
+          <figcaption class="caption"><strong>Gelateria Rosa</strong><span>Template social</span></figcaption>
+        </figure>
+        <figure class="project">
+          <img src="img/packaging.svg" alt="Scatola di biscotti artigianali" width="800" height="600" loading="lazy">
+          <figcaption class="caption"><strong>Biscotti di Nonna</strong><span>Packaging</span></figcaption>
+        </figure>
       </div>
     </div>
   </section>
 
   <section class="block" id="servizi">
     <div class="wrap">
-      <div class="head">
-        <h2>Servizi e prezzi</h2>
-        <p>Prezzi di partenza indicativi: il preventivo finale dipende da luogo e durata.</p>
-      </div>
-      <div class="plans">
-        <div class="plan">
-          <h3>Ritratto</h3>
-          <p class="price">da <strong>180 €</strong></p>
-          <ul><li>1 ora di servizio</li><li>20 foto ritoccate</li><li>Galleria online privata</li></ul>
-        </div>
-        <div class="plan">
-          <h3>Evento</h3>
-          <p class="price">da <strong>450 €</strong></p>
-          <ul><li>Fino a 4 ore</li><li>Tutte le foto selezionate</li><li>Consegna in 10 giorni</li></ul>
-        </div>
-        <div class="plan">
-          <h3>Matrimonio</h3>
-          <p class="price">da <strong>1.600 €</strong></p>
-          <ul><li>Preparativi, cerimonia, festa</li><li>Incontro di prova</li><li>Album stampato opzionale</li></ul>
-        </div>
+      <p class="label">Servizi</p>
+      <h2>Prezzi chiari, prima di iniziare.</h2>
+      <div class="rows">
+        <div class="row"><h3>Logo</h3><p>Tre proposte, due giri di modifiche, file per stampa e web.</p><span class="price">da 350 €</span></div>
+        <div class="row"><h3>Brand identity</h3><p>Logo, colori, caratteri, biglietti da visita e una guida d'uso.</p><span class="price">da 750 €</span></div>
+        <div class="row"><h3>Etichette e packaging</h3><p>Dal progetto al file pronto per la tipografia.</p><span class="price">da 280 €</span></div>
+        <div class="row"><h3>Kit social</h3><p>12 template modificabili su Canva, con le tue foto e i tuoi colori.</p><span class="price">da 220 €</span></div>
       </div>
     </div>
   </section>
 
-  <section class="block" id="come">
+  <section class="block" id="metodo">
     <div class="wrap">
-      <div class="head"><h2>Come lavoro</h2></div>
+      <p class="label">Metodo</p>
+      <h2>Quattro passi, nessuna sorpresa.</h2>
       <div class="steps">
-        <div class="step"><strong>Ci sentiamo</strong><p>Una chiamata di 20 minuti per capire cosa ti serve.</p></div>
-        <div class="step"><strong>Preventivo</strong><p>Entro 48 ore, scritto e senza sorprese.</p></div>
-        <div class="step"><strong>Il giorno</strong><p>Arrivo prima, studio la luce, resto discreta.</p></div>
-        <div class="step"><strong>Consegna</strong><p>Galleria online da scaricare e condividere.</p></div>
+        <div class="step"><b>01</b><strong>Ascolto</strong><p>Una chiamata per capire chi sei e a chi parli.</p></div>
+        <div class="step"><b>02</b><strong>Proposte</strong><p>Tre direzioni in una settimana.</p></div>
+        <div class="step"><b>03</b><strong>Rifinitura</strong><p>Due giri di modifiche sulla direzione scelta.</p></div>
+        <div class="step"><b>04</b><strong>Consegna</strong><p>Tutti i file, per la stampa e per il web.</p></div>
       </div>
     </div>
   </section>
 
-  <section class="block" id="preventivo">
+  <section class="block" id="contatti">
     <div class="wrap contact">
       <div>
-        <div class="head" style="margin:0"><h2>Chiedi un preventivo</h2></div>
-        <p>Rispondo entro 48 ore. Per le date in alta stagione conviene scrivere con qualche mese di anticipo.</p>
-        <p>WhatsApp: +39 000 000 0000<br>Email: info@esempio.it</p>
+        <p class="label">Contatti</p>
+        <h2>Parliamo del tuo progetto.</h2>
+        <p>Rispondo entro due giorni lavorativi.</p>
+        <p>WhatsApp +39 000 000 0000 · info@esempio.it</p>
       </div>
       <form id="quote" novalidate>
-        <div class="row">
+        <div class="pair">
           <label for="q-name">Nome<input id="q-name" name="nome" autocomplete="name"></label>
-          <label for="q-date">Data dell'evento<input id="q-date" name="data" type="date"></label>
+          <label for="q-biz">Attività<input id="q-biz" name="attivita"></label>
         </div>
-        <label for="q-type">Tipo di servizio
-          <select id="q-type" name="tipo"><option>Ritratto</option><option>Evento</option><option>Matrimonio</option></select>
+        <label for="q-type">Ti serve
+          <select id="q-type" name="tipo"><option>Logo</option><option>Brand identity</option><option>Etichette e packaging</option><option>Kit social</option></select>
         </label>
-        <label for="q-msg">Raccontami qualcosa<textarea id="q-msg" name="messaggio" rows="3"></textarea></label>
-        <button class="btn btn-main" type="submit">Invia la richiesta</button>
+        <label for="q-msg">Raccontami qualcosa<textarea id="q-msg" name="messaggio" rows="4"></textarea></label>
+        <button class="btn" type="submit">Invia <span aria-hidden="true">→</span></button>
         <p class="note" id="q-note" aria-live="polite"></p>
       </form>
     </div>
@@ -214,20 +204,20 @@ footer .wrap { display: flex; justify-content: space-between; gap: 16px; flex-wr
 
 <footer>
   <div class="wrap">
-    <span>Elena Marino Fotografa · professionista immaginaria · P. IVA di esempio</span>
+    <span>Elena Marino · professionista immaginaria · P. IVA di esempio</span>
     <span>Sito realizzato da <strong>Bellelli Digital</strong></span>
   </div>
 </footer>
 
 <nav class="bar" aria-label="Contatti rapidi">
-  <a href="#preventivo">Preventivo</a>
+  <a href="#contatti">Scrivimi</a>
   <a href="https://wa.me/390000000000" rel="noopener">WhatsApp</a>
 </nav>
 
 <script>
 document.getElementById('quote').addEventListener('submit', function (e) {
   e.preventDefault();
-  document.getElementById('q-note').textContent = 'Questo è un sito di esempio: nel sito reale la richiesta arriva via email alla professionista.';
+  document.getElementById('q-note').textContent = 'Questo è un sito di esempio: nel sito reale la richiesta arriva via email.';
 });
 </script>
 </body>

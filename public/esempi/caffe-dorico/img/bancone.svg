@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="Cappuccino, cornetto e sfogliatella sul bancone">
+<defs>
+<linearGradient id="wall" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1b4a73"/><stop offset="1" stop-color="#123a5e"/></linearGradient>
+<linearGradient id="marble" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f4f1ea"/><stop offset="1" stop-color="#ddd6c8"/></linearGradient>
+<linearGradient id="cup" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#e9e5dc"/><stop offset=".45" stop-color="#ffffff"/><stop offset="1" stop-color="#d8d2c6"/></linearGradient>
+<radialGradient id="foam" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#f3e3cb"/><stop offset=".7" stop-color="#d9b48a"/><stop offset="1" stop-color="#9b6a3f"/></radialGradient>
+<linearGradient id="croissant" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e9a54f"/><stop offset="1" stop-color="#b56a26"/></linearGradient>
+<linearGradient id="sfoglia" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f1c27a"/><stop offset="1" stop-color="#c47f37"/></linearGradient>
+<radialGradient id="sun" cx=".8" cy=".15" r=".5"><stop offset="0" stop-color="#f2c230" stop-opacity=".55"/><stop offset="1" stop-color="#f2c230" stop-opacity="0"/></radialGradient>
+</defs>
+<rect width="800" height="600" fill="url(#wall)"/>
+<rect width="800" height="600" fill="url(#sun)"/>
+<g fill="#f3f0e9" opacity=".08">
+<rect x="70" y="40" width="34" height="300"/><rect x="140" y="40" width="34" height="300"/><rect x="210" y="40" width="34" height="300"/>
+<rect x="560" y="40" width="34" height="300"/><rect x="630" y="40" width="34" height="300"/><rect x="700" y="40" width="34" height="300"/>
+</g>
+<rect x="0" y="380" width="800" height="220" fill="url(#marble)"/>
+<path d="M0 420 C 160 400 260 470 420 430 S 680 460 800 410" stroke="#cfc6b4" stroke-width="3" fill="none" opacity=".6"/>
+<path d="M0 520 C 200 500 330 560 520 520 S 720 540 800 515" stroke="#cfc6b4" stroke-width="2" fill="none" opacity=".5"/>
+<rect x="0" y="372" width="800" height="12" fill="#c9bfae"/>
+<!-- saucer + cup -->
+<ellipse cx="330" cy="455" rx="150" ry="34" fill="#00000022"/>
+<ellipse cx="330" cy="440" rx="140" ry="30" fill="#ffffff"/>
+<ellipse cx="330" cy="436" rx="104" ry="20" fill="#ece7dd"/>
+<path d="M240 300 h180 l-14 120 a76 22 0 0 1 -152 0 z" fill="url(#cup)"/>
+<path d="M420 322 c 52 -6 60 58 4 70" stroke="#ece7dd" stroke-width="16" fill="none" stroke-linecap="round"/>
+<ellipse cx="330" cy="300" rx="90" ry="24" fill="#f6f2ea"/>
+<ellipse cx="330" cy="302" rx="80" ry="19" fill="url(#foam)"/>
+<path d="M330 292 c -14 -12 -34 2 -18 14 l18 12 l18 -12 c 16 -12 -4 -26 -18 -14 z" fill="#fbf2e2"/>
+<path d="M300 250 c -10 -20 10 -30 0 -50 M340 245 c -10 -20 10 -30 0 -50 M370 252 c -8 -16 8 -24 0 -40" stroke="#f3f0e9" stroke-width="5" fill="none" stroke-linecap="round" opacity=".35"/>
+<!-- croissant -->
+<ellipse cx="590" cy="470" rx="130" ry="20" fill="#00000022"/>
+<path d="M480 450 c 20 -70 200 -70 220 0 c -30 -10 -60 -14 -110 -14 s -80 4 -110 14 z" fill="url(#croissant)"/>
+<path d="M530 410 q 10 30 0 42 M570 398 q 12 34 0 52 M612 398 q -12 34 0 52 M652 410 q -10 30 0 42" stroke="#9a5419" stroke-width="5" fill="none" stroke-linecap="round" opacity=".7"/>
+<path d="M480 450 c -14 2 -22 -8 -14 -16 c 6 -6 14 -2 18 4 z M700 450 c 14 2 22 -8 14 -16 c -6 -6 -14 -2 -18 4 z" fill="#b56a26"/>
+<!-- sfogliatella -->
+<ellipse cx="130" cy="500" rx="96" ry="16" fill="#00000022"/>
+<path d="M40 492 c 10 -80 170 -90 186 -10 c -60 12 -126 22 -186 10 z" fill="url(#sfoglia)"/>
+<g stroke="#a8652a" stroke-width="3.5" fill="none" opacity=".75">
+<path d="M60 488 c 14 -46 120 -56 150 -12"/><path d="M78 486 c 14 -36 100 -42 122 -10"/><path d="M96 484 c 12 -24 74 -28 90 -6"/><path d="M114 484 c 8 -12 44 -14 54 -2"/>
+</g>
+<g fill="#ffffff" opacity=".85"><circle cx="90" cy="452" r="3"/><circle cx="130" cy="440" r="2.5"/><circle cx="170" cy="448" r="3"/><circle cx="150" cy="462" r="2"/><circle cx="110" cy="466" r="2.5"/></g>
+</svg>
