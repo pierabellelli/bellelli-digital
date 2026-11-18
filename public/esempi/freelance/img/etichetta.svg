@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="Etichetta per un vino bianco del Cilento">
+<rect width="800" height="600" fill="#e9eef0"/>
+<ellipse cx="400" cy="560" rx="160" ry="18" fill="#00000018"/>
+<path d="M370 40 h60 v120 c 0 30 70 50 70 120 v270 a20 20 0 0 1 -20 20 h-160 a20 20 0 0 1 -20 -20 v-270 c 0 -70 70 -90 70 -120 z" fill="#3d5a3a"/>
+<path d="M392 60 v110" stroke="#ffffff" stroke-width="6" opacity=".2" stroke-linecap="round"/>
+<rect x="360" y="40" width="80" height="40" rx="4" fill="#c8a24a"/>
+<rect x="320" y="300" width="160" height="190" fill="#f7f3ea"/>
+<text x="400" y="352" text-anchor="middle" font-family="Georgia, serif" font-size="30" fill="#1b1a19">Fiano</text>
+<line x1="350" y1="368" x2="450" y2="368" stroke="#c8a24a" stroke-width="2"/>
+<text x="400" y="394" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#1b1a19" letter-spacing="3">CILENTO DOP</text>
+<path d="M370 440 q 30 -30 60 0" stroke="#3d5a3a" stroke-width="3" fill="none"/>
+<circle cx="400" cy="430" r="6" fill="#c8a24a"/>
+<text x="400" y="472" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#6b6559" letter-spacing="2">CANTINA DEL MONTE</text>
+</svg>

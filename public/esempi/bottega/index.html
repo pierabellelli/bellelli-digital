@@ -65,7 +65,9 @@ section.block { padding: 72px 0; border-top: 1px solid var(--line); }
 
 .products { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
 .product { background: #fff; border: 1px solid var(--line); border-radius: 14px; padding: 14px; display: flex; flex-direction: column; gap: 8px; }
-.product .img { aspect-ratio: 1; border-radius: 10px; }
+.product .img { display: block; width: 100%; height: auto; aspect-ratio: 1; border-radius: 10px; }
+.hero-img { display: block; width: 100%; height: auto; }
+.course-img { display: block; width: 100%; height: auto; border-radius: 14px; margin-bottom: 22px; }
 .i1 { background: radial-gradient(circle at 50% 60%, var(--clay) 0 34%, transparent 35%), #f1e5d3; }
 .i2 { background: radial-gradient(ellipse 30% 40% at 50% 55%, var(--glaze) 0 98%, transparent 100%), #f1e5d3; }
 .i3 { background: radial-gradient(ellipse 42% 18% at 50% 62%, #d9c29c 0 98%, transparent 100%), #f1e5d3; }
@@ -130,7 +132,7 @@ footer .wrap { display: flex; justify-content: space-between; gap: 16px; flex-wr
         <a class="btn btn-line" href="#pezzi">Guarda i pezzi</a>
       </div>
     </div>
-    <div class="pots" role="img" aria-label="Illustrazione di tre vasi in ceramica"><div class="pot a"></div><div class="pot b"></div><div class="pot c"></div></div>
+    <img class="hero-img" src="img/bottega.svg" alt="Scaffale della bottega con vasi, ciotole e piatti in ceramica" width="800" height="800">
   </div>
 
   <section class="block" id="pezzi">
@@ -140,10 +142,10 @@ footer .wrap { display: flex; justify-content: space-between; gap: 16px; flex-wr
         <p>Ogni pezzo è unico: colori e forme possono variare. Si prenotano su WhatsApp.</p>
       </div>
       <div class="products">
-        <article class="product"><div class="img i1" role="img" aria-label="Spazio foto ciotola"></div><h3>Ciotola cotto</h3><p>Ø 16 cm, smalto alimentare</p><p class="price">28 €</p></article>
-        <article class="product"><div class="img i2" role="img" aria-label="Spazio foto vaso"></div><h3>Vaso mare</h3><p>Altezza 24 cm, smalto verde fondale</p><p class="price">65 €</p></article>
-        <article class="product"><div class="img i3" role="img" aria-label="Spazio foto piatto"></div><h3>Piatto da portata</h3><p>Ø 32 cm, bianco sabbia</p><p class="price">48 €</p></article>
-        <article class="product"><div class="img i4" role="img" aria-label="Spazio foto tazza"></div><h3>Tazza da caffè</h3><p>Set da 2, con piattino</p><p class="price">32 €</p></article>
+        <article class="product"><img class="img" src="img/ciotola.svg" alt="Ciotola in cotto smaltato" width="400" height="400" loading="lazy"><h3>Ciotola cotto</h3><p>Ø 16 cm, smalto alimentare</p><p class="price">28 €</p></article>
+        <article class="product"><img class="img" src="img/vaso.svg" alt="Vaso verde fondale" width="400" height="400" loading="lazy"><h3>Vaso mare</h3><p>Altezza 24 cm, smalto verde fondale</p><p class="price">65 €</p></article>
+        <article class="product"><img class="img" src="img/piatto.svg" alt="Piatto da portata bianco sabbia" width="400" height="400" loading="lazy"><h3>Piatto da portata</h3><p>Ø 32 cm, bianco sabbia</p><p class="price">48 €</p></article>
+        <article class="product"><img class="img" src="img/tazze.svg" alt="Set di due tazze da caffè" width="400" height="400" loading="lazy"><h3>Tazza da caffè</h3><p>Set da 2, con piattino</p><p class="price">32 €</p></article>
       </div>
     </div>
   </section>
@@ -152,6 +154,7 @@ footer .wrap { display: flex; justify-content: space-between; gap: 16px; flex-wr
     <div class="wrap">
       <div class="course">
         <div>
+          <img class="course-img" src="img/tornio.svg" alt="Tornio con un vaso in lavorazione" width="600" height="420" loading="lazy">
           <h2>Prova il tornio</h2>
           <p>Lezioni in piccoli gruppi, massimo 4 persone. Il pezzo che crei te lo porti a casa dopo la cottura.</p>
           <p style="margin-top:20px"><a class="btn btn-main" href="https://wa.me/390000000000" rel="noopener">Prenota un posto</a></p>

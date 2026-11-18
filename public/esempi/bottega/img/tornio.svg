@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 420" role="img" aria-label="Tornio con un vaso in lavorazione">
+<rect width="600" height="420" rx="18" fill="#2b5c58"/>
+<circle cx="480" cy="80" r="90" fill="#f6f1e7" opacity=".08"/>
+<ellipse cx="300" cy="330" rx="200" ry="40" fill="#163533"/>
+<ellipse cx="300" cy="310" rx="170" ry="32" fill="#8a6a4c"/>
+<ellipse cx="300" cy="302" rx="150" ry="26" fill="#a5835f"/>
+<path d="M240 300 c -20 -60 0 -110 40 -130 h40 c 40 20 60 70 40 130 z" fill="#b5532f"/>
+<ellipse cx="300" cy="170" rx="22" ry="6" fill="#8c3d21"/>
+<path d="M150 220 c 40 -20 70 0 90 30 c -40 10 -70 0 -90 -30 z" fill="#e0b08f"/>
+<path d="M450 220 c -40 -20 -70 0 -90 30 c 40 10 70 0 90 -30 z" fill="#e0b08f"/>
+<path d="M200 330 a100 20 0 0 0 200 0" stroke="#f6f1e7" stroke-width="3" fill="none" opacity=".3" stroke-dasharray="14 10"/>
+</svg>
