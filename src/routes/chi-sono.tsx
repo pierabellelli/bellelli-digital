@@ -42,9 +42,7 @@ function ChiSono() {
       <section className="section section-top-0">
         <div className="container split">
           <div>
-            <div className="photo-slot photo-slot-tall" role="img" aria-label="Spazio per il ritratto di Piera">
-              Spazio per il tuo ritratto
-            </div>
+            <img className="photo photo-tall" src="/piera-bellelli.jpg" alt="Piera Bellelli" width="512" height="512" loading="lazy" />
           </div>
           <div className="split-body">
             <p className="big">

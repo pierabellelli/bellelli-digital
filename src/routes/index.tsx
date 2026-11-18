@@ -64,13 +64,7 @@ function Home() {
           <div>
             <p className="eyebrow">Chi sono</p>
             <h2 className="split-title">Piera Bellelli.</h2>
-            <div
-              className="photo-slot"
-              role="img"
-              aria-label="Spazio per il ritratto di Piera"
-            >
-              Spazio per il tuo ritratto
-            </div>
+            <img className="photo" src="/piera-bellelli.jpg" alt="Piera Bellelli" width="512" height="512" loading="lazy" />
           </div>
           <div className="split-body split-body-offset">
             <p className="big">
