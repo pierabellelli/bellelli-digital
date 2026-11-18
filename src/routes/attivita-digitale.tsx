@@ -13,11 +13,33 @@ const problems = [
   { title: 'Recensioni senza risposta', text: 'Chi legge una critica senza risposta pensa che non ti importi.' },
 ]
 
+const examples = [
+  {
+    hash: 'bar',
+    name: 'Caffè Dorico',
+    kind: 'Bar pasticceria',
+    text: 'Colazioni, pasticceria e aperitivo, con orari “aperto ora”, mappa e pulsante per chiamare.',
+  },
+  {
+    hash: 'freelance',
+    name: 'Elena Marino',
+    kind: 'Graphic designer freelance',
+    text: 'Lavori scelti, servizi con prezzi indicativi e richiesta di preventivo in un tocco.',
+  },
+  {
+    hash: 'bottega',
+    name: 'Bottega Terra Cilento',
+    kind: 'Ceramiche artigianali ad Agropoli',
+    text: 'Pezzi in vendita, corsi al tornio e ordini direttamente su WhatsApp.',
+  },
+]
+
 const faqs = [
   { q: 'Di chi è il sito?', a: 'Tuo. Dominio e account sono intestati a te, io vengo aggiunta come collaboratrice.' },
   { q: 'Posso modificarlo da solo?', a: 'Le modifiche le faccio io: con la manutenzione una al mese è inclusa, altrimenti costano 35 € l’ora.' },
   { q: 'Quanto costa ogni anno?', a: 'Solo il dominio, circa 10-20 €. La pubblicazione del sito è gratuita e la manutenzione è facoltativa.' },
   { q: 'E se non mi piace?', a: 'Prima della pubblicazione vedi l’anteprima e puoi chiedere fino a 2 giri di modifiche. Il saldo si paga solo quando il sito va online.' },
+  { q: 'Le richieste dei clienti dove arrivano?', a: 'Nel pacchetto Plus il modulo del sito salva ogni richiesta in un foglio Google, ti avvisa via email e manda al cliente una risposta automatica. Così nessun contatto si perde.' },
   { q: 'Lavori anche fuori dal Cilento?', a: 'Sì: chiamata, revisione e formazione si fanno anche in videochiamata.' },
 ]
 
@@ -81,24 +103,31 @@ function AttivitaDigitale() {
       </section>
 
       <section className="section band-soft">
-        <div className="container split">
-          <div>
+        <div className="container">
+          <div className="rows-head">
             <p className="eyebrow">Esempi</p>
-            <h2 className="split-title">Tre attività, tre siti.</h2>
+            <h2>Tre attività, tre siti.</h2>
           </div>
-          <div className="split-body">
-            <p className="big">
-              Un bar pasticceria, una fotografa freelance e una bottega di ceramiche:
-              tre attività immaginarie per vedere come può diventare il tuo sito.
-            </p>
-            <p>
-              Ogni sito parte da un modello per settore e viene adattato alla tua
-              attività: testi, foto, colori e servizi sono i tuoi.
-            </p>
-            <a href={EXAMPLE_URL} className="text-link">
-              Apri i siti di esempio <span aria-hidden="true">↗</span>
-            </a>
+          <div className="features features-3">
+            {examples.map((e, i) => (
+              <a className="feature" key={e.hash} href={`${EXAMPLE_URL}#${e.hash}`}>
+                <span className="feature-n">0{i + 1}</span>
+                <div>
+                  <h3>{e.name}</h3>
+                  <p>
+                    <strong>{e.kind}.</strong> {e.text}
+                  </p>
+                  <span className="text-link">
+                    Guarda il sito <span aria-hidden="true">↗</span>
+                  </span>
+                </div>
+              </a>
+            ))}
           </div>
+          <p className="section-note">
+            Attività immaginarie, siti veri. Ogni sito parte da un modello per settore e
+            diventa tuo con testi, foto, colori e servizi della tua attività.
+          </p>
         </div>
       </section>
 

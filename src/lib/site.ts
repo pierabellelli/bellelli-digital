@@ -45,6 +45,7 @@ export const packages = [
       'Tutto il pacchetto Completo',
       'Sito fino a 3 pagine',
       'Prenotazione o richiesta preventivo',
+      'Raccolta contatti automatica: foglio Google, avviso e risposta al cliente',
       '5 post social pronti da pubblicare',
     ],
   },

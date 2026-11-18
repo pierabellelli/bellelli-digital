@@ -490,3 +490,21 @@
   object-position: 50% 20%;
   margin-top: 0;
 }
+
+a.feature {
+  color: inherit;
+  text-decoration: none;
+  transition: transform 0.15s ease;
+}
+a.feature:hover {
+  transform: translateY(-2px);
+}
+a.feature .text-link {
+  display: inline-block;
+  margin-top: 12px;
+}
+.section-note {
+  margin-top: 28px;
+  max-width: 640px;
+  color: var(--muted, #6b5a68);
+}
