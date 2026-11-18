@@ -25,6 +25,7 @@ export function Footer() {
               <h2>Inizia</h2>
               <Link to="/parliamone">Parliamone</Link>
               <a href="/esempi/">Siti di esempio</a>
+              <Link to="/risorse">Risorse gratuite</Link>
             </div>
             <div>
               <h2>Contatti</h2>
