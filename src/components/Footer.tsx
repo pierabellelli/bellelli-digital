@@ -1,26 +1,45 @@
-import { CONTACT_EMAIL } from '../lib/constants'
-import { useLanguage } from '../lib/Language'
+import { Link } from '@tanstack/react-router'
+import { CONTACT_EMAIL, WHATSAPP_NUMBER, WHATSAPP_URL } from '../lib/site'
 import './Footer.css'
 
 export function Footer() {
-  const { t } = useLanguage()
   return (
     <footer className="footer">
       <div className="container">
         <div className="footer-top">
-          <a href="#top" className="nav-logo">
-            bellelli<span>.digital</span>
-          </a>
-          <p>{t.footer.line}</p>
-          <a href="#top" className="text-link">
-            {t.footer.top} ↑
-          </a>
+          <div className="footer-brand">
+            <Link to="/" className="nav-logo">
+              bellelli<span>.digital</span>
+            </Link>
+            <p>Sito, Google e AI per le attività locali. Capaccio Paestum (SA).</p>
+          </div>
+          <nav className="footer-cols" aria-label="Link del sito">
+            <div>
+              <h2>Esplora</h2>
+              <Link to="/attivita-digitale">Attività Digitale</Link>
+              <Link to="/servizi">Servizi</Link>
+              <Link to="/chi-sono">Chi sono</Link>
+              <Link to="/blog">Blog</Link>
+            </div>
+            <div>
+              <h2>Inizia</h2>
+              <Link to="/parliamone">Parliamone</Link>
+              <a href="/esempi/caffe-dorico/">Sito di esempio</a>
+            </div>
+            <div>
+              <h2>Contatti</h2>
+              <a href={WHATSAPP_URL} rel="noopener">
+                WhatsApp {WHATSAPP_NUMBER}
+              </a>
+              <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>
+            </div>
+          </nav>
         </div>
         <div className="footer-inner">
-          <span>
-            © {new Date().getFullYear()} Bellelli Digital · Piera Bellelli
-          </span>
-          <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>
+          <span>© {new Date().getFullYear()} Bellelli Digital · Piera Bellelli</span>
+          <a href="#main" className="text-link">
+            Torna su ↑
+          </a>
         </div>
       </div>
     </footer>

@@ -1,78 +1,59 @@
 import { useState } from 'react'
-import { useLanguage } from '../lib/Language'
+import { Link } from '@tanstack/react-router'
 import './Nav.css'
 
+const links = [
+  { to: '/attivita-digitale', label: 'Attività Digitale' },
+  { to: '/servizi', label: 'Servizi' },
+  { to: '/chi-sono', label: 'Chi sono' },
+  { to: '/blog', label: 'Blog' },
+] as const
+
 export function Nav() {
-  const { language, setLanguage, t } = useLanguage()
   const [open, setOpen] = useState(false)
   return (
     <>
       <a className="skip-link" href="#main">
-        {t.nav.skip}
+        Vai al contenuto
       </a>
       <header className="nav">
         <div className="container nav-inner">
-          <a href="#top" className="nav-logo" aria-label="Bellelli Digital">
+          <Link to="/" className="nav-logo" aria-label="Bellelli Digital, home">
             bellelli<span>.digital</span>
-          </a>
+          </Link>
           <nav
             id="primary-navigation"
-            aria-label={t.nav.label}
+            aria-label="Navigazione principale"
             className={`nav-links${open ? ' is-open' : ''}`}
           >
-            <a href="#attivita-digitale" onClick={() => setOpen(false)}>
-              {t.nav.digital}
-            </a>
-            <a href="#prodotti" onClick={() => setOpen(false)}>
-              {t.nav.projects}
-            </a>
-            <a href="#chi-sono" onClick={() => setOpen(false)}>
-              {t.nav.about}
-            </a>
-            <a
-              href="#contatti"
+            {links.map((l) => (
+              <Link
+                key={l.to}
+                to={l.to}
+                onClick={() => setOpen(false)}
+                activeProps={{ 'aria-current': 'page', className: 'is-active' }}
+              >
+                {l.label}
+              </Link>
+            ))}
+            <Link
+              to="/parliamone"
               className="btn btn-primary nav-cta"
               onClick={() => setOpen(false)}
             >
-              {t.nav.contact} <span aria-hidden="true">↗</span>
-            </a>
+              Parliamone <span aria-hidden="true">↗</span>
+            </Link>
           </nav>
-          <div className="nav-controls">
-            <div
-              className="language-switch"
-              role="group"
-              aria-label={t.nav.language}
-            >
-              <button
-                type="button"
-                lang="it"
-                aria-label="Italiano"
-                aria-pressed={language === 'it'}
-                onClick={() => setLanguage('it')}
-              >
-                IT
-              </button>
-              <button
-                type="button"
-                lang="en"
-                aria-label="English"
-                aria-pressed={language === 'en'}
-                onClick={() => setLanguage('en')}
-              >
-                EN
-              </button>
-            </div>
-            <button
-              type="button"
-              className="menu-toggle"
-              aria-expanded={open}
-              aria-controls="primary-navigation"
-              aria-label={open ? t.nav.close : t.nav.menu}
-              onClick={() => setOpen(!open)}
-            >
-              <span aria-hidden="true">{open ? '×' : '☰'}</span>
-            </button>
-          </div>
+          <button
+            type="button"
+            className="menu-toggle"
+            aria-expanded={open}
+            aria-controls="primary-navigation"
+            aria-label={open ? 'Chiudi il menu' : 'Apri il menu'}
+            onClick={() => setOpen(!open)}
+          >
+            <span aria-hidden="true">{open ? '×' : '☰'}</span>
+          </button>
         </div>
       </header>
     </>

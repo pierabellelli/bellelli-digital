@@ -54,3 +54,17 @@ and are no longer used by the contact form.
 - Contact details are in `src/lib/constants.ts`. Call requests currently use email;
   replace with a verified scheduling URL when one is available.
 - There are no public product/demo links until their destinations are confirmed.
+
+## Blog
+
+Posts live in `src/content/posts.ts`. Add an entry (slug, title, date,
+excerpt, minutes, tags, body) and add its URL to `public/sitemap.xml`.
+Routes: `/blog` and `/blog/<slug>`.
+
+
+## Pages
+
+Italian only. Routes in `src/routes/`: `/`, `/attivita-digitale`, `/servizi`,
+`/chi-sono`, `/parliamone`, `/blog`, `/blog/<slug>`, `/blog/categoria/<slug>`.
+Prices, steps, WhatsApp and email live in `src/lib/site.ts`.
+The example site is static: `public/esempi/caffe-dorico/index.html`.
