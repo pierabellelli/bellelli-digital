@@ -43,7 +43,7 @@ function AttivitaDigitale() {
           Prenota una chiamata di 15 minuti
         </Link>
         <a href={EXAMPLE_URL} className="btn btn-secondary">
-          Guarda un sito di esempio
+          Guarda i siti di esempio
         </a>
       </PageHero>
 
@@ -83,20 +83,20 @@ function AttivitaDigitale() {
       <section className="section band-soft">
         <div className="container split">
           <div>
-            <p className="eyebrow">Un esempio</p>
-            <h2 className="split-title">Caffè Dorico, Paestum.</h2>
+            <p className="eyebrow">Esempi</p>
+            <h2 className="split-title">Tre attività, tre siti.</h2>
           </div>
           <div className="split-body">
             <p className="big">
-              Il sito di un bar pasticceria immaginario: menu, orari che mostrano se
-              è aperto in quel momento, mappa e pulsanti sempre a portata di pollice.
+              Un bar pasticceria, una fotografa freelance e una bottega di ceramiche:
+              tre attività immaginarie per vedere come può diventare il tuo sito.
             </p>
             <p>
-              È il modello da cui parto per bar e ristoranti. Per negozi, artigiani e
-              professionisti uso modelli simili, adattati al tuo lavoro.
+              Ogni sito parte da un modello per settore e viene adattato alla tua
+              attività: testi, foto, colori e servizi sono i tuoi.
             </p>
             <a href={EXAMPLE_URL} className="text-link">
-              Apri il sito di esempio <span aria-hidden="true">↗</span>
+              Apri i siti di esempio <span aria-hidden="true">↗</span>
             </a>
           </div>
         </div>

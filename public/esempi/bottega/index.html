@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Bottega Terra Cilento</title>
+<meta name="description" content="Bottega Terra Cilento, ceramiche fatte a mano ad Agropoli: pezzi unici, corsi al tornio e spedizioni. Sito dimostrativo.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  /* Layout: insegna da bottega, prodotti con prezzi a catalogo, corsi, orari e mappa, ordine su WhatsApp */
+  --clay: #b5532f;
+  --clay-dark: #8c3d21;
+  --glaze: #1f4d4a;
+  --cream: #f6f1e7;
+  --ink: #2a211c;
+  --ink-soft: #6a5c52;
+  --line: #e2d6c3;
+  --font-display: "Young Serif", Georgia, serif;
+  --font-body: "Work Sans", system-ui, sans-serif;
+  color-scheme: light;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; }
+body { background: var(--cream); color: var(--ink); font-family: var(--font-body); font-size: 17px; line-height: 1.6; padding-bottom: 76px; }
+a { color: inherit; }
+a:focus-visible, button:focus-visible { outline: 3px solid var(--glaze); outline-offset: 3px; border-radius: 4px; }
+h1, h2, h3 { font-family: var(--font-display); font-weight: 400; line-height: 1.08; margin: 0; text-wrap: balance; }
+.wrap { width: min(1080px, 100% - 32px); margin-inline: auto; }
+.demo-bar { background: var(--glaze); color: var(--cream); font-size: 13px; font-weight: 600; text-align: center; padding: 7px 16px; }
+.demo-bar a { color: #fff; }
+
+.sign { border-bottom: 2px solid var(--ink); }
+.sign .wrap { display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 18px 0; }
+.logo { font-family: var(--font-display); font-size: 24px; text-decoration: none; }
+.logo span { color: var(--clay); }
+.sign nav { display: flex; gap: 22px; font-size: 15px; font-weight: 500; }
+.sign nav a { text-decoration: none; }
+.sign nav a:hover { color: var(--clay); }
+
+.hero { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; padding: 56px 0 72px; }
+.kicker { font-size: 14px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: var(--clay); margin: 0 0 14px; }
+.hero h1 { font-size: clamp(44px, 6.5vw, 78px); }
+.hero p.lead { font-size: 19px; color: var(--ink-soft); max-width: 36ch; margin: 20px 0 26px; }
+.btns { display: flex; flex-wrap: wrap; gap: 12px; }
+.btn { display: inline-flex; align-items: center; padding: 14px 22px; border-radius: 999px; font-weight: 600; font-size: 15px; text-decoration: none; border: 2px solid var(--clay); }
+.btn-main { background: var(--clay); color: #fff; }
+.btn-main:hover { background: var(--clay-dark); border-color: var(--clay-dark); }
+.btn-line { color: var(--clay-dark); }
+.btn-line:hover { background: #efe2d0; }
+.pots { position: relative; aspect-ratio: 1; }
+.pot { position: absolute; bottom: 8%; border-radius: 46% 46% 40% 40% / 30% 30% 70% 70%; }
+.pot.a { left: 6%; width: 38%; height: 58%; background: linear-gradient(90deg, #9c4527, var(--clay) 45%, #cf7752); }
+.pot.b { left: 38%; width: 30%; height: 76%; background: linear-gradient(90deg, #163a38, var(--glaze) 45%, #3c7470); }
+.pot.c { left: 64%; width: 30%; height: 44%; background: linear-gradient(90deg, #b9a17e, #dcc7a3 50%, #eadbbf); }
+.pots::after { content: ""; position: absolute; left: 0; right: 0; bottom: 6%; height: 3px; background: var(--ink); border-radius: 2px; }
+
+section.block { padding: 72px 0; border-top: 1px solid var(--line); }
+.head { display: flex; justify-content: space-between; align-items: end; gap: 16px; flex-wrap: wrap; margin-bottom: 28px; }
+.head h2 { font-size: clamp(32px, 4.4vw, 48px); }
+.head p { margin: 0; color: var(--ink-soft); max-width: 44ch; }
+
+.products { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
+.product { background: #fff; border: 1px solid var(--line); border-radius: 14px; padding: 14px; display: flex; flex-direction: column; gap: 8px; }
+.product .img { aspect-ratio: 1; border-radius: 10px; }
+.i1 { background: radial-gradient(circle at 50% 60%, var(--clay) 0 34%, transparent 35%), #f1e5d3; }
+.i2 { background: radial-gradient(ellipse 30% 40% at 50% 55%, var(--glaze) 0 98%, transparent 100%), #f1e5d3; }
+.i3 { background: radial-gradient(ellipse 42% 18% at 50% 62%, #d9c29c 0 98%, transparent 100%), #f1e5d3; }
+.i4 { background: radial-gradient(ellipse 22% 38% at 50% 55%, #c98a62 0 98%, transparent 100%), #f1e5d3; }
+.product h3 { font-size: 20px; }
+.product p { margin: 0; font-size: 14px; color: var(--ink-soft); }
+.product .price { font-weight: 600; color: var(--ink); font-variant-numeric: tabular-nums; }
+
+.course { display: grid; grid-template-columns: 1.2fr 1fr; gap: 32px; align-items: center; background: var(--glaze); color: var(--cream); border-radius: 22px; padding: 40px; }
+.course h2 { font-size: clamp(30px, 4vw, 44px); color: #fff; }
+.course p { margin: 14px 0 0; color: #d6e3df; }
+.course ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+.course li { display: flex; justify-content: space-between; gap: 12px; border-bottom: 1px solid rgba(246,241,231,.25); padding-bottom: 10px; font-variant-numeric: tabular-nums; }
+.course li span:last-child { font-weight: 600; white-space: nowrap; }
+
+.visit { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+.card { background: #fff; border: 1px solid var(--line); border-radius: 14px; padding: 24px; }
+.card h3 { font-size: 24px; margin-bottom: 12px; }
+.hours { width: 100%; border-collapse: collapse; font-variant-numeric: tabular-nums; }
+.hours td { padding: 7px 0; border-bottom: 1px solid var(--line); }
+.hours td:last-child { text-align: right; }
+.card p { margin: 0 0 14px; }
+
+footer { padding: 28px 0; border-top: 2px solid var(--ink); font-size: 14px; color: var(--ink-soft); }
+footer .wrap { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+
+.bar { position: fixed; inset: auto 0 0 0; display: grid; grid-template-columns: repeat(3, 1fr); background: var(--ink); z-index: 5; }
+.bar a { color: var(--cream); text-decoration: none; text-align: center; padding: 12px 6px 14px; font-weight: 600; font-size: 14px; }
+.bar a small { display: block; font-weight: 400; font-size: 11px; opacity: .75; }
+.bar a.wa { background: var(--clay); color: #fff; }
+@media (min-width: 861px) { body { padding-bottom: 0; } .bar { display: none; } }
+@media (max-width: 860px) {
+  .sign nav { display: none; }
+  .hero, .course, .visit { grid-template-columns: 1fr; }
+  .products { grid-template-columns: 1fr 1fr; }
+  .course { padding: 26px; }
+}
+</style>
+</head>
+<body>
+<div class="demo-bar">Sito dimostrativo · bottega immaginaria · <a href="/attivita-digitale" target="_top">realizzato da Bellelli Digital</a></div>
+
+<header class="sign">
+  <div class="wrap">
+    <a class="logo" href="#top">Bottega <span>Terra</span> Cilento</a>
+    <nav aria-label="Menu">
+      <a href="#pezzi">I pezzi</a>
+      <a href="#corsi">Corsi</a>
+      <a href="#visita">Orari e indirizzo</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="wrap hero" id="top">
+    <div>
+      <p class="kicker">Ceramiche fatte a mano · Agropoli</p>
+      <h1>Ogni pezzo nasce al tornio, qui in bottega.</h1>
+      <p class="lead">Piatti, vasi e tazze con argilla e smalti del Sud. Pezzi unici, spedizioni in tutta Italia e corsi per chi vuole provare.</p>
+      <div class="btns">
+        <a class="btn btn-main" href="https://wa.me/390000000000" rel="noopener">Ordina su WhatsApp</a>
+        <a class="btn btn-line" href="#pezzi">Guarda i pezzi</a>
+      </div>
+    </div>
+    <div class="pots" role="img" aria-label="Illustrazione di tre vasi in ceramica"><div class="pot a"></div><div class="pot b"></div><div class="pot c"></div></div>
+  </div>
+
+  <section class="block" id="pezzi">
+    <div class="wrap">
+      <div class="head">
+        <h2>I pezzi della settimana</h2>
+        <p>Ogni pezzo è unico: colori e forme possono variare. Si prenotano su WhatsApp.</p>
+      </div>
+      <div class="products">
+        <article class="product"><div class="img i1" role="img" aria-label="Spazio foto ciotola"></div><h3>Ciotola cotto</h3><p>Ø 16 cm, smalto alimentare</p><p class="price">28 €</p></article>
+        <article class="product"><div class="img i2" role="img" aria-label="Spazio foto vaso"></div><h3>Vaso mare</h3><p>Altezza 24 cm, smalto verde fondale</p><p class="price">65 €</p></article>
+        <article class="product"><div class="img i3" role="img" aria-label="Spazio foto piatto"></div><h3>Piatto da portata</h3><p>Ø 32 cm, bianco sabbia</p><p class="price">48 €</p></article>
+        <article class="product"><div class="img i4" role="img" aria-label="Spazio foto tazza"></div><h3>Tazza da caffè</h3><p>Set da 2, con piattino</p><p class="price">32 €</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="corsi">
+    <div class="wrap">
+      <div class="course">
+        <div>
+          <h2>Prova il tornio</h2>
+          <p>Lezioni in piccoli gruppi, massimo 4 persone. Il pezzo che crei te lo porti a casa dopo la cottura.</p>
+          <p style="margin-top:20px"><a class="btn btn-main" href="https://wa.me/390000000000" rel="noopener">Prenota un posto</a></p>
+        </div>
+        <ul>
+          <li><span>Prova singola, 2 ore</span><span>45 €</span></li>
+          <li><span>Corso base, 4 incontri</span><span>160 €</span></li>
+          <li><span>Laboratorio per bambini</span><span>25 €</span></li>
+          <li><span>Regalo: buono corso</span><span>da 45 €</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="visita">
+    <div class="wrap visit">
+      <div class="card">
+        <h3>Orari</h3>
+        <table class="hours" aria-label="Orari settimanali">
+          <tbody>
+            <tr><td>Lunedì</td><td>Chiuso</td></tr>
+            <tr><td>Martedì – Venerdì</td><td>10:00 – 13:00 · 16:30 – 20:00</td></tr>
+            <tr><td>Sabato</td><td>10:00 – 20:00</td></tr>
+            <tr><td>Domenica</td><td>10:00 – 13:00</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="card">
+        <h3>Dove siamo</h3>
+        <p>Indirizzo di esempio, centro storico, 84043 Agropoli (SA).</p>
+        <p>Spedizioni in tutta Italia in 3-5 giorni, imballo protetto.</p>
+        <a class="btn btn-line" href="https://www.google.com/maps/search/?api=1&query=Agropoli" rel="noopener">Apri in Google Maps</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>Bottega Terra Cilento · attività immaginaria · P. IVA di esempio</span>
+    <span>Sito realizzato da <strong>Bellelli Digital</strong></span>
+  </div>
+</footer>
+
+<nav class="bar" aria-label="Contatti rapidi">
+  <a href="tel:0000000000">Chiama<small>0974 000 000</small></a>
+  <a class="wa" href="https://wa.me/390000000000" rel="noopener">WhatsApp<small>ordina</small></a>
+  <a href="https://www.google.com/maps/search/?api=1&query=Agropoli" rel="noopener">Indicazioni<small>Maps</small></a>
+</nav>
+</body>
+</html>
