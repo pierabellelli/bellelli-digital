@@ -3,6 +3,7 @@ import { createFileRoute, Link, notFound } from '@tanstack/react-router'
 import { Nav } from '../components/Nav'
 import { Footer } from '../components/Footer'
 import { useLanguage } from '../lib/Language'
+import { CategoryLabel } from '../components/BlogPreview'
 import { formatDate, posts, type Block } from '../content/posts'
 import '../components/Blog.css'
 
@@ -69,6 +70,7 @@ function BlogPost() {
           <Link to="/blog" className="text-link article-back">
             <span aria-hidden="true">←</span> {b.back}
           </Link>
+          <CategoryLabel slug={post.category} />
           <p className="blog-meta">
             <time dateTime={post.date}>{formatDate(post.date, language)}</time>
             {' · '}

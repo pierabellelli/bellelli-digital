@@ -1,3 +1,5 @@
+import type { CategorySlug } from './categories'
+
 // Blog posts. To add one: copy an entry, change slug, date and text.
 // Newest first is handled by sortedPosts().
 
@@ -13,6 +15,7 @@ export type Post = {
   date: string // YYYY-MM-DD
   excerpt: string
   minutes: number
+  category: CategorySlug
   tags: string[]
   body: Block[]
 }
@@ -25,6 +28,7 @@ export const posts: Post[] = [
     excerpt:
       'Prima di entrare in un bar o chiamare un artigiano, quasi tutti guardano Google Maps. Ecco cosa controllare oggi, dal telefono, senza spendere nulla.',
     minutes: 4,
+    category: 'siti-e-google',
     tags: ['Google', 'Attività locali'],
     body: [
       {
@@ -62,6 +66,7 @@ export const posts: Post[] = [
     excerpt:
       'L’AI può prepararti una buona bozza in pochi secondi. Il tocco finale però deve restare tuo: ecco un metodo semplice e un prompt da copiare.',
     minutes: 5,
+    category: 'ai-nel-lavoro',
     tags: ['AI', 'Recensioni'],
     body: [
       {
@@ -103,5 +108,13 @@ export function formatDate(date: string, language: 'it' | 'en') {
   return new Date(`${date}T12:00:00`).toLocaleDateString(
     language === 'it' ? 'it-IT' : 'en-GB',
     { day: 'numeric', month: 'long', year: 'numeric' },
+  )
+}
+
+export function searchPosts(query: string) {
+  const q = query.trim().toLowerCase()
+  if (!q) return sortedPosts()
+  return sortedPosts().filter((p) =>
+    [p.title, p.excerpt, ...p.tags].join(' ').toLowerCase().includes(q),
   )
 }
