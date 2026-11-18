@@ -11,6 +11,16 @@ export function Services() {
           <h2>{t.services.title}</h2>
           <p>{t.services.intro}</p>
         </div>
+        <a className="service-featured" href={t.services.featured.url}>
+          <div>
+            <span className="eyebrow">{t.services.featured.eyebrow}</span>
+            <h3>{t.services.featured.title}</h3>
+            <p>{t.services.featured.text}</p>
+          </div>
+          <span className="btn btn-primary">
+            {t.services.featured.cta} <span aria-hidden="true">↗</span>
+          </span>
+        </a>
         <div className="services-grid">
           {t.services.items.map((item, i) => (
             <article className="service-card" key={item.title}>

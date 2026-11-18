@@ -54,3 +54,23 @@ and are no longer used by the contact form.
 - Contact details are in `src/lib/constants.ts`. Call requests currently use email;
   replace with a verified scheduling URL when one is available.
 - There are no public product/demo links until their destinations are confirmed.
+
+## Blog
+
+Posts live in `src/content/posts.ts`. Add an entry (slug, title, date,
+excerpt, minutes, tags, body) and add its URL to `public/sitemap.xml`.
+Routes: `/blog` and `/blog/<slug>`.
+
+## Landing page: attivita.bellelli-digital.com
+
+`landing/attivita/` is a separate static site for the "Attività Digitale in
+7 giorni" offer, with the example site at `/esempi/caffe-dorico/`.
+
+1. In Netlify, add a new site from this same repository with
+   **Base directory** `landing/attivita` and no build command
+   (`landing/attivita/netlify.toml` publishes the folder as is).
+2. Under **Domain management**, add `attivita.bellelli-digital.com` and
+   create the DNS record Netlify shows (CNAME `attivita` → the new site).
+3. Under **Forms**, enable form detection and redeploy: the form is
+   named `richiesta-attivita` and redirects to `/grazie/`. Set up an email
+   notification for new submissions.
