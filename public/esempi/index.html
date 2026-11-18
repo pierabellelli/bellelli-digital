@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Siti di esempio — Bellelli Digital</title>
+<meta name="description" content="Tre siti di esempio per attività locali: bar, freelance e negozio artigiano. Realizzati da Bellelli Digital.">
+<link rel="canonical" href="https://bellelli-digital.com/esempi/">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --accent: #d6156b;
+  --accent-dark: #a30f53;
+  --night: #291728;
+  --ink: #231c29;
+  --soft: #e8d3df;
+  color-scheme: light;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; height: 100%; }
+body { display: flex; flex-direction: column; background: var(--night); font-family: "Inter", system-ui, sans-serif; }
+.picker {
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px 16px;
+  padding: 10px 20px; background: var(--night); color: var(--soft);
+}
+.brand { font-family: "Poppins", system-ui, sans-serif; font-weight: 700; font-size: 18px; color: #fff; text-decoration: none; letter-spacing: -0.02em; }
+.brand span { color: #ff9cc9; }
+.tabs { display: flex; gap: 4px; background: rgba(255,255,255,.08); border-radius: 999px; padding: 4px; }
+.tabs button {
+  border: 0; background: transparent; color: var(--soft); font: inherit; font-size: 14px; font-weight: 600;
+  padding: 9px 16px; border-radius: 999px; cursor: pointer; min-height: 40px;
+}
+.tabs button[aria-selected="true"] { background: var(--accent); color: #fff; }
+.tabs button:focus-visible, a:focus-visible { outline: 3px solid #ff9cc9; outline-offset: 2px; }
+.cta { color: #fff; background: transparent; border: 1.5px solid #ff9cc9; text-decoration: none; font-weight: 600; font-size: 14px; padding: 9px 16px; border-radius: 999px; }
+.cta:hover { background: var(--accent); border-color: var(--accent); }
+.frame { flex: 1; min-height: 0; background: #fff; }
+iframe { display: block; width: 100%; height: 100%; border: 0; }
+@media (max-width: 640px) {
+  .picker { padding: 10px 12px; }
+  .brand { display: none; }
+  .tabs { flex: 1; justify-content: space-between; }
+  .tabs button { padding: 8px 10px; font-size: 13px; flex: 1; }
+  .cta { display: none; }
+}
+</style>
+</head>
+<body>
+<header class="picker">
+  <a class="brand" href="/attivita-digitale">bellelli<span>.digital</span></a>
+  <div class="tabs" role="tablist" aria-label="Scegli un esempio">
+    <button role="tab" id="tab-bar" aria-controls="demo" data-key="bar">Bar</button>
+    <button role="tab" id="tab-freelance" aria-controls="demo" data-key="freelance">Freelance</button>
+    <button role="tab" id="tab-bottega" aria-controls="demo" data-key="bottega">Negozio artigiano</button>
+  </div>
+  <a class="cta" href="/parliamone">Vuoi un sito così?</a>
+</header>
+<main class="frame" id="demo" role="tabpanel">
+  <iframe id="frame" title="Sito di esempio" src="/esempi/caffe-dorico/"></iframe>
+</main>
+<script>
+(function () {
+  var demos = {
+    bar: { src: '/esempi/caffe-dorico/', title: 'Esempio: bar pasticceria Caffè Dorico' },
+    freelance: { src: '/esempi/freelance/', title: 'Esempio: fotografa freelance Elena Marino' },
+    bottega: { src: '/esempi/bottega/', title: 'Esempio: negozio artigiano Bottega Terra Cilento' }
+  };
+  var frame = document.getElementById('frame');
+  var panel = document.getElementById('demo');
+  var tabs = Array.prototype.slice.call(document.querySelectorAll('[role="tab"]'));
+  function show(key, push) {
+    if (!demos[key]) key = 'bar';
+    tabs.forEach(function (t) {
+      var on = t.getAttribute('data-key') === key;
+      t.setAttribute('aria-selected', on ? 'true' : 'false');
+      t.tabIndex = on ? 0 : -1;
+      if (on) panel.setAttribute('aria-labelledby', t.id);
+    });
+    if (frame.getAttribute('src') !== demos[key].src) frame.setAttribute('src', demos[key].src);
+    frame.title = demos[key].title;
+    if (push && location.hash !== '#' + key) history.replaceState(null, '', '#' + key);
+  }
+  tabs.forEach(function (t, i) {
+    t.addEventListener('click', function () { show(t.getAttribute('data-key'), true); });
+    t.addEventListener('keydown', function (e) {
+      if (e.key !== 'ArrowRight' && e.key !== 'ArrowLeft') return;
+      var next = tabs[(i + (e.key === 'ArrowRight' ? 1 : tabs.length - 1)) % tabs.length];
+      next.focus(); show(next.getAttribute('data-key'), true);
+    });
+  });
+  window.addEventListener('hashchange', function () { show(location.hash.slice(1), false); });
+  show(location.hash.slice(1), false);
+})();
+</script>
+</body>
+</html>

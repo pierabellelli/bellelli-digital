@@ -6,7 +6,7 @@ export const WHATSAPP_URL =
   'https://wa.me/393291969548?text=' +
   encodeURIComponent('Ciao Piera, vorrei informazioni su Attività Digitale in 7 giorni.')
 export const SITE_URL = 'https://bellelli-digital.com'
-export const EXAMPLE_URL = '/esempi/caffe-dorico/'
+export const EXAMPLE_URL = '/esempi/'
 
 export const packages = [
   {
