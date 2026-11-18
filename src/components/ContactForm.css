@@ -179,3 +179,15 @@
     grid-template-columns: 1fr;
   }
 }
+
+.resource-done h2 {
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+.resource-downloads {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  margin-top: 20px;
+}

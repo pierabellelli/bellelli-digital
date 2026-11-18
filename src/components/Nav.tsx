@@ -7,6 +7,7 @@ const links = [
   { to: '/servizi', label: 'Servizi' },
   { to: '/chi-sono', label: 'Chi sono' },
   { to: '/blog', label: 'Blog' },
+  { to: '/risorse', label: 'Risorse' },
 ] as const
 
 export function Nav() {
