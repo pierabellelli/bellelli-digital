@@ -45,7 +45,7 @@ export const packages = [
       'Tutto il pacchetto Completo',
       'Sito fino a 3 pagine',
       'Prenotazione o richiesta preventivo',
-      'Raccolta contatti automatica: foglio Google, avviso e risposta al cliente',
+      'Richieste dal sito salvate in un foglio Google, con avviso a te e risposta al cliente',
       '5 post social pronti da pubblicare',
     ],
   },
@@ -83,7 +83,7 @@ export const automation = {
     },
   ],
   note:
-    'Si aggiunge a qualsiasi pacchetto o si richiede da solo. I messaggi WhatsApp automatici hanno un piccolo costo per messaggio applicato da Meta, che ti spiego prima di partire.',
+    'Differenza con il Plus: il Plus salva solo le richieste del sito in un foglio Google. Contatti in automatico aggiunge un CRM vero, le richieste da email e WhatsApp, i promemoria e il riepilogo settimanale. Si aggiunge a qualsiasi pacchetto o si richiede da solo. I messaggi WhatsApp automatici hanno un piccolo costo per messaggio applicato da Meta, che ti spiego prima di partire.',
 }
 
 export const steps = [

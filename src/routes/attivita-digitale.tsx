@@ -39,7 +39,7 @@ const faqs = [
   { q: 'Posso modificarlo da solo?', a: 'Le modifiche le faccio io: con la manutenzione una al mese è inclusa, altrimenti costano 35 € l’ora.' },
   { q: 'Quanto costa ogni anno?', a: 'Solo il dominio, circa 10-20 €. La pubblicazione del sito è gratuita e la manutenzione è facoltativa.' },
   { q: 'E se non mi piace?', a: 'Prima della pubblicazione vedi l’anteprima e puoi chiedere fino a 2 giri di modifiche. Il saldo si paga solo quando il sito va online.' },
-  { q: 'Le richieste dei clienti dove arrivano?', a: 'Nel pacchetto Plus il modulo del sito salva ogni richiesta in un foglio Google, ti avvisa via email e manda al cliente una risposta automatica. Così nessun contatto si perde.' },
+  { q: 'Le richieste dei clienti dove arrivano?', a: 'Nel pacchetto Plus il modulo del sito salva ogni richiesta in un foglio Google, ti avvisa via email e manda al cliente una risposta automatica. Se vuoi anche email e WhatsApp in un CRM, con promemoria, c’è Contatti in automatico.' },
   { q: 'Lavori anche fuori dal Cilento?', a: 'Sì: chiamata, revisione e formazione si fanno anche in videochiamata.' },
 ]
 

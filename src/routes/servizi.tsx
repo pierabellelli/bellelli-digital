@@ -35,7 +35,7 @@ const services = [
       'Prompt per post, offerte e messaggi ai clienti',
       'Cosa non condividere mai con l’AI',
       'Guida “La tua AI in 10 minuti al giorno”',
-      'Plus: raccolta contatti automatica dal sito',
+      'Plus: richieste dal sito salvate in un foglio Google',
       'In più: contatti in automatico su CRM, email e WhatsApp',
     ],
   },
