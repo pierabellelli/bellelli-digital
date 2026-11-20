@@ -1,7 +1,8 @@
 import { createFileRoute, Link } from '@tanstack/react-router'
 import { CtaBand, Layout, Packages, PageHero, WeekSteps } from '../components/Blocks'
 import { HeroShowcase } from '../components/HeroShowcase'
-import { automation, EXAMPLE_URL } from '../lib/site'
+import { ExampleSites } from '../components/ExampleSites'
+import { automation } from '../lib/site'
 import { useSeo } from '../lib/useSeo'
 
 export const Route = createFileRoute('/attivita-digitale')({
@@ -12,27 +13,6 @@ const problems = [
   { title: 'Nessun sito', text: 'Solo una pagina Facebook, che chi non ti conosce non apre.' },
   { title: 'Orari sbagliati', text: 'Google dice “aperto” quando sei chiuso, o il contrario. Il cliente va altrove.' },
   { title: 'Recensioni senza risposta', text: 'Chi legge una critica senza risposta pensa che non ti importi.' },
-]
-
-const examples = [
-  {
-    hash: 'bar',
-    name: 'Caffè Dorico',
-    kind: 'Bar pasticceria',
-    text: 'Colazioni, pasticceria e aperitivo, con orari “aperto ora”, mappa e pulsante per chiamare.',
-  },
-  {
-    hash: 'freelance',
-    name: 'Elena Marino',
-    kind: 'Graphic designer freelance',
-    text: 'Lavori scelti, servizi con prezzi indicativi e richiesta di preventivo in un tocco.',
-  },
-  {
-    hash: 'bottega',
-    name: 'Bottega Terra Cilento',
-    kind: 'Ceramiche artigianali ad Agropoli',
-    text: 'Pezzi in vendita, corsi al tornio e ordini direttamente su WhatsApp.',
-  },
 ]
 
 const faqs = [
@@ -66,7 +46,7 @@ function AttivitaDigitale() {
         <Link to="/parliamone" className="btn btn-dark">
           Prenota una chiamata di 15 minuti
         </Link>
-        <a href={EXAMPLE_URL} className="btn btn-secondary">
+        <a href="#esempi" className="btn btn-secondary">
           Guarda i siti di esempio
         </a>
       </PageHero>
@@ -87,6 +67,23 @@ function AttivitaDigitale() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      <section className="section examples-band" id="esempi">
+        <div className="container">
+          <div className="ex-head">
+            <div>
+              <p className="eyebrow">Esempi</p>
+              <h2>Tre attività, tre siti.</h2>
+            </div>
+            <p>Passa sopra un’anteprima per scorrerla, cliccala per aprire il sito vero.</p>
+          </div>
+          <ExampleSites />
+          <p className="section-note">
+            Attività immaginarie, siti veri. Ogni sito parte da un modello per settore e
+            diventa tuo con testi, foto, colori e servizi della tua attività.
+          </p>
         </div>
       </section>
 
@@ -152,35 +149,6 @@ function AttivitaDigitale() {
             ))}
           </div>
           <p className="smallprint">{automation.note}</p>
-        </div>
-      </section>
-
-      <section className="section band-soft">
-        <div className="container">
-          <div className="rows-head">
-            <p className="eyebrow">Esempi</p>
-            <h2>Tre attività, tre siti.</h2>
-          </div>
-          <div className="features features-3">
-            {examples.map((e, i) => (
-              <a className="feature" key={e.hash} href={`${EXAMPLE_URL}#${e.hash}`}>
-                <span className="feature-n">0{i + 1}</span>
-                <div>
-                  <h3>{e.name}</h3>
-                  <p>
-                    <strong>{e.kind}.</strong> {e.text}
-                  </p>
-                  <span className="text-link">
-                    Guarda il sito <span aria-hidden="true">↗</span>
-                  </span>
-                </div>
-              </a>
-            ))}
-          </div>
-          <p className="section-note">
-            Attività immaginarie, siti veri. Ogni sito parte da un modello per settore e
-            diventa tuo con testi, foto, colori e servizi della tua attività.
-          </p>
         </div>
       </section>
 
