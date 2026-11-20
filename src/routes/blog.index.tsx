@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from 'react'
 import { createFileRoute } from '@tanstack/react-router'
 import { Layout, PageHero } from '../components/Blocks'
 import { ClusterGrid, PostRows } from '../components/BlogParts'
+import { BlogStack } from '../components/HeroCards'
 import { searchPosts } from '../content/posts'
 import { useSeo } from '../lib/useSeo'
 
@@ -34,6 +35,7 @@ function BlogIndex() {
   return (
     <Layout>
       <PageHero
+        visual={<BlogStack />}
         eyebrow="Blog"
         title={
           <>
