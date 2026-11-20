@@ -1,5 +1,6 @@
 import { createFileRoute } from '@tanstack/react-router'
 import { CtaBand, Layout, PageHero } from '../components/Blocks'
+import { Portfolio } from '../components/Portfolio'
 import { useSeo } from '../lib/useSeo'
 import { LINKEDIN_URL } from '../lib/site'
 
@@ -87,7 +88,21 @@ function ChiSono() {
         </div>
       </section>
 
-      <section className="section">
+      <section className="section" id="progetti">
+        <div className="container">
+          <div className="rows-head">
+            <p className="eyebrow">Progetti</p>
+            <h2>Cosa ho costruito.</h2>
+          </div>
+          <p className="lead pf-lead">
+            App, automazioni e siti che ho progettato e costruito io, con l’AI come braccio
+            operativo. Gli stessi strumenti che uso per la tua attività.
+          </p>
+          <Portfolio />
+        </div>
+      </section>
+
+      <section className="section band-soft">
         <div className="container split">
           <h2 className="split-title">Fuori dallo schermo.</h2>
           <div className="split-body">
