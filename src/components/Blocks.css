@@ -517,6 +517,9 @@ a.feature .text-link {
 }
 .packages-2 {
   grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin-top: 16px;
+}
+.automation-diff {
   margin-top: 32px;
 }
 @media (max-width: 900px) {

@@ -123,6 +123,10 @@ function AttivitaDigitale() {
               </div>
             ))}
           </div>
+          <div className="maintenance automation-diff">
+            <strong>{automation.plusDiff.title}</strong>
+            <p>{automation.plusDiff.text}</p>
+          </div>
           <div className="packages packages-2">
             {automation.levels.map((l) => (
               <article className="package" key={l.name}>

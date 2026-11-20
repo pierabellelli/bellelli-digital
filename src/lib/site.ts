@@ -83,8 +83,12 @@ export const automation = {
       ],
     },
   ],
+  plusDiff: {
+    title: 'Rispetto al Plus',
+    text: 'Il Plus salva solo le richieste del sito in un foglio Google. Qui hai un CRM vero, con email, WhatsApp, promemoria e riepilogo settimanale. Si aggiunge a qualsiasi pacchetto o si richiede da solo.',
+  },
   note:
-    'Differenza con il Plus: il Plus salva solo le richieste del sito in un foglio Google. Contatti in automatico aggiunge un CRM vero, le richieste da email e WhatsApp, i promemoria e il riepilogo settimanale. Si aggiunge a qualsiasi pacchetto o si richiede da solo. I messaggi WhatsApp automatici hanno un piccolo costo per messaggio applicato da Meta, che ti spiego prima di partire.',
+    'I messaggi WhatsApp automatici hanno un piccolo costo per messaggio applicato da Meta, che ti spiego prima di partire.',
 }
 
 export const steps = [
