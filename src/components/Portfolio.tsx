@@ -17,8 +17,10 @@ const projects: Project[] = [
     kind: 'App',
     name: 'OmbrellOne',
     text: 'Ordini dall’ombrellone con un QR code: il cliente sceglie dal telefono, il bar dello stabilimento riceve l’ordine. Con pannello di gestione, periodo di prova e pagine privacy.',
-    status: 'Online · provata in uno stabilimento',
+    status: 'Online',
     tags: ['React', 'Supabase', 'Email automatiche'],
+    href: 'https://ombrellone.app/',
+    cta: 'Visita il sito',
   },
   {
     kind: 'App con AI',
