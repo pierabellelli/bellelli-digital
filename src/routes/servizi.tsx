@@ -1,5 +1,6 @@
 import { createFileRoute, Link } from '@tanstack/react-router'
 import { CtaBand, Layout, PageHero } from '../components/Blocks'
+import { PackageVisual } from '../components/PackageVisual'
 import { useSeo } from '../lib/useSeo'
 
 export const Route = createFileRoute('/servizi')({
@@ -60,6 +61,7 @@ function Servizi() {
   return (
     <Layout>
       <PageHero
+        visual={<PackageVisual />}
         eyebrow="Servizi"
         title={
           <>
