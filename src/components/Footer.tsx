@@ -1,5 +1,5 @@
 import { Link } from '@tanstack/react-router'
-import { CONTACT_EMAIL, WHATSAPP_NUMBER, WHATSAPP_URL } from '../lib/site'
+import { CONTACT_EMAIL, LINKEDIN_URL, WHATSAPP_NUMBER, WHATSAPP_URL } from '../lib/site'
 import './Footer.css'
 
 export function Footer() {
@@ -33,6 +33,9 @@ export function Footer() {
                 WhatsApp {WHATSAPP_NUMBER}
               </a>
               <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>
+              <a href={LINKEDIN_URL} target="_blank" rel="noopener noreferrer">
+                LinkedIn
+              </a>
             </div>
           </nav>
         </div>

@@ -1,7 +1,7 @@
 import { createFileRoute } from '@tanstack/react-router'
 import { Layout, PageHero } from '../components/Blocks'
 import { ContactForm } from '../components/ContactForm'
-import { CONTACT_EMAIL, WHATSAPP_NUMBER, WHATSAPP_URL } from '../lib/site'
+import { CONTACT_EMAIL, LINKEDIN_URL, WHATSAPP_NUMBER, WHATSAPP_URL } from '../lib/site'
 import { useSeo } from '../lib/useSeo'
 
 type Search = { pacchetto?: string }
@@ -45,6 +45,12 @@ function Parliamone() {
               <h2>Email</h2>
               <a href={`mailto:${CONTACT_EMAIL}`} className="contact-email">
                 {CONTACT_EMAIL}
+              </a>
+            </div>
+            <div>
+              <h2>LinkedIn</h2>
+              <a href={LINKEDIN_URL} className="contact-email" target="_blank" rel="noopener noreferrer">
+                Piera Bellelli
               </a>
             </div>
             <div>

@@ -5,6 +5,7 @@ export const WHATSAPP_NUMBER = '+39 329 196 9548'
 export const WHATSAPP_URL =
   'https://wa.me/393291969548?text=' +
   encodeURIComponent('Ciao Piera, vorrei informazioni su Attività Digitale in 7 giorni.')
+export const LINKEDIN_URL = 'https://www.linkedin.com/in/piera-bellelli/'
 export const SITE_URL = 'https://bellelli-digital.com'
 export const EXAMPLE_URL = '/esempi/'
 
