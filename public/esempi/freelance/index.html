@@ -152,11 +152,11 @@ body { overflow-x: clip; }
 }
 .hero::after {
   content: ""; position: absolute; z-index: -1; pointer-events: none;
-  width: min(620px, 80vw); aspect-ratio: 1; right: -8%; top: -12%;
-  border-radius: 50%;
-  background: radial-gradient(circle at 40% 40%, rgba(255,90,54,.45), rgba(255,175,90,.25) 45%, transparent 70%);
-  filter: blur(40px);
-  animation: bg-float 14s ease-in-out infinite alternate;
+  top: -78px; bottom: 0; right: calc(50% - 50vw); width: 52vw;
+  background:
+    linear-gradient(90deg, #fff 0%, rgba(255,255,255,.55) 35%, rgba(255,255,255,.1) 100%),
+    linear-gradient(0deg, #fff 0%, transparent 30%),
+    url("https://images.unsplash.com/photo-1716471330463-f475b00f0506?w=1400&q=70&auto=format") center / cover no-repeat;
 }
 .top { position: relative; z-index: 1; }
 
@@ -313,7 +313,7 @@ body { overflow-x: clip; }
 
 <footer>
   <div class="wrap">
-    <span>Elena Marino · professionista immaginaria · P. IVA di esempio</span>
+    <span>Elena Marino · professionista immaginaria · P. IVA di esempio · Foto hero: Unsplash</span>
     <span>Sito realizzato da <strong>Bellelli Digital</strong></span>
   </div>
 </footer>

@@ -266,7 +266,16 @@ footer .row { display: flex; justify-content: space-between; gap: 16px; flex-wra
 .btn-lemon:hover { filter: brightness(1.05); }
 
 /* Sfondo hero: alba sui Templi */
-.hero { background: linear-gradient(160deg, #18476f 0%, var(--sea) 45%, var(--sea-deep) 100%); isolation: isolate; }
+.hero {
+  background:
+    linear-gradient(90deg, var(--sea) 30%, rgba(18,58,94,.82) 52%, rgba(12,39,66,.45) 100%),
+    url('https://images.unsplash.com/photo-1777558578066-44266564ee65?w=1400&q=70&auto=format') right 30% / 58% auto no-repeat,
+    var(--sea-deep);
+  isolation: isolate;
+}
+@media (max-width: 860px) {
+  .hero { background: linear-gradient(180deg, rgba(18,58,94,.92), rgba(12,39,66,.88)), url('https://images.unsplash.com/photo-1777558578066-44266564ee65?w=900&q=60&auto=format') center / cover, var(--sea); }
+}
 .hero::before {
   content: ""; position: absolute; inset: -20%; z-index: -1; pointer-events: none;
   background:
@@ -454,7 +463,7 @@ footer .row { display: flex; justify-content: space-between; gap: 16px; flex-wra
 
 <footer>
   <div class="wrap row">
-    <span>© Caffè Dorico · attività immaginaria · P. IVA di esempio</span>
+    <span>© Caffè Dorico · attività immaginaria · P. IVA di esempio · Foto: Wenceslao Moya grondona de luca / Unsplash</span>
     <span><a href="#top">Privacy e cookie</a> · Sito realizzato da <strong>Bellelli Digital</strong></span>
   </div>
 </footer>
