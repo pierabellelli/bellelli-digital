@@ -150,6 +150,23 @@ footer .wrap { display: flex; justify-content: space-between; gap: 16px; flex-wr
 .rv-card:nth-child(even) .rv-av { background: var(--glaze); }
 .rv-reply { background: var(--cream); }
 .rv-reply strong { color: var(--clay-dark); }
+
+/* Sfondo hero: argilla e smalto */
+body { overflow-x: clip; }
+.hero { position: relative; isolation: isolate; }
+.hero::before {
+  content: ""; position: absolute; top: -75px; bottom: 0; left: calc(50% - 50vw); width: 100vw; -webkit-mask-image: linear-gradient(to bottom, #000 75%, transparent); mask-image: linear-gradient(to bottom, #000 75%, transparent); z-index: -1; pointer-events: none;
+  background:
+    radial-gradient(34% 55% at 12% 30%, rgba(181,83,47,.26), transparent 70%),
+    radial-gradient(36% 60% at 88% 70%, rgba(31,77,74,.26), transparent 70%),
+    radial-gradient(20% 30% at 60% 8%, rgba(242,194,48,.18), transparent 70%),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .4 0 0 0 0 .3 0 0 0 0 .2 0 0 0 .07 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  animation: bg-drift 22s ease-in-out infinite alternate;
+}
+
+@keyframes bg-drift { from { transform: translate3d(0,0,0) scale(1); } to { transform: translate3d(3%, -2%, 0) scale(1.06); } }
+@keyframes bg-float { from { transform: translate(0,0) scale(1); } to { transform: translate(-60px, 40px) scale(1.12); } }
+@media (prefers-reduced-motion: reduce) { .hero::before, .hero::after { animation: none !important; } }
 </style>
 </head>
 <body>

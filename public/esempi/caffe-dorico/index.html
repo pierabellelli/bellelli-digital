@@ -264,6 +264,23 @@ footer .row { display: flex; justify-content: space-between; gap: 16px; flex-wra
 .rv-reply strong { color: var(--sea); }
 .btn-lemon { background: var(--lemon); color: var(--sea-deep); border-color: var(--lemon); }
 .btn-lemon:hover { filter: brightness(1.05); }
+
+/* Sfondo hero: alba sui Templi */
+.hero { background: linear-gradient(160deg, #18476f 0%, var(--sea) 45%, var(--sea-deep) 100%); isolation: isolate; }
+.hero::before {
+  content: ""; position: absolute; inset: -20%; z-index: -1; pointer-events: none;
+  background:
+    radial-gradient(26% 32% at 74% 26%, rgba(242,194,48,.55), rgba(242,194,48,.18) 45%, transparent 72%),
+    radial-gradient(30% 36% at 90% 62%, rgba(255,140,90,.32), transparent 70%),
+    radial-gradient(40% 45% at 12% 80%, rgba(46,170,190,.38), transparent 70%);
+  filter: blur(10px);
+  animation: bg-drift 18s ease-in-out infinite alternate;
+}
+.hero > .wrap, .hero .nav { position: relative; z-index: 1; }
+
+@keyframes bg-drift { from { transform: translate3d(0,0,0) scale(1); } to { transform: translate3d(3%, -2%, 0) scale(1.06); } }
+@keyframes bg-float { from { transform: translate(0,0) scale(1); } to { transform: translate(-60px, 40px) scale(1.12); } }
+@media (prefers-reduced-motion: reduce) { .hero::before, .hero::after { animation: none !important; } }
 </style>
 </head>
 <body>

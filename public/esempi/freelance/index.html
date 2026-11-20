@@ -139,6 +139,30 @@ footer .wrap { display: flex; justify-content: space-between; gap: 16px; flex-wr
 .rv-card:nth-child(2) .rv-av, .rv-card:nth-child(3) .rv-av { background: var(--accent); }
 .rv-reply { background: #fff; }
 .rv-score a { padding: 12px 20px; }
+
+/* Sfondo hero: griglia a puntini + alone arancio */
+body { overflow-x: clip; }
+.hero { position: relative; isolation: isolate; }
+.hero::before {
+  content: ""; position: absolute; top: -78px; bottom: 0; left: 50%; width: 100vw; transform: translateX(-50%); z-index: -2; pointer-events: none;
+  background-image: radial-gradient(rgba(17,17,17,.16) 1.2px, transparent 1.4px);
+  background-size: 22px 22px;
+  -webkit-mask-image: radial-gradient(70% 80% at 60% 40%, #000 30%, transparent 80%);
+          mask-image: radial-gradient(70% 80% at 60% 40%, #000 30%, transparent 80%);
+}
+.hero::after {
+  content: ""; position: absolute; z-index: -1; pointer-events: none;
+  width: min(620px, 80vw); aspect-ratio: 1; right: -8%; top: -12%;
+  border-radius: 50%;
+  background: radial-gradient(circle at 40% 40%, rgba(255,90,54,.45), rgba(255,175,90,.25) 45%, transparent 70%);
+  filter: blur(40px);
+  animation: bg-float 14s ease-in-out infinite alternate;
+}
+.top { position: relative; z-index: 1; }
+
+@keyframes bg-drift { from { transform: translate3d(0,0,0) scale(1); } to { transform: translate3d(3%, -2%, 0) scale(1.06); } }
+@keyframes bg-float { from { transform: translate(0,0) scale(1); } to { transform: translate(-60px, 40px) scale(1.12); } }
+@media (prefers-reduced-motion: reduce) { .hero::before, .hero::after { animation: none !important; } }
 </style>
 </head>
 <body>
