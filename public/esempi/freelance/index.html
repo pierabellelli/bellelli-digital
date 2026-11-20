@@ -96,6 +96,49 @@ footer .wrap { display: flex; justify-content: space-between; gap: 16px; flex-wr
   .pair { grid-template-columns: 1fr; }
   section.block { padding: 64px 0; }
 }
+
+/* Recensioni */
+.rv-head { display: grid; grid-template-columns: 1.3fr 1fr; gap: 32px; align-items: end; margin-bottom: 40px; }
+.rv-lead { margin: 14px 0 0; max-width: 46ch; }
+.rv-score { display: grid; grid-template-columns: auto 1fr; gap: 6px 18px; align-items: center; justify-self: end; }
+.rv-score .rv-num { font-size: clamp(64px, 9vw, 96px); font-weight: 800; line-height: .9; letter-spacing: -.04em; }
+.rv-score > div { display: grid; gap: 4px; }
+.rv-score a { grid-column: 1 / -1; justify-self: start; margin-top: 12px; }
+.rv-stars { letter-spacing: 2px; font-size: 18px; }
+.rv-off { opacity: .25; }
+.rv-count { font-size: 14px; }
+.rv-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+.rv-card { border-radius: 16px; padding: 24px; display: grid; gap: 12px; align-content: start; transition: transform .25s ease, box-shadow .25s ease, opacity .6s ease; }
+.rv-card:hover { transform: translateY(-4px); }
+.rv-card header { display: flex; align-items: center; gap: 12px; }
+.rv-card header div { display: grid; line-height: 1.3; }
+.rv-card header span:not(.rv-av) { font-size: 13px; }
+.rv-av { width: 44px; height: 44px; border-radius: 50%; display: grid; place-items: center; font-weight: 700; font-size: 15px; color: #fff; flex: none; }
+.rv-card p { margin: 0; }
+.rv-reply { border-radius: 10px; padding: 12px 14px; font-size: 15px; }
+.rv-reply strong { display: block; font-size: 13px; margin-bottom: 2px; }
+.rv-note { font-size: 13px; margin: 24px 0 0; }
+.rv-anim .rv-card { opacity: 0; transform: translateY(24px); }
+.rv-anim .rv-card.rv-in { opacity: 1; transform: none; }
+.rv-anim .rv-card.rv-in:hover { transform: translateY(-4px); }
+@media (max-width: 860px) {
+  .rv-head { grid-template-columns: 1fr; }
+  .rv-score { justify-self: start; }
+  .rv-grid { grid-template-columns: 1fr; }
+}
+
+.rv h2 { margin-bottom: 0; }
+.rv-lead, .rv-count, .rv-note, .rv-card header span:not(.rv-av) { color: var(--ink-soft); }
+.rv-num { color: var(--ink); }
+.rv .rv-stars { color: var(--accent); }
+.rv-card { background: var(--tint); position: relative; padding-top: 44px; }
+.rv-card::before { content: "“"; position: absolute; top: -6px; left: 20px; font-size: 96px; font-weight: 800; line-height: 1; color: var(--accent); }
+.rv-card:hover { box-shadow: 0 16px 36px rgba(0,0,0,.08); }
+.rv-card > p { font-size: 18px; font-weight: 500; line-height: 1.5; }
+.rv-av { background: var(--ink); }
+.rv-card:nth-child(2) .rv-av, .rv-card:nth-child(3) .rv-av { background: var(--accent); }
+.rv-reply { background: #fff; }
+.rv-score a { padding: 12px 20px; }
 </style>
 </head>
 <body>
@@ -108,6 +151,7 @@ footer .wrap { display: flex; justify-content: space-between; gap: 16px; flex-wr
       <a href="#lavori">Lavori</a>
       <a href="#servizi">Servizi</a>
       <a href="#metodo">Metodo</a>
+      <a href="#recensioni">Clienti</a>
       <a href="#contatti">Contatti</a>
     </nav>
   </header>
@@ -178,6 +222,47 @@ footer .wrap { display: flex; justify-content: space-between; gap: 16px; flex-wr
     </div>
   </section>
 
+  <section class="block rv" id="recensioni">
+    <div class="wrap">
+      <div class="rv-head">
+        <div>
+          <p class="label">Clienti</p>
+          <h2>Cosa dicono i clienti.</h2>
+          <p class="rv-lead">Attività del territorio che oggi hanno un’immagine riconoscibile.</p>
+        </div>
+        <div class="rv-score">
+          <span class="rv-num">5,0</span>
+          <div><span class="rv-stars" aria-label="5 stelle su 5">★★★★★</span><span class="rv-count">42 recensioni su Google</span></div>
+          <a class="btn" href="https://www.google.com/maps" rel="noopener">Lascia una recensione</a>
+        </div>
+      </div>
+      <div class="rv-grid">
+      <article class="rv-card">
+        <header><span class="rv-av" aria-hidden="true">RC</span><div><strong>Roberto Caruso</strong><span>Pastificio artigianale</span></div></header>
+        <span class="rv-stars" aria-label="5 stelle su 5">★★★★★</span>
+        <p>Elena ha capito il nostro marchio meglio di noi. Le nuove etichette sono sugli scaffali da tre mesi e i clienti le riconoscono al primo sguardo.</p>
+      </article>
+      <article class="rv-card">
+        <header><span class="rv-av" aria-hidden="true">VG</span><div><strong>Valentina Greco</strong><span>Agriturismo</span></div></header>
+        <span class="rv-stars" aria-label="5 stelle su 5">★★★★★</span>
+        <p>Tre proposte in una settimana, come promesso. Abbiamo scelto la seconda senza esitare, e il menu nuovo piace a tutti.</p>
+        <div class="rv-reply"><strong>Risposta di Elena</strong><p>Grazie Valentina, è stato un piacere lavorare con voi. Ci vediamo per il kit social di primavera!</p></div>
+      </article>
+      <article class="rv-card">
+        <header><span class="rv-av" aria-hidden="true">DF</span><div><strong>Davide Fontana</strong><span>Birrificio</span></div></header>
+        <span class="rv-stars" aria-label="5 stelle su 5">★★★★★</span>
+        <p>Logo, etichette e kit social in un mese. Finalmente un’immagine che ci assomiglia: le vendite allo spaccio sono cresciute subito.</p>
+      </article>
+      <article class="rv-card">
+        <header><span class="rv-av" aria-hidden="true">MC</span><div><strong>Martina Conti</strong><span>Studio di yoga</span></div></header>
+        <span class="rv-stars" aria-label="5 stelle su 5">★★★★★</span>
+        <p>Prezzi chiari prima di iniziare, nessuna sorpresa e file pronti per stampa e web. La consiglio a chiunque apra un’attività.</p>
+      </article>
+      </div>
+      <p class="rv-note">Recensioni di esempio: nel sito reale mostriamo quelle vere della scheda Google.</p>
+    </div>
+  </section>
+
   <section class="block" id="contatti">
     <div class="wrap contact">
       <div>
@@ -219,6 +304,17 @@ document.getElementById('quote').addEventListener('submit', function (e) {
   e.preventDefault();
   document.getElementById('q-note').textContent = 'Questo è un sito di esempio: nel sito reale la richiesta arriva via email.';
 });
+</script>
+<script>
+(function () {
+  var cards = document.querySelectorAll('.rv-card');
+  if (!('IntersectionObserver' in window) || matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  document.documentElement.classList.add('rv-anim');
+  var io = new IntersectionObserver(function (es) {
+    es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('rv-in'); io.unobserve(e.target); } });
+  }, { threshold: 0.15 });
+  cards.forEach(function (c, i) { c.style.transitionDelay = (i % 4) * 90 + 'ms'; io.observe(c); });
+})();
 </script>
 </body>
 </html>
