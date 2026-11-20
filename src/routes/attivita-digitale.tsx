@@ -1,5 +1,6 @@
 import { createFileRoute, Link } from '@tanstack/react-router'
 import { CtaBand, Layout, Packages, PageHero, WeekSteps } from '../components/Blocks'
+import { HeroShowcase } from '../components/HeroShowcase'
 import { automation, EXAMPLE_URL } from '../lib/site'
 import { useSeo } from '../lib/useSeo'
 
@@ -53,6 +54,7 @@ function AttivitaDigitale() {
     <Layout>
       <PageHero
         big
+        visual={<HeroShowcase />}
         eyebrow="Attività Digitale in 7 giorni"
         title={
           <>
