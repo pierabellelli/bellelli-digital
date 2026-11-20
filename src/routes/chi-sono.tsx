@@ -1,6 +1,7 @@
 import { createFileRoute } from '@tanstack/react-router'
 import { CtaBand, Layout, PageHero } from '../components/Blocks'
 import { useSeo } from '../lib/useSeo'
+import { LINKEDIN_URL } from '../lib/site'
 
 export const Route = createFileRoute('/chi-sono')({
   component: ChiSono,
@@ -59,6 +60,11 @@ function ChiSono() {
               Con Bellelli Digital porto questo metodo alle attività della mia zona. Bar,
               negozi, artigiani e professionisti che lavorano bene di persona e meritano di essere
               trovati anche online.
+            </p>
+            <p>
+              <a href={LINKEDIN_URL} className="text-link" target="_blank" rel="noopener noreferrer">
+                Il mio percorso su LinkedIn <span aria-hidden="true">↗</span>
+              </a>
             </p>
           </div>
         </div>

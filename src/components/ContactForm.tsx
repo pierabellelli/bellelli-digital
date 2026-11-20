@@ -4,7 +4,7 @@ import './ContactForm.css'
 
 type Status = 'idle' | 'submitting' | 'success' | 'error'
 
-const PACKAGES = ['Non lo so ancora', 'Base', 'Completo', 'Plus', 'Altro']
+const PACKAGES = ['Non lo so ancora', 'Base', 'Completo', 'Plus', 'Contatti in automatico', 'Altro']
 
 export function ContactForm({ initialPackage }: { initialPackage?: string }) {
   const [nome, setNome] = useState('')

@@ -508,3 +508,22 @@ a.feature .text-link {
   max-width: 640px;
   color: var(--muted, #6b5a68);
 }
+
+/* Contatti in automatico */
+.section-intro {
+  flex-basis: 100%;
+  max-width: 640px;
+  margin: 0;
+}
+.packages-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin-top: 32px;
+}
+@media (max-width: 900px) {
+  .packages-2 {
+    grid-template-columns: 1fr;
+  }
+}
+.packages-2 .package-price small {
+  white-space: nowrap;
+}
