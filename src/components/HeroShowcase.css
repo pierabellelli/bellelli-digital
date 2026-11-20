@@ -212,27 +212,7 @@
   .showcase *, .showcase-glow { animation: none !important; }
 }
 
-/* Hero layout with a visual */
-.page-hero-grid {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) 460px;
-  gap: 32px;
-  align-items: center;
-}
 @media (max-width: 1000px) {
-  .has-visual .container {
-    display: flex;
-    flex-direction: column;
-  }
-  .page-hero-grid {
-    display: contents;
-  }
-  .page-hero-text { order: 1; }
-  .has-visual .page-hero-row { order: 2; }
-  .page-hero-visual {
-    order: 3;
-    margin-top: 48px;
-  }
   .showcase {
     margin: 0 auto;
     max-width: 380px;

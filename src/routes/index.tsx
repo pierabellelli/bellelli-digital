@@ -7,6 +7,7 @@ import {
   WeekSteps,
 } from "../components/Blocks";
 import { PostRows } from "../components/BlogParts";
+import { BeforeAfter } from "../components/BeforeAfter";
 import { sortedPosts } from "../content/posts";
 import { WHATSAPP_URL } from "../lib/site";
 import { useSeo } from "../lib/useSeo";
@@ -25,6 +26,7 @@ function Home() {
     <Layout>
       <PageHero
         big
+        visual={<BeforeAfter />}
         eyebrow="Per bar, negozi, artigiani e professionisti · Capaccio Paestum"
         title={
           <>
