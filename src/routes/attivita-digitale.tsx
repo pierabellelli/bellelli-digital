@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from '@tanstack/react-router'
 import { CtaBand, Layout, Packages, PageHero, WeekSteps } from '../components/Blocks'
-import { EXAMPLE_URL } from '../lib/site'
+import { automation, EXAMPLE_URL } from '../lib/site'
 import { useSeo } from '../lib/useSeo'
 
 export const Route = createFileRoute('/attivita-digitale')({
@@ -99,6 +99,53 @@ function AttivitaDigitale() {
         <div className="container">
           <h2 className="band-title">Tre pacchetti, nessuna sorpresa.</h2>
           <Packages detailed />
+        </div>
+      </section>
+
+      <section className="section section-top-0" id="contatti-automatici">
+        <div className="container">
+          <div className="rows-head">
+            <p className="eyebrow">In più</p>
+            <h2>Contatti in automatico.</h2>
+            <p className="section-intro">
+              Ogni richiesta finisce in un piccolo CRM fatto per la tua attività. Il cliente
+              riceve subito una risposta, tu un avviso. Nessun contatto si perde.
+            </p>
+          </div>
+          <div className="features">
+            {automation.steps.map((s, i) => (
+              <div className="feature" key={s.title}>
+                <span className="feature-n">0{i + 1}</span>
+                <div>
+                  <h3>{s.title}</h3>
+                  <p>{s.text}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+          <div className="packages packages-2">
+            {automation.levels.map((l) => (
+              <article className="package" key={l.name}>
+                <h3>{l.name}</h3>
+                <p className="package-price">
+                  {l.price} <small>una tantum</small>
+                </p>
+                <ul className="package-list">
+                  {l.features.map((f) => (
+                    <li key={f}>{f}</li>
+                  ))}
+                </ul>
+                <Link
+                  to="/parliamone"
+                  search={{ pacchetto: 'Contatti in automatico' }}
+                  className="btn btn-secondary"
+                >
+                  Chiedi informazioni
+                </Link>
+              </article>
+            ))}
+          </div>
+          <p className="smallprint">{automation.note}</p>
         </div>
       </section>
 

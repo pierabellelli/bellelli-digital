@@ -36,6 +36,7 @@ const services = [
       'Cosa non condividere mai con l’AI',
       'Guida “La tua AI in 10 minuti al giorno”',
       'Plus: raccolta contatti automatica dal sito',
+      'In più: contatti in automatico su CRM, email e WhatsApp',
     ],
   },
   {

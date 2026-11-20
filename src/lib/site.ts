@@ -51,6 +51,41 @@ export const packages = [
   },
 ]
 
+export const automation = {
+  steps: [
+    { title: 'Arriva la richiesta', text: 'Dal modulo del sito, da un’email o da WhatsApp.' },
+    { title: 'L’AI la legge', text: 'Ricava nome, telefono e servizio, e capisce se è un preventivo, un’informazione o un problema.' },
+    { title: 'Entra nel tuo CRM', text: 'Un gestionale semplice, costruito sulle tue esigenze, con lo stato di ogni cliente.' },
+    { title: 'Risposta e promemoria', text: 'Il cliente riceve subito una risposta. Se dopo 2 giorni nessuno l’ha ricontattato, ti arriva un avviso.' },
+  ],
+  levels: [
+    {
+      name: 'Email e CRM',
+      price: 'da 390 €',
+      features: [
+        'CRM su misura per la tua attività',
+        'Richieste dal sito e dall’email salvate in automatico',
+        'Risposta automatica via email al cliente',
+        'Promemoria se una richiesta resta senza risposta',
+        'Riepilogo settimanale dei contatti',
+      ],
+    },
+    {
+      name: 'Con WhatsApp automatico',
+      price: 'da 690 €',
+      features: [
+        'Tutto il livello Email e CRM',
+        'Messaggi WhatsApp ricevuti salvati nel CRM',
+        'Conferme e promemoria automatici su WhatsApp',
+        'Attivazione del numero su WhatsApp Business Platform',
+        'Assistenza da 29 €/mese, disdici quando vuoi',
+      ],
+    },
+  ],
+  note:
+    'Si aggiunge a qualsiasi pacchetto o si richiede da solo. I messaggi WhatsApp automatici hanno un piccolo costo per messaggio applicato da Meta, che ti spiego prima di partire.',
+}
+
 export const steps = [
   { day: 'G0', title: 'Chiamata di 30 minuti', text: 'Mi racconti l’attività e cosa vuoi mettere in evidenza.' },
   { day: 'G1', title: 'Materiali', text: 'Mi mandi foto, logo e orari, e mi dai accesso alla scheda Google.' },
