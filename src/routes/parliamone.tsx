@@ -1,6 +1,7 @@
 import { createFileRoute } from '@tanstack/react-router'
 import { Layout, PageHero } from '../components/Blocks'
 import { ContactForm } from '../components/ContactForm'
+import { ChatPreview } from '../components/ChatPreview'
 import { CONTACT_EMAIL, LINKEDIN_URL, WHATSAPP_NUMBER, WHATSAPP_URL } from '../lib/site'
 import { useSeo } from '../lib/useSeo'
 
@@ -23,6 +24,7 @@ function Parliamone() {
   return (
     <Layout>
       <PageHero
+        visual={<ChatPreview />}
         eyebrow="Parliamone"
         title={
           <>
