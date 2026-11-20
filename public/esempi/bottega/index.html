@@ -153,6 +153,7 @@ footer .wrap { display: flex; justify-content: space-between; gap: 16px; flex-wr
 
 /* Sfondo hero: argilla e smalto */
 body { overflow-x: clip; }
+.sign { position: relative; z-index: 2; }
 .hero { position: relative; isolation: isolate; }
 .hero::before {
   content: ""; position: absolute; top: -75px; bottom: 0; left: calc(50% - 50vw); width: 100vw; -webkit-mask-image: linear-gradient(to bottom, #000 75%, transparent); mask-image: linear-gradient(to bottom, #000 75%, transparent); z-index: -1; pointer-events: none;
@@ -160,8 +161,10 @@ body { overflow-x: clip; }
     radial-gradient(34% 55% at 12% 30%, rgba(181,83,47,.26), transparent 70%),
     radial-gradient(36% 60% at 88% 70%, rgba(31,77,74,.26), transparent 70%),
     radial-gradient(20% 30% at 60% 8%, rgba(242,194,48,.18), transparent 70%),
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .4 0 0 0 0 .3 0 0 0 0 .2 0 0 0 .07 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
-  animation: bg-drift 22s ease-in-out infinite alternate;
+    linear-gradient(90deg, rgba(246,241,231,.96) 0%, rgba(246,241,231,.82) 42%, rgba(246,241,231,.35) 100%),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .4 0 0 0 0 .3 0 0 0 0 .2 0 0 0 .07 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"),
+    url("https://images.unsplash.com/photo-1519233181562-35b0b8bb2b1d?w=1800&q=65&auto=format") center 40% / cover no-repeat;
+  
 }
 
 @keyframes bg-drift { from { transform: translate3d(0,0,0) scale(1); } to { transform: translate3d(3%, -2%, 0) scale(1.06); } }
@@ -299,7 +302,7 @@ body { overflow-x: clip; }
 
 <footer>
   <div class="wrap">
-    <span>Bottega Terra Cilento · attività immaginaria · P. IVA di esempio</span>
+    <span>Bottega Terra Cilento · attività immaginaria · P. IVA di esempio · Foto: Maggie Markel / Unsplash</span>
     <span>Sito realizzato da <strong>Bellelli Digital</strong></span>
   </div>
 </footer>
