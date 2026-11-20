@@ -1,0 +1,227 @@
+@property --split {
+  syntax: '<percentage>';
+  inherits: true;
+  initial-value: 50%;
+}
+
+.ba {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  margin-left: auto;
+  font-family: var(--sans);
+}
+.ba-glow {
+  position: absolute;
+  inset: 8% -6% -4% -6%;
+  border-radius: 40%;
+  background:
+    radial-gradient(closest-side at 70% 30%, rgba(214, 21, 107, 0.25), transparent),
+    radial-gradient(closest-side at 30% 75%, rgba(255, 156, 201, 0.35), transparent);
+  filter: blur(30px);
+}
+.ba-frame {
+  --split: 50%;
+  position: relative;
+  height: 470px;
+  border-radius: 22px;
+  overflow: hidden;
+  box-shadow:
+    0 0 0 1px var(--border),
+    0 30px 60px -28px rgba(99, 26, 59, 0.5);
+  animation: ba-slide 9s ease-in-out 0.8s infinite;
+}
+
+.ba-card {
+  position: absolute;
+  inset: 0;
+  background: #fff;
+  color: var(--text-h);
+  font-size: 13px;
+  line-height: 1.45;
+}
+.ba-card p {
+  margin: 0;
+}
+.ba-before {
+  filter: saturate(0.2);
+  background: #f6f4f5;
+}
+.ba-after {
+  clip-path: inset(0 0 0 var(--split));
+}
+
+.ba-photo {
+  height: 150px;
+  background: #ccc center / cover no-repeat;
+  position: relative;
+}
+.ba-photo-empty {
+  display: grid;
+  place-items: center;
+  background:
+    repeating-linear-gradient(45deg, #e4e0e2 0 12px, #ebe8ea 12px 24px);
+  color: #8a8288;
+  font-weight: 600;
+  font-size: 12px;
+}
+.ba-count {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  padding: 3px 9px;
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.55);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 600;
+}
+.ba-body {
+  padding: 16px 18px;
+  display: grid;
+  gap: 4px;
+}
+.ba-name {
+  font-family: var(--heading);
+  font-size: 19px;
+  letter-spacing: -0.01em;
+}
+.ba-stars {
+  color: #f4b400;
+  letter-spacing: 1px;
+}
+.ba-stars-grey {
+  color: #b9b2b6;
+}
+.ba-off {
+  color: #ddd;
+}
+.ba-meta {
+  color: var(--text);
+}
+.ba-warn {
+  color: #b3261e;
+  font-weight: 600;
+}
+.ba-open b {
+  color: #188038;
+}
+.ba-actions {
+  display: flex;
+  gap: 6px;
+  margin: 8px 0 4px;
+}
+.ba-actions span {
+  padding: 5px 11px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  font-size: 11.5px;
+  font-weight: 600;
+  color: var(--accent-dark);
+  background: #fff;
+}
+.ba-before .ba-actions span {
+  color: #6c6469;
+}
+.ba-actions .ba-missing {
+  border-style: dashed;
+  color: #9a9297 !important;
+  background: transparent;
+}
+.ba-actions .ba-site {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+.ba-review {
+  margin-top: 8px;
+  padding-top: 10px;
+  border-top: 1px solid var(--border);
+  display: grid;
+  gap: 4px;
+}
+.ba-noreply {
+  font-size: 11.5px;
+  font-style: italic;
+  color: #9a9297;
+}
+.ba-reply {
+  margin-top: 4px;
+  padding: 8px 10px;
+  border-radius: 10px 10px 10px 2px;
+  background: var(--accent-bg);
+  font-size: 12.5px;
+}
+.ba-reply span {
+  display: block;
+  font-size: 10.5px;
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: 2px;
+}
+
+.ba-divider {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: var(--split);
+  width: 3px;
+  translate: -50% 0;
+  background: #fff;
+  box-shadow: 0 0 0 1px rgba(214, 21, 107, 0.35), 0 0 18px rgba(214, 21, 107, 0.35);
+  z-index: 3;
+}
+.ba-handle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: var(--accent);
+  color: #fff;
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 2px;
+  box-shadow: 0 6px 16px rgba(214, 21, 107, 0.45);
+}
+
+.ba-label {
+  position: absolute;
+  top: 12px;
+  z-index: 4;
+  padding: 4px 11px;
+  border-radius: 999px;
+  font-size: 11.5px;
+  font-weight: 700;
+  transition: opacity 0.3s;
+}
+.ba-label-before {
+  left: 12px;
+  background: rgba(35, 28, 41, 0.75);
+  color: #fff;
+}
+.ba-label-after {
+  right: 12px;
+  background: var(--accent);
+  color: #fff;
+}
+
+@keyframes ba-slide {
+  0%, 8% { --split: 50%; }
+  30%, 45% { --split: 92%; }
+  65%, 80% { --split: 8%; }
+  100% { --split: 50%; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .ba-frame { animation: none; }
+}
+@media (max-width: 1000px) {
+  .ba {
+    margin: 0 auto;
+    max-width: 380px;
+  }
+}
