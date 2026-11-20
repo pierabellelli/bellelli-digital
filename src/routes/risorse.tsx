@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { CtaBand, Layout, PageHero } from "../components/Blocks";
 import { ResourceForm } from "../components/ResourceForm";
+import { ResourceCovers } from "../components/HeroCards";
 import { resources } from "../lib/resources";
 import { useSeo } from "../lib/useSeo";
 
@@ -17,6 +18,7 @@ function Risorse() {
   return (
     <Layout>
       <PageHero
+        visual={<ResourceCovers />}
         eyebrow="Risorse gratuite"
         title={
           <>
