@@ -30,18 +30,32 @@ export function PageHero({
   intro,
   children,
   big = false,
+  visual,
 }: {
   eyebrow: string
   title: ReactNode
   intro?: ReactNode
   children?: ReactNode
   big?: boolean
+  visual?: ReactNode
 }) {
+  const heading = (
+    <>
+      <p className="eyebrow">{eyebrow}</p>
+      <h1 className={big ? 'display' : 'display display-sm'}>{title}</h1>
+    </>
+  )
   return (
-    <section className="page-hero">
+    <section className={`page-hero${visual ? ' has-visual' : ''}`}>
       <div className="container">
-        <p className="eyebrow">{eyebrow}</p>
-        <h1 className={big ? 'display' : 'display display-sm'}>{title}</h1>
+        {visual ? (
+          <div className="page-hero-grid">
+            <div className="page-hero-text">{heading}</div>
+            <div className="page-hero-visual">{visual}</div>
+          </div>
+        ) : (
+          heading
+        )}
         {(intro || children) && (
           <div className="page-hero-row">
             {intro && <p className="lead">{intro}</p>}
